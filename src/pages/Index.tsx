@@ -8,8 +8,10 @@ import { ChannelGrid } from '@/components/ChannelGrid/ChannelGrid';
 import { CategoryNav } from '@/components/Sidebar/CategoryNav';
 import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
+import { EPGSection } from '@/components/EPG/EPGSection';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { generateEPG } from '@/lib/epg';
 import type { Channel } from '@/lib/parser';
 
 interface WatchHistoryEntry {
@@ -31,6 +33,8 @@ const Index: React.FC = () => {
     });
     return counts;
   }, [categories, categoryMap]);
+
+  const epgData = useMemo(() => generateEPG(channels), [channels]);
 
   const filteredChannels = useMemo(() => {
     let result = channels;
@@ -122,6 +126,15 @@ const Index: React.FC = () => {
             channels={channels}
             onSelect={handleSelect}
             onClear={handleClearHistory}
+          />
+        )}
+
+        {/* EPG Section - only when no channel is playing and no search/filter active */}
+        {!activeChannel && !search && !activeCategory && (
+          <EPGSection
+            channels={channels}
+            epgData={epgData}
+            onSelectChannel={handleSelect}
           />
         )}
 
