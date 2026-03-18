@@ -11,7 +11,7 @@ export const ChannelGrid: React.FC<Props> = ({ channels, onSelect }) => {
   if (channels.length === 0) {
     return (
       <div className="flex items-center justify-center py-20 text-muted-foreground text-sm">
-        No channels found
+        Kanallar topilmadi
       </div>
     );
   }

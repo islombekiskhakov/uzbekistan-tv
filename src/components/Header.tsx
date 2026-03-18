@@ -9,9 +9,9 @@ export const Header: React.FC = () => {
       </div>
       <div>
         <h1 className="text-xl font-display font-bold text-foreground tracking-tight">
-          Aether<span className="text-primary">TV</span>
+          Uzbekistan<span className="text-primary">TV</span>
         </h1>
-        <p className="text-[10px] text-muted-foreground font-medium tracking-widest uppercase">Live Streaming</p>
+        <p className="text-[10px] text-muted-foreground font-medium tracking-widest uppercase">Jonli Efir</p>
       </div>
     </header>
   );

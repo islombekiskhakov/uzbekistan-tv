@@ -9,6 +9,7 @@ import { CategoryNav } from '@/components/Sidebar/CategoryNav';
 import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import type { Channel } from '@/lib/parser';
 
 interface WatchHistoryEntry {
@@ -21,7 +22,7 @@ const Index: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [activeChannel, setActiveChannel] = useState<Channel | null>(null);
-  const [history, setHistory] = useLocalStorage<WatchHistoryEntry[]>('aether-history', []);
+  const [history, setHistory] = useLocalStorage<WatchHistoryEntry[]>('uztv-history', []);
 
   const channelCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -68,7 +69,7 @@ const Index: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center glow-md">
             <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
-          <p className="text-sm text-muted-foreground font-medium">Loading channels...</p>
+          <p className="text-sm text-muted-foreground font-medium">Kanallar yuklanmoqda...</p>
         </motion.div>
       </div>
     );
@@ -101,7 +102,7 @@ const Index: React.FC = () => {
                 className="flex items-center gap-2 mb-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
-                Kanallar ro'yxati
+                Kanallar ro'yxatiga qaytish
               </button>
               <div className="max-w-4xl mx-auto">
                 <VideoPlayer
@@ -136,6 +137,8 @@ const Index: React.FC = () => {
 
         {/* Channel Grid */}
         <ChannelGrid channels={filteredChannels} onSelect={handleSelect} />
+
+        <Footer />
       </div>
     </div>
   );

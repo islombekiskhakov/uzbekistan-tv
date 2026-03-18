@@ -20,12 +20,12 @@ interface Props {
 function getAudioLabel(track: { name?: string; lang?: string }, index: number): string {
   const n = (track.name || '').toLowerCase();
   const l = (track.lang || '').toLowerCase();
-  if (n.includes('uz') || l.includes('uz')) return 'O\'zbek';
+  if (n.includes('uz') || l.includes('uz')) return 'O\'zbekcha';
   if (n.includes('ru') || l.includes('ru') || l === 'rus') return 'Русский';
-  if (n.includes('en') || l.includes('en') || l === 'eng') return 'English';
+  if (n.includes('en') || l.includes('en') || l === 'eng') return 'Inglizcha';
   if (track.name) return track.name;
   if (track.lang) return track.lang.toUpperCase();
-  return `Track ${index + 1}`;
+  return `Trek ${index + 1}`;
 }
 
 export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, onClose }) => {
@@ -88,12 +88,12 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
       hls.on(Hls.Events.ERROR, (_, data) => {
         if (data.fatal) {
           if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
-            setError('Network error. Check your connection.');
+            setError('Tarmoq xatosi. Internet aloqangizni tekshiring.');
             hls.startLoad();
           } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
             hls.recoverMediaError();
           } else {
-            setError('Playback error. Try again.');
+            setError('Ijro xatosi. Qaytadan urinib ko\'ring.');
           }
         }
       });
@@ -106,7 +106,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
         video.play().catch(() => {});
       });
     } else {
-      setError('HLS playback is not supported in this browser.');
+      setError('Ushbu brauzerda HLS qo\'llab-quvvatlanmaydi.');
       setLoading(false);
     }
   }, [url]);
@@ -237,7 +237,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
             >
               <RefreshCw className="w-4 h-4" />
-              Retry
+              Qayta urinish
             </button>
           </motion.div>
         )}
@@ -263,7 +263,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
               </span>
               <span className="ml-auto flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-destructive/90 text-destructive-foreground text-[10px] font-bold uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-destructive-foreground animate-pulse-glow" />
-                Live
+                Jonli
               </span>
             </div>
 
@@ -300,7 +300,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors text-foreground text-xs font-medium"
                   >
                     <Languages className="w-3.5 h-3.5" />
-                    {audioTracks[currentAudioTrack]?.label || 'Audio'}
+                    {audioTracks[currentAudioTrack]?.label || 'Til'}
                   </button>
 
                   <AnimatePresence>
