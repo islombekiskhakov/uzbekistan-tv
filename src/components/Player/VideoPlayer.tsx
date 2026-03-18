@@ -237,7 +237,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
             >
               <RefreshCw className="w-4 h-4" />
-              Retry
+              Qayta urinish
             </button>
           </motion.div>
         )}
