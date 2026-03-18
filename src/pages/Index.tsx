@@ -144,13 +144,6 @@ const Index: React.FC = () => {
           />
         )}
 
-        {!activeChannel && !search && !activeCategory && !showFavorites && (
-          <EPGSection
-            channels={channels}
-            epgData={epgData}
-            onSelectChannel={handleSelect}
-          />
-        )}
 
         <div className="mb-6">
           <CategoryNav
@@ -170,6 +163,14 @@ const Index: React.FC = () => {
           favorites={favoritesSet}
           onToggleFavorite={handleToggleFavorite}
         />
+
+        {!activeChannel && !search && !activeCategory && !showFavorites && (
+          <EPGSection
+            channels={channels}
+            epgData={epgData}
+            onSelectChannel={handleSelect}
+          />
+        )}
 
         <Footer />
       </div>
