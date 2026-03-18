@@ -9,6 +9,7 @@ import { CategoryNav } from '@/components/Sidebar/CategoryNav';
 import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 import type { Channel } from '@/lib/parser';
 
 interface WatchHistoryEntry {
