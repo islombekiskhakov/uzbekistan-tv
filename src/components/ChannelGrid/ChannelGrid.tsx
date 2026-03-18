@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { ChannelCard } from './ChannelCard';
 import type { Channel } from '@/lib/parser';
 
-const INITIAL_COUNT = 14;
+const INITIAL_COUNT = 28;
 
 interface Props {
   channels: Channel[];
@@ -30,25 +30,22 @@ export const ChannelGrid: React.FC<Props> = ({ channels, onSelect, favorites, on
   return (
     <div>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 md:gap-4">
-        <AnimatePresence initial={false}>
-          {visible.map((channel, i) => (
-            <motion.div
-              key={channel.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.2, delay: i >= INITIAL_COUNT ? (i - INITIAL_COUNT) * 0.02 : 0 }}
-            >
-              <ChannelCard
-                channel={channel}
-                onClick={onSelect}
-                index={i}
-                isFavorite={favorites?.has(channel.id)}
-                onToggleFavorite={onToggleFavorite}
-              />
-            </motion.div>
-          ))}
-        </AnimatePresence>
+        {visible.map((channel, i) => (
+          <motion.div
+            key={channel.id}
+            initial={i >= INITIAL_COUNT ? { opacity: 0, scale: 0.9 } : false}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.2, delay: i >= INITIAL_COUNT ? (i - INITIAL_COUNT) * 0.015 : 0 }}
+          >
+            <ChannelCard
+              channel={channel}
+              onClick={onSelect}
+              index={i}
+              isFavorite={favorites?.has(channel.id)}
+              onToggleFavorite={onToggleFavorite}
+            />
+          </motion.div>
+        ))}
       </div>
 
       {showToggle && (
