@@ -88,7 +88,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
       hls.on(Hls.Events.ERROR, (_, data) => {
         if (data.fatal) {
           if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
-            setError('Network error. Check your connection.');
+            setError('Tarmoq xatosi. Internet aloqangizni tekshiring.');
             hls.startLoad();
           } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
             hls.recoverMediaError();
