@@ -22,7 +22,7 @@ function getAudioLabel(track: { name?: string; lang?: string }, index: number): 
   const l = (track.lang || '').toLowerCase();
   if (n.includes('uz') || l.includes('uz')) return 'O\'zbekcha';
   if (n.includes('ru') || l.includes('ru') || l === 'rus') return 'Русский';
-  if (n.includes('en') || l.includes('en') || l === 'eng') return 'English';
+  if (n.includes('en') || l.includes('en') || l === 'eng') return 'Inglizcha';
   if (track.name) return track.name;
   if (track.lang) return track.lang.toUpperCase();
   return `Track ${index + 1}`;
