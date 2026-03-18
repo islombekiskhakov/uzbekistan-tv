@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tv, Film, Newspaper, Baby, Trophy, Music, Sparkles, GraduationCap, FlaskConical, LayoutGrid, Heart } from 'lucide-react';
+import { LayoutGrid, Heart, Tv, Film, Newspaper, Baby, Trophy, Music, Sparkles, GraduationCap, FlaskConical } from 'lucide-react';
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
-  'Milliy': <Tv className="w-4 h-4" />,
-  'Kino': <Film className="w-4 h-4" />,
-  'Yangiliklar': <Newspaper className="w-4 h-4" />,
-  'Bolalar uchun': <Baby className="w-4 h-4" />,
-  'Sport': <Trophy className="w-4 h-4" />,
-  'Musiqiy': <Music className="w-4 h-4" />,
-  "Ko'ngil Ochar": <Sparkles className="w-4 h-4" />,
-  "Ta'lim": <GraduationCap className="w-4 h-4" />,
-  "Ta'lim va ilm fan": <FlaskConical className="w-4 h-4" />,
+  'Milliy': <Tv className="w-3.5 h-3.5" />,
+  'Kino': <Film className="w-3.5 h-3.5" />,
+  'Yangiliklar': <Newspaper className="w-3.5 h-3.5" />,
+  'Bolalar uchun': <Baby className="w-3.5 h-3.5" />,
+  'Sport': <Trophy className="w-3.5 h-3.5" />,
+  'Musiqiy': <Music className="w-3.5 h-3.5" />,
+  "Ko'ngil Ochar": <Sparkles className="w-3.5 h-3.5" />,
+  "Ta'lim": <GraduationCap className="w-3.5 h-3.5" />,
+  "Ta'lim va ilm fan": <FlaskConical className="w-3.5 h-3.5" />,
 };
 
 interface Props {
@@ -25,55 +25,47 @@ interface Props {
 }
 
 export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSelect, channelCounts, favoritesCount = 0, showFavorites, onToggleFavorites }) => {
-  const pillClass = (active: boolean) =>
-    `relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 overflow-hidden ${
+  const pill = (active: boolean, variant?: 'accent') =>
+    `flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
       active
-        ? 'bg-primary text-primary-foreground glow-sm'
-        : 'bg-secondary/60 text-secondary-foreground hover:bg-secondary hover:text-foreground'
+        ? variant === 'accent'
+          ? 'bg-accent text-accent-foreground'
+          : 'bg-primary text-primary-foreground'
+        : 'text-muted-foreground hover:text-foreground hover:bg-secondary/80'
     }`;
 
   return (
-    <nav className="flex gap-2 overflow-x-auto pb-3 scrollbar-none -mx-1 px-1">
-      <motion.button
-        whileTap={{ scale: 0.95 }}
+    <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none px-4 md:px-8 py-1">
+      <button
         onClick={() => { onSelect(null); if (showFavorites && onToggleFavorites) onToggleFavorites(); }}
-        className={pillClass(activeCategory === null && !showFavorites)}
+        className={pill(activeCategory === null && !showFavorites)}
       >
-        <LayoutGrid className="w-4 h-4" />
+        <LayoutGrid className="w-3.5 h-3.5" />
         Barchasi
-      </motion.button>
+      </button>
 
       {favoritesCount > 0 && onToggleFavorites && (
-        <motion.button
-          whileTap={{ scale: 0.95 }}
+        <button
           onClick={() => { onSelect(null); onToggleFavorites(); }}
-          className={`relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 overflow-hidden ${
-            showFavorites
-              ? 'bg-accent text-accent-foreground glow-sm'
-              : 'bg-secondary/60 text-secondary-foreground hover:bg-secondary hover:text-foreground'
-          }`}
+          className={pill(!!showFavorites, 'accent')}
         >
-          <Heart className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`} />
+          <Heart className={`w-3.5 h-3.5 ${showFavorites ? 'fill-current' : ''}`} />
           Sevimlilar
-          <span className="text-[10px] opacity-70 font-bold">{favoritesCount}</span>
-        </motion.button>
+        </button>
       )}
 
-      {categories.map((cat, i) => (
-        <motion.button
+      <div className="w-px h-5 bg-border/50 flex-shrink-0 mx-1" />
+
+      {categories.map(cat => (
+        <button
           key={cat}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: i * 0.03, duration: 0.3 }}
           onClick={() => { if (showFavorites && onToggleFavorites) onToggleFavorites(); onSelect(cat); }}
-          className={pillClass(activeCategory === cat && !showFavorites)}
+          className={pill(activeCategory === cat && !showFavorites)}
         >
-          {CATEGORY_ICONS[cat] || <Tv className="w-4 h-4" />}
+          {CATEGORY_ICONS[cat] || <Tv className="w-3.5 h-3.5" />}
           {cat}
-          <span className="text-[10px] opacity-60 font-bold">{channelCounts[cat] || 0}</span>
-        </motion.button>
+        </button>
       ))}
-    </nav>
+    </div>
   );
 };
