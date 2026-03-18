@@ -137,6 +137,8 @@ const Index: React.FC = () => {
 
         {/* Channel Grid */}
         <ChannelGrid channels={filteredChannels} onSelect={handleSelect} />
+
+        <Footer />
       </div>
     </div>
   );
