@@ -66,6 +66,7 @@ const Index: React.FC = () => {
 
   const handleSelect = useCallback((channel: Channel) => {
     setActiveChannel(channel);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setHistory(prev => {
       const filtered = prev.filter(h => h.channelId !== channel.id);
       return [{ channelId: channel.id, timestamp: Date.now() }, ...filtered].slice(0, 5);
