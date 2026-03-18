@@ -25,6 +25,16 @@ const Index: React.FC = () => {
   const [search, setSearch] = useState('');
   const [activeChannel, setActiveChannel] = useState<Channel | null>(null);
   const [history, setHistory] = useLocalStorage<WatchHistoryEntry[]>('uztv-history', []);
+  const [favoriteIds, setFavoriteIds] = useLocalStorage<string[]>('uztv-favorites', []);
+  const [showFavorites, setShowFavorites] = useState(false);
+
+  const favoritesSet = useMemo(() => new Set(favoriteIds), [favoriteIds]);
+
+  const handleToggleFavorite = useCallback((channelId: string) => {
+    setFavoriteIds(prev =>
+      prev.includes(channelId) ? prev.filter(id => id !== channelId) : [...prev, channelId]
+    );
+  }, [setFavoriteIds]);
 
   const channelCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -39,7 +49,9 @@ const Index: React.FC = () => {
   const filteredChannels = useMemo(() => {
     let result = channels;
 
-    if (activeCategory) {
+    if (showFavorites) {
+      result = result.filter(c => favoritesSet.has(c.id));
+    } else if (activeCategory) {
       const ids = new Set(categoryMap[activeCategory] || []);
       result = result.filter(c => ids.has(c.id));
     }
@@ -50,7 +62,7 @@ const Index: React.FC = () => {
     }
 
     return result;
-  }, [channels, activeCategory, categoryMap, search]);
+  }, [channels, activeCategory, categoryMap, search, showFavorites, favoritesSet]);
 
   const handleSelect = useCallback((channel: Channel) => {
     setActiveChannel(channel);
@@ -61,6 +73,11 @@ const Index: React.FC = () => {
   }, [setHistory]);
 
   const handleClearHistory = useCallback(() => setHistory([]), [setHistory]);
+
+  const handleToggleFavoritesFilter = useCallback(() => {
+    setShowFavorites(prev => !prev);
+    setActiveCategory(null);
+  }, []);
 
   if (loading) {
     return (
@@ -82,7 +99,6 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-background noise">
       <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-4 md:py-6">
-        {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
           <Header />
           <div className="sm:ml-auto w-full sm:w-auto">
@@ -90,7 +106,6 @@ const Index: React.FC = () => {
           </div>
         </div>
 
-        {/* Player Section */}
         <AnimatePresence mode="wait">
           {activeChannel && (
             <motion.div
@@ -119,7 +134,6 @@ const Index: React.FC = () => {
           )}
         </AnimatePresence>
 
-        {/* Continue Watching */}
         {!activeChannel && (
           <ContinueWatching
             history={history}
@@ -129,8 +143,7 @@ const Index: React.FC = () => {
           />
         )}
 
-        {/* EPG Section - only when no channel is playing and no search/filter active */}
-        {!activeChannel && !search && !activeCategory && (
+        {!activeChannel && !search && !activeCategory && !showFavorites && (
           <EPGSection
             channels={channels}
             epgData={epgData}
@@ -138,18 +151,24 @@ const Index: React.FC = () => {
           />
         )}
 
-        {/* Categories */}
         <div className="mb-6">
           <CategoryNav
             categories={categories}
             activeCategory={activeCategory}
             onSelect={setActiveCategory}
             channelCounts={channelCounts}
+            favoritesCount={favoriteIds.length}
+            showFavorites={showFavorites}
+            onToggleFavorites={handleToggleFavoritesFilter}
           />
         </div>
 
-        {/* Channel Grid */}
-        <ChannelGrid channels={filteredChannels} onSelect={handleSelect} />
+        <ChannelGrid
+          channels={filteredChannels}
+          onSelect={handleSelect}
+          favorites={favoritesSet}
+          onToggleFavorite={handleToggleFavorite}
+        />
 
         <Footer />
       </div>
