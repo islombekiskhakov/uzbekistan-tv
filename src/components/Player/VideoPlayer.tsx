@@ -25,7 +25,7 @@ function getAudioLabel(track: { name?: string; lang?: string }, index: number): 
   if (n.includes('en') || l.includes('en') || l === 'eng') return 'Inglizcha';
   if (track.name) return track.name;
   if (track.lang) return track.lang.toUpperCase();
-  return `Track ${index + 1}`;
+  return `Trek ${index + 1}`;
 }
 
 export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, onClose }) => {

@@ -101,7 +101,7 @@ const Index: React.FC = () => {
                 className="flex items-center gap-2 mb-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <ArrowLeft className="w-4 h-4" />
-                Kanallar ro'yxati
+                Kanallar ro'yxatiga qaytish
               </button>
               <div className="max-w-4xl mx-auto">
                 <VideoPlayer
