@@ -300,7 +300,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-foreground/10 hover:bg-foreground/20 transition-colors text-foreground text-xs font-medium"
                   >
                     <Languages className="w-3.5 h-3.5" />
-                    {audioTracks[currentAudioTrack]?.label || 'Audio'}
+                    {audioTracks[currentAudioTrack]?.label || 'Til'}
                   </button>
 
                   <AnimatePresence>
