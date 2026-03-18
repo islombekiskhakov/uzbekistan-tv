@@ -20,7 +20,7 @@ interface Props {
 function getAudioLabel(track: { name?: string; lang?: string }, index: number): string {
   const n = (track.name || '').toLowerCase();
   const l = (track.lang || '').toLowerCase();
-  if (n.includes('uz') || l.includes('uz')) return 'O\'zbek';
+  if (n.includes('uz') || l.includes('uz')) return 'O\'zbekcha';
   if (n.includes('ru') || l.includes('ru') || l === 'rus') return 'Русский';
   if (n.includes('en') || l.includes('en') || l === 'eng') return 'English';
   if (track.name) return track.name;
