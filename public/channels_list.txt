@@ -1,0 +1,275 @@
+Category:Milliy
+Zo'r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream1.cinerama.uz/1016/tracks-v1a1/mono.m3u8
+iTV Cinema	https://files.itv.uz/uploads/iptv/channels/2023/05/31//91c58d573e4a8e351e68a0ebcbe724ab-q-500x500.jpeg	https://stream2.cinerama.uz/4000/tracks-v1a1/mono.m3u8
+Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream1.cinerama.uz/1004/tracks-v1a1/mono.m3u8
+iTV Music	https://files.itv.uz/uploads/iptv/channels/2023/05/31//27d9324713264f6d8c4cc6986cf4ae86-q-500x500.jpeg	https://stream2.cinerama.uz/4001/tracks-v1a1/mono.m3u8
+Milliy TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/3754e8d4-89b5-496d-8c81-448121f35002.png	https://stream1.cinerama.uz/1014/tracks-v1a1/mono.m3u8
+OʻzbekistonTV	https://files.cinerama.uz/images/tv_channels/2020/06/12/80f29007-3f69-44fd-a8de-4c5d9783beb1.png	https://stream1.cinerama.uz/1001/tracks-v1a1/mono.m3u8
+Yoshlar	https://files.cinerama.uz/images/tv_channels/2020/06/12/f9b7dca1-6d47-480d-9958-7ce77b63ba8d.png	https://stream1.cinerama.uz/1002/tracks-v1a1/mono.m3u8
+Toshkent	https://files.cinerama.uz/images/tv_channels/2020/06/12/2eb5212f-fda5-42f3-a1cf-56bda22bbb77.png	https://stream1.cinerama.uz/1003/tracks-v1a1/mono.m3u8
+O'zbekiston 24 HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/2fa215cc-332c-4181-8d30-cb32ab9b7f61.png	https://stream1.cinerama.uz/1011/tracks-v1a1/mono.m3u8
+Sevimli TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/035fe5e3-f968-45fd-93af-31e4b91cdebf.png	https://stream8.cinerama.uz/1017/tracks-v1a1/playlist.m3u8
+Milliy SD	https://files.cinerama.uz/images/tv_channels/2021/12/14/044a1ecc-cf92-4c32-8a8b-54ce07c69546.png	https://stream1.cinerama.uz/1216/tracks-v1a1/mono.m3u8
+MY5 HD	https://files.itv.uz/uploads/iptv/channels/2021/11/03//5a52a0580d30e504a5dbf424962bed82-q-500x500.jpeg	https://stream1.cinerama.uz/1012/tracks-v1a1/mono.m3u8
+MY5 SD	https://files.itv.uz/uploads/iptv/channels/2021/11/03//2675cdc82b452ba3267237a976d173fc-q-500x500.jpeg	https://stream1.cinerama.uz/1217/tracks-v1a1/mono.m3u8
+MYDAYTV	https://files.cinerama.uz/images/tv_channels/2023/08/14/23bab5dc-4a74-4db8-8a30-6b10918cdd4f.png	https://stream1.cinerama.uz/1265/tracks-v1a1/mono.m3u8
+Renessans TV	https://files.itv.uz/uploads/iptv/channels/2024/01/24//4a4b31ebb4248789549263ad774c2c61-q-500x500.jpeg	https://stream1.cinerama.uz/1221/tracks-v1a1/mono.m3u8
+Bolajon	https://files.itv.uz/uploads/iptv/channels/2020/06/17//6184bdb718f893d4c4480ed8db4aeaa3-q-500x500.jpeg	https://stream1.cinerama.uz/1212/tracks-v1a1/mono.m3u8
+Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9aaa3d73229f6ef0-q-500x500.jpeg	https://stream1.cinerama.uz/1205/tracks-v1a1/mono.m3u8
+BizTV HD	https://files.itv.uz/uploads/iptv/channels/2022/12/06//d650b7a25deeb8a4f48a899eca793598-q-500x500.jpeg	https://stream1.cinerama.uz/1211/tracks-v1a1/mono.m3u8
+DasturxonTV	https://files.cinerama.uz/images/tv_channels/2021/04/27/4db20de5-0bb9-4126-b12e-908d327ecf70.png	https://stream1.cinerama.uz/1206/tracks-v1a1/mono.m3u8
+Navo	https://files.itv.uz/uploads/iptv/channels/2022/08/23//2b3a36d6b5ad122598ce23f472f908ce-q-500x500.jpeg	https://stream1.cinerama.uz/1008/tracks-v1a1/mono.m3u8
+Madaniyat va Marifat	https://files.itv.uz/uploads/iptv/channels/2023/05/31//95737b9a2b913a6fadf576f61933a635-q-500x500.jpeg	https://stream1.cinerama.uz/1005/tracks-v1a1/mono.m3u8
+Mahalla	    https://files.itv.uz/uploads/iptv/channels/2023/05/31//27e8188e91570f9ccf5c29121c183e6a-q-500x500.jpeg	https://stream1.cinerama.uz/1013/tracks-v1a1/mono.m3u8
+Kinoteatr HD	https://files.itv.uz/uploads/iptv/channels/2020/06/17//d2e38ec0058f9c217b4c77c88f81404e-q-500x500.jpeg	https://stream1.cinerama.uz/1009/tracks-v1a1/mono.m3u8
+O'zbekiston Tarixi HD	https://files.itv.uz/uploads/iptv/channels/2020/06/17//58b2e970ecde5f03f461b8fe59550fac-q-500x500.jpeg	https://stream1.cinerama.uz/1209/tracks-v1a1/mono.m3u8
+Dunyo bo`ylab	https://files.itv.uz/uploads/iptv/channels/2020/06/17//622d1ccb45505a6a0c4a5b231a1664eb-q-500x500.jpeg	https://stream1.cinerama.uz/1006/tracks-v1a1/mono.m3u8
+Uzreport HD	    https://files.cinerama.uz/images/tv_channels/2020/06/12/b72767f1-cb87-48f3-b299-ee1b2fd06795.png	https://stream1.cinerama.uz/1015/tracks-v1a1/mono.m3u8
+Taraqqiyot TV	https://files.cinerama.uz/images/tv_channels/2021/12/14/56fe1797-3b4e-4f18-816b-e633ebc34316.png	https://stream1.cinerama.uz/1204/tracks-v1a1/mono.m3u8
+S-Ikbol	https://files.cinerama.uz/images/tv_channels/2023/08/14/5951e3a5-db4d-41c0-a9f2-1d485801aa0e.png	https://stream1.cinerama.uz/1282/tracks-v1a1/mono.m3u8
+Gold Television	https://files.cinerama.uz/images/tv_channels/2023/08/14/5951e3a5-db4d-41c0-a9f2-1d485801aa0e.png	https://stream1.cinerama.uz/4007/tracks-v1a1/mono.m3u8
+Ruxsor TV	https://files.cinerama.uz/images/tv_channels/2023/08/14/74ed2467-9e28-4f29-a355-9f4e0d240fd7.png	https://stream1.cinerama.uz/1260/tracks-v1a1/mono.m3u8
+LUX.TV 	https://files.cinerama.uz/images/tv_channels/2024/01/30/e2b9fdd9-560a-494f-bf8f-4a085d042624.jpeg	https://stream1.cinerama.uz/1210/tracks-v1a1/mono.m3u8
+Biz Cinema	https://files.itv.uz/uploads/iptv/channels/2020/08/24//b2e7b7a4e645fbef99b302d06b35670d-q-500x500.jpeg	https://stream1.cinerama.uz/1213/tracks-v1a1/mono.m3u8
+Biz Music	https://files.cinerama.uz/images/tv_channels/2024/01/30/e4beb360-07dc-45bc-97a9-a27df4e936d2.jpeg	https://stream1.cinerama.uz/1212/tracks-v1a1/mono.m3u8
+NTV	https://files.itv.uz/uploads/iptv/channels/2023/07/26//3b502b779ef41d61b37bc535bf869f87-q-500x500.jpeg	https://stream1.cinerama.uz/1284/tracks-v1a1/mono.m3u8
+Istiqlol TV	https://files.itv.uz/uploads/iptv/channels/2023/07/26//0cc702bdf78b38aff615d7c502dd4fe2-q-500x500.jpeg	https://stream1.cinerama.uz/1283/tracks-v1a1/mono.m3u8
+Nurafshon TV	https://files.itv.uz/uploads/iptv/channels/2022/01/22//4a58120210414aef66c88ca130dd3650-q-500x500.jpeg	https://stream1.cinerama.uz/1220/tracks-v1a1/mono.m3u8
+Qaraqalpaqstan MTRK	https://files.itv.uz/uploads/iptv/channels/2024/04/20//5098a8b805e7326ec7dc8f3bf2e180f2-q-500x500.jpeg	https://stream1.cinerama.uz/1467/tracks-v1a1/mono.m3u8
+MakonTV HD	https://files.itv.uz/uploads/iptv/channels/2024/12/18//e6505a1ed9a0e61a67aa3e7afeb52167-q-500x500.jpeg	https://stream2.cinerama.uz/1497/tracks-v1a1/mono.m3u8+
+S Cinema	https://files.cinerama.uz/images/tv_channels/2025/02/07/f9bf163d-632a-49f5-928c-a40d47df8bf7.jpeg	https://stream2.cinerama.uz/1498/tracks-v1a1/mono.m3u8
+Farg'ona MTRK	https://files.itv.uz/uploads/iptv/channels/2024/04/20//a413e4713cb517535bb72e3adddfe943-q-500x500.jpeg	https://stream1.cinerama.uz/1458/tracks-v1a1/mono.m3u8
+Surxondaryo MTRK	https://files.itv.uz/uploads/iptv/channels/2024/04/20//a0534f66a3cce9a795ff7027b1a23c94-q-500x500.jpeg	https://stream1.cinerama.uz/1463/tracks-v1a1/mono.m3u8
+Futbol TV UZ	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream2.cinerama.uz/1010/tracks-v1a1/mono.m3u8
+Xorazm MTRK 	https://files.cinerama.uz/images/tv_channels/2024/06/03/38994bac-c9a5-4e72-b25e-cc25237390ac.jpeg	https://stream1.cinerama.uz/1464/tracks-v1a1/mono.m3u8
+S Music	 https://files.itv.uz/uploads/iptv/channels/2024/10/14//2aad1133ca08fb62b06d06edf1b052b1-q-500x500.jpeg	  https://stream2.cinerama.uz/1245/tracks-v2a1/mono.m3u8
+TTV UZ	https://files.itv.uz/uploads/iptv/channels/2024/10/16//17af904b28e714551e8396fcc077e11a-q-500x500.jpeg	https://stream2.cinerama.uz/1494/tracks-v1a1/mono.m3u8
+TTV Kino UZ	https://files.itv.uz/uploads/iptv/channels/2024/10/18//9421425ce5dc3385aac7fd42c2273223-q-500x500.jpeg	https://stream2.cinerama.uz/1486/tracks-v1a1/mono.m3u8
+TTV Musiqa	https://files.itv.uz/uploads/iptv/channels/2024/10/18//4d3cca95cc849ef5cb15e9a397316622-q-500x500.jpeg	https://stream1.cinerama.uz/1212/tracks-v1a1/mono.m3u8
+Live TV         https://files.cinerama.uz/images/tv_channels/2025/02/07/f2b46d1e-4104-463f-8851-f08fb082dbf5.jpeg	https://stream1.cinerama.uz/1475/tracks-v1a1/mono.m3u8
+Vodiy TV         https://files.cinerama.uz/images/tv_channels/2025/03/24/c58b1e89-4197-4534-bf89-605c9dc842ea.jpeg	https://stream1.cinerama.uz/4012/tracks-v1a1/mono.m3u8
+Jaslar TV	https://files.itv.uz/uploads/iptv/channels/2024/10/17//1f68774291aa8afc63a9696929ffbbee-q-500x500.jpeg	https://stream8.cinerama.uz/1490/tracks-v1a1/mono.m3u8
+Shifo TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/3b397981-ece6-4fb9-a66f-29b07d234f0f.jpeg	https://st1.biztv.media/checksiztv_1080/tracks-v1a1/mono.m3u8
+Nasaf TV	https://files.itv.uz/uploads/iptv/channels/2024/10/30//4a675cfc1ca9fc523519e8154c67f3a4-q-500x500.jpeg	https://stream8.cinerama.uz/2025/tracks-a1/mono.m3u8
+Mimi TV	https://files.itv.uz/uploads/iptv/channels/2024/07/23//d20bd7900e47c133b4fe42afaff686de-q-500x500.jpeg	https://fl.biztv.media/MiMiTV_1080/tracks-v1a1/mono.m3u8
+Jizzax TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/c454009d-156c-433b-ab68-079cb3e6d5d2.jpeg	https://stream2.cinerama.uz/1488/tracks-v1a1/mono.m3u8
+Ishonch TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/1702a7f8-8f1f-4d75-92b4-468a40c125bf.jpeg	https://stream2.cinerama.uz/1489/tracks-v1a1/mono.m3u8
+Ellikqala TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/d8af2b7e-bee1-4ace-9fee-a8304d7f11b8.jpeg	https://stream2.cinerama.uz/1495/tracks-v1a1/mono.m3u8
+Amudaryo TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/e242bb73-9172-4461-8ae3-f812ad7392db.jpeg	https://stream2.cinerama.uz/1491/tracks-v1a1/mono.m3u8
+Muloqot TV	https://files.itv.uz/uploads/iptv/channels/2024/10/17//c32cb89a20def5498dac66a7a6923399-q-500x500.jpeg	https://stream8.cinerama.uz/1285/tracks-v1a1/mono.m3u8
+
+
+
+
+
+Category:Kino
+iTV Cinema	https://files.itv.uz/uploads/iptv/channels/2023/05/31//91c58d573e4a8e351e68a0ebcbe724ab-q-500x500.jpeg	https://stream2.cinerama.uz/4000/tracks-v1a1/mono.m3u8
+Кинохит	https://files.itv.uz/uploads/iptv/channels/1539678567_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1055/tracks-v1a1/mono.m3u8
+Кинопремьера FHD	https://files.itv.uz/uploads/iptv/channels/1539671291_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1207/tracks-v1a1/mono.m3u8
+Родное кино	https://files.itv.uz/uploads/iptv/channels/1539678907_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1052/tracks-v1a1/mono.m3u8
+Наше новое кино	https://files.itv.uz/uploads/iptv/channels/1539678706_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1051/tracks-v1a1/mono.m3u8
+Киносерия HD	https://files.itv.uz/uploads/iptv/channels/2020/07/20//def52b54f333507e6969f453e2852bb1-q-500x500.jpeg	https://stream8.cinerama.uz/1235/tracks-v1a1/mono.m3u8
+Киносемья	https://files.itv.uz/uploads/iptv/channels/2020/07/20//40ed58c9ef1929111e06f15b29652e87-q-500x500.jpeg	https://stream8.cinerama.uz/1234/tracks-v1a1/mono.m3u8
+Киносвидание	https://files.itv.uz/uploads/iptv/channels/1539678189_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1203/tracks-v1a1/mono.m3u8
+Киномикс	https://files.itv.uz/uploads/iptv/channels/2020/07/20//6ca0afa439bff13f635a3d10820e0dd2-q-500x500.jpeg	https://stream8.cinerama.uz/1233/tracks-v1a1/mono.m3u8
+Кинокомедия	https://files.itv.uz/uploads/iptv/channels/2020/07/20//1a8628a152bbee35f86d784341b25f14-q-500x500.jpeg	https://stream8.cinerama.uz/1232/tracks-v1a1/mono.m3u8
+Индийское кино	https://files.itv.uz/uploads/iptv/channels/1539678644_10_16_2018-q-500x500.jpeg	https://stream8.cinerama.uz/1060/tracks-v1a1/mono.m3u8
+Мужское кино	https://files.itv.uz/uploads/iptv/channels/2020/07/20//f150911ca6863e154db38355ea8c5c01-q-500x500.jpeg	https://stream8.cinerama.uz/1237/tracks-v1a1/mono.m3u8
+Кинопоказ	https://files.itv.uz/uploads/iptv/channels/2023/05/31//ac21fb4cccf9698688ebb185fd6affc2-q-500x500.jpeg	https://stream8.cinerama.uz/1057/tracks-v1a1/mono.m3u8
+Cinema TV	https://files.cinerama.uz/images/tv_channels/2023/09/11/c87ca0b0-12f4-44a6-9c78-86eda201dbc5.jpeg	https://stream8.cinerama.uz/1227/tracks-v1a1/mono.m3u8
+TV 1000	https://files.itv.uz/uploads/iptv/channels/2023/06/23//efa102b22ab6603f803081b78f9f810d-q-500x500.jpeg	https://stream1.cinerama.uz/1058/tracks-v1a1/mono.m3u8
+TV1000 Русское кино	https://files.itv.uz/uploads/iptv/channels/2023/06/23//59907578752fdb6fd70d4f5c936554b4-q-500x500.jpeg	https://stream1.cinerama.uz/1059/tracks-v1a1/mono.m3u8
+TV1000 Action FHD	https://files.itv.uz/uploads/iptv/channels/2023/06/23//96e0859ce3ac2d56c949cbe1a8488837-q-500x500.jpeg	https://stream1.cinerama.uz/1225/tracks-v1a1/mono.m3u8
+Hollywood	https://files.itv.uz/uploads/iptv/channels/2023/07/24//4816ee6103361ac7220f83a0122e95c6-q-500x500.jpeg	https://stream1.cinerama.uz/1443/tracks-v1a1/mono.m3u8
+Bollywood	https://files.itv.uz/uploads/iptv/channels/2023/07/24//333e8170dd68c6817da6dfd427dbfd14-q-500x500.jpeg	https://stream1.cinerama.uz/1444/tracks-v1a1/mono.m3u8
+Дорама	https://files.itv.uz/uploads/iptv/channels/2022/12/26//b1bef9dcde190b953b3f232b714435e6-q-500x500.jpeg	https://stream1.cinerama.uz/1273/tracks-v1a1/mono.m3u8
+Дом Кино	https://files.itv.uz/uploads/iptv/channels/2021/10/28//b133087cbc976edcd975caa248118413-q-500x500.jpeg	https://stream1.cinerama.uz/1054/tracks-v1a1/mono.m3u8
+Ретро ТВ	https://files.cinerama.uz/images/tv_channels/2020/06/12/828d4562-bf08-4874-9c0f-52e86676d1e9.png	https://stream1.cinerama.uz/1047/tracks-v1a1/mono.m3u8
+Biz Cinema	https://files.itv.uz/uploads/iptv/channels/2020/08/24//b2e7b7a4e645fbef99b302d06b35670d-q-500x500.jpeg	https://stream1.cinerama.uz/1213/tracks-v1a1/mono.m3u8
+TTV Kino UZ	https://files.itv.uz/uploads/iptv/channels/2024/10/18//9421425ce5dc3385aac7fd42c2273223-q-500x500.jpeg	https://stream2.cinerama.uz/1486/tracks-v1a1/mono.m3u8
+
+
+Category:Yangiliklar
+Первый	https://files.cinerama.uz/images/tv_channels/2020/06/12/7264f8a9-b852-461e-8791-3dd998e5a9e5.png	https://stream2.cinerama.uz/1019/tracks-v1a1/mono.m3u8
+Россия 1	https://files.cinerama.uz/images/tv_channels/2020/06/12/23dfcfff-b1fd-4f57-bb0b-39ffa79d45b5.png	https://stream8.cinerama.uz/1020/tracks-v1a1/mono.m3u8
+НТВ	https://files.cinerama.uz/images/tv_channels/2020/06/12/8b828a19-cfd1-4022-9e05-6ec3f3902cbd.png	https://stream8.cinerama.uz/1023/tracks-v1a1/mono.m3u8
+Россия 24	https://files.cinerama.uz/images/tv_channels/2020/06/12/19eb6d5f-97b9-421e-8d4a-763c00715604.png	https://stream8.cinerama.uz/1021/tracks-v1a1/mono.m3u8
+Первый HD	https://files.cinerama.uz/images/tv_channels/2025/01/17/469416b3-331d-4893-b007-6ac1c0d3b39f.png	https://stream8.cinerama.uz/1214/tracks-v1a1/mono.m3u8
+EuroNews	https://files.cinerama.uz/images/tv_channels/2020/06/12/ac492313-1888-47ce-97c6-8095a3e2781e.png	https://stream8.cinerama.uz/1024/tracks-v1a1/mono.m3u8
+ТВЦ	https://files.cinerama.uz/images/tv_channels/2024/02/20/6f4db2ed-fd01-4e38-b633-dfa20befcfa7.jpeg	https://stream8.cinerama.uz/1025/tracks-v1a1/mono.m3u8
+BBC-World	https://files.cinerama.uz/images/tv_channels/2023/08/31/c6b38439-d330-4c16-9b06-5d1a951c34da.png	https://stream8.cinerama.uz/1251/tracks-v1a1/mono.m3u8
+CNN	https://files.cinerama.uz/images/tv_channels/2023/08/31/f91d98da-87cb-4314-8270-03d5942b0309.png	https://stream8.cinerama.uz/1259/tracks-v1a1/mono.m3u8
+FOX-NEWS	https://files.cinerama.uz/images/tv_channels/2023/08/31/c2717fcc-19f3-4dbf-bcb1-0bbcd368befe.png	https://stream8.cinerama.uz/1252/tracks-v1a1/mono.m3u8
+Bloomberg	https://files.cinerama.uz/images/tv_channels/2023/08/31/22657b6f-9297-404a-9c91-2ce0ce5927fb.png	https://stream8.cinerama.uz/1255/tracks-v1a1/mono.m3u8
+CGTN	https://files.cinerama.uz/images/tv_channels/2023/08/31/d96c13f0-ec55-4a41-a76e-319efbd9cde5.png	https://stream8.cinerama.uz/1253/tracks-v1a1/mono.m3u8
+DW English	https://files.cinerama.uz/images/tv_channels/2023/08/14/cd91d21c-cd11-44d6-8c5c-9ac8c2660e65.png	https://stream8.cinerama.uz/1418/tracks-v1a1/mono.m3u8
+France24	https://files.cinerama.uz/images/tv_channels/2023/08/31/17a19933-97d7-4c8a-8cfe-8f145087644e.png	https://stream8.cinerama.uz/1241/tracks-v1a1/mono.m3u8
+TRT HABER	https://files.cinerama.uz/images/tv_channels/2023/08/31/01e00f1b-bbbd-477a-a7d7-c6a62a710547.png	https://stream1.cinerama.uz/1257/tracks-v1a1/mono.m3u8
+Мир	https://files.cinerama.uz/images/tv_channels/2021/12/14/1d294da3-5f54-4e99-bb45-1308f13da3c1.png	https://stream1.cinerama.uz/1218/tracks-v1a1/mono.m3u8
+Мир24	https://files.cinerama.uz/images/tv_channels/2021/12/14/a0e101d7-b517-41dd-92cb-2221ebf50612.png	https://stream1.cinerama.uz/1219/tracks-v1a1/mono.m3u8
+RBK	https://files.cinerama.uz/images/tv_channels/2023/08/14/547e0fb2-dc3e-4e8b-9f50-696e5a8a38ca.png	https://stream1.cinerama.uz/1438/tracks-v1a1/mono.m3u8
+Qazaqstan TV	https://files.cinerama.uz/images/tv_channels/2023/09/11/d53465e1-9972-43fe-ad82-e3630d1fd30b.png	https://stream1.cinerama.uz/1431/tracks-v1a1/mono.m3u8
+Хабар 24 KZ	https://files.cinerama.uz/images/tv_channels/2023/09/11/7fc88f01-8941-4053-98f2-8a209848c61d.jpeg	https://stream1.cinerama.uz/1408/tracks-v1a1/mono.m3u8
+Toshkent	https://files.cinerama.uz/images/tv_channels/2020/06/12/2eb5212f-fda5-42f3-a1cf-56bda22bbb77.png	https://stream1.cinerama.uz/1003/tracks-v1a1/mono.m3u8
+O'zbekiston 24 HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/2fa215cc-332c-4181-8d30-cb32ab9b7f61.png	https://stream1.cinerama.uz/1011/tracks-v1a1/mono.m3u8
+Uzreport HD	https://files.itv.uz/uploads/iptv/channels/2020/06/17//6f5be573ae591540e132f03c6dd242a5-q-500x500.jpeg	https://stream8.cinerama.uz/1015/tracks-v1a1/playlist.m3u8
+Ishonch TV	https://files.cinerama.uz/images/tv_channels/2025/03/24/1702a7f8-8f1f-4d75-92b4-468a40c125bf.jpeg	https://stream2.cinerama.uz/1489/tracks-v1a1/mono.m3u8
+
+
+
+Category:Bolalar uchun
+СТС KIDS	https://files.cinerama.uz/images/tv_channels/2023/08/14/d2cbd703-1019-4441-9d5b-a62cf6c3876b.png	https://stream2.cinerama.uz/1437/tracks-v1a1/mono.m3u8
+Карусель	https://files.cinerama.uz/images/tv_channels/2020/06/12/265ed287-b0aa-4fbf-b09a-924635e62820.png	https://stream2.cinerama.uz/1034/tracks-v1a1/mono.m3u8
+Мульт ТВ	https://files.cinerama.uz/images/tv_channels/2023/09/11/459cc59d-fde3-4430-9b50-b018fa66d725.jpeg	https://stream2.cinerama.uz/1246/tracks-v1a1/mono.m3u8
+Мультиландия	https://files.cinerama.uz/images/tv_channels/2020/10/16/bd4bc454-df6a-4b48-8d31-c4c1d49c6ac1.png	https://stream2.cinerama.uz/1440/tracks-v1a1/mono.m3u8
+Детский Мир	https://files.cinerama.uz/images/tv_channels/2020/06/12/6891d933-5f88-496a-aa73-61c030566eec.png	https://stream2.cinerama.uz/1032/tracks-v1a1/mono.m3u8
+Da Vinci	https://files.cinerama.uz/images/tv_channels/2020/10/16/a74fe393-6ab8-4edf-a541-5b839c727339.png	https://stream2.cinerama.uz/1231/tracks-v1a1/mono.m3u8
+В гостях у Сказки	https://files.cinerama.uz/images/tv_channels/2023/09/11/4d4e95a6-ee0b-4444-a48e-262109df4ad6.jpeg	https://stream2.cinerama.uz/1270/tracks-v1a1/mono.m3u8
+Мама	https://files.cinerama.uz/images/tv_channels/2023/09/11/c87740e4-e38d-4336-ba85-e08441b1e73b.jpeg	https://stream2.cinerama.uz/1244/tracks-v1a1/mono.m3u8
+Уникум	https://files.cinerama.uz/images/tv_channels/2024/02/20/e525159b-d1fa-4452-82db-401316a5e9e5.jpeg	https://stream2.cinerama.uz/1033/tracks-v1a1/mono.m3u8
+Капитан Фантастика	https://files.cinerama.uz/images/tv_channels/2023/09/11/05037a46-794f-4ad2-8159-b7bd07b8d303.jpeg	https://stream2.cinerama.uz/1406/tracks-v1a1/mono.m3u8
+Рыжий	https://files.cinerama.uz/images/tv_channels/2023/09/11/02cd7c4d-4d86-4058-9bc1-3a7330f17b1e.jpeg	https://stream2.cinerama.uz/1407/tracks-v1a1/mono.m3u8
+Смайлик ТВ	https://files.cinerama.uz/images/tv_channels/2023/09/11/c1bc97db-9b94-45f0-a81b-a09171a06708.png	https://stream2.cinerama.uz/1425/tracks-v1a1/mono.m3u8
+Ducktv HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/6e6ff3a9-c332-49cb-9a92-96eaeb5a2c9a.jpeg	https://stream2.cinerama.uz/1271/tracks-v1a1/mono.m3u8
+Tiji	https://files.cinerama.uz/images/tv_channels/2023/09/11/6e1a91c6-1465-47c1-b044-eef3ca25f97b.png	https://stream2.cinerama.uz/1441/tracks-v1a1/mono.m3u8
+Gulli Girl	https://files.cinerama.uz/images/tv_channels/2023/09/11/8cf4769d-6ba1-4484-bf10-870f68d61574.png	https://stream2.cinerama.uz/1445/tracks-v1a1/mono.m3u8
+Bolajon	https://files.itv.uz/uploads/iptv/channels/2020/06/17//6184bdb718f893d4c4480ed8db4aeaa3-q-500x500.jpeg	https://stream1.cinerama.uz/1212/tracks-v1a1/mono.m3u8
+Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9aaa3d73229f6ef0-q-500x500.jpeg	https://stream1.cinerama.uz/1205/tracks-v1a1/mono.m3u8
+
+
+
+
+
+Category:Sport
+Zo'r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream1.cinerama.uz/1016/tracks-v1a1/mono.m3u8
+Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream1.cinerama.uz/1263/tracks-v1a1/mono.m3u8
+Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream1.cinerama.uz/1264/tracks-v1a1/mono.m3u8
+Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream1.cinerama.uz/1004/tracks-v1a1/mono.m3u8
+Viasat Sport HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/da09ba3d-82ae-4d47-8e9a-4d934522f4f2.png	https://stream1.cinerama.uz/1229/tracks-v1a1/mono.m3u8
+Матч Планета	https://files.cinerama.uz/images/tv_channels/2023/09/11/90d59b30-09b3-484e-bea8-952da4cfcc46.jpeg	https://stream1.cinerama.uz/1243/tracks-v1a1/mono.m3u8
+КХЛ	https://files.cinerama.uz/images/tv_channels/2023/08/14/8bf48f18-393d-4553-a8d3-73c602fd0036.png	https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
+MMA TV	https://files.cinerama.uz/images/tv_channels/2023/03/05/851c6f61-d4ec-43e7-b68f-8d90a811a6e3.png	https://stream1.cinerama.uz/1226/tracks-v1a1/mono.m3u8
+Fuel TV HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/b434f380-9aa1-425d-a942-864d676707a9.png	https://stream1.cinerama.uz/1280/tracks-v1a1/mono.m3u8
+Точка Отрыва	https://files.cinerama.uz/images/tv_channels/2023/08/14/1c887f6c-eefc-48a7-8618-1b302f032766.png	https://stream1.cinerama.uz/1031/tracks-v1a1/mono.m3u8
+Trace Sport Starts HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/87cb45de-8c74-4194-88ca-e5f709c11621.jpeg	https://stream1.cinerama.uz/1274/tracks-v1a1/mono.m3u8
+Eurosport HD	https://files.cinerama.uz/images/tv_channels/2023/08/14/3fa5ec93-3e9c-4bba-a02c-3611f8a3be5a.png	https://stream1.cinerama.uz/1439/tracks-v1a1/mono.m3u8
+Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream1.cinerama.uz/1010/tracks-v1a1/mono.m3u8
+
+
+
+
+
+
+
+
+Category:Musiqiy
+iTV Music	https://files.itv.uz/uploads/iptv/channels/2023/05/31//27d9324713264f6d8c4cc6986cf4ae86-q-500x500.jpeg	https://stream2.cinerama.uz/4001/tracks-v1a1/mono.m3u8
+Tugan Tel	https://files.cinerama.uz/images/tv_channels/2023/08/31/ebb84ad5-ee0a-4f41-9e6f-2f03ec658ed5.png	https://stream2.cinerama.uz/1261/tracks-v1a1/mono.m3u8
+TRT Music	https://files.cinerama.uz/images/tv_channels/2023/09/11/8bd6a701-305f-4760-9586-3aa8d7334e18.png	https://stream2.cinerama.uz/1208/tracks-v1a1/mono.m3u8
+Ру тв	https://files.cinerama.uz/images/tv_channels/2020/06/12/725b7125-c247-4ec7-a2e0-7cd4779cc59c.png	https://stream2.cinerama.uz/1202/tracks-v1a1/mono.m3u8
+Муз-тв	https://files.cinerama.uz/images/tv_channels/2020/06/12/899888a2-24a2-4e37-a51d-1c94542ea0b0.png	https://stream2.cinerama.uz/1200/tracks-v1a1/mono.m3u8
+Музыка первого	https://files.cinerama.uz/images/tv_channels/2020/06/12/fac02a6a-8752-47d9-bf0b-951e785f7b16.png	https://stream2.cinerama.uz/1201/tracks-v1a1/mono.m3u8
+Ля Минор	https://files.cinerama.uz/images/tv_channels/2020/10/16/14ab379c-1305-4bb0-9700-8643453fac54.png	https://stream2.cinerama.uz/1238/tracks-v1a1/mono.m3u8
+MuzTV UZ	https://files.cinerama.uz/images/tv_channels/2024/02/20/8f0b15f3-746e-425a-9057-ad1efbb274ec.jpeg	https://stream2.cinerama.uz/1063/tracks-v1a1/mono.m3u8
+Navo	https://files.cinerama.uz/images/tv_channels/2020/06/12/9216690c-a093-4029-9b5a-60db8b4f733e.png	https://stream2.cinerama.uz/1008/tracks-v1a1/mono.m3u8
+S-Music	https://files.cinerama.uz/images/tv_channels/2025/02/07/6b8fa054-cd8d-4722-9964-f5109ef45df6.jpeg	https://stream2.cinerama.uz/1476/tracks-v1a1/mono.m3u8
+
+
+
+
+
+
+Category:Ko'ngil Ochar
+Zo'r TV	    https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream1.cinerama.uz/1016/tracks-v1a1/mono.m3u8
+ТВ3	    https://files.cinerama.uz/images/tv_channels/2023/08/14/7fb948c8-222c-46e0-bd73-0db6b36d3c45.png	https://stream1.cinerama.uz/1435/tracks-v1a1/mono.m3u8
+Milliy TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/3754e8d4-89b5-496d-8c81-448121f35002.png	https://stream1.cinerama.uz/1014/tracks-v1a1/mono.m3u8
+Домашний International	    https://files.cinerama.uz/images/tv_channels/2023/08/14/e41544a7-6d40-442e-a517-e6ba42eb7e87.png	https://stream1.cinerama.uz/1436/tracks-v1a1/mono.m3u8
+Телекафе	    https://files.cinerama.uz/images/tv_channels/2020/06/12/4d874ae0-f0f4-4442-91f8-e1578211a205.png	https://stream1.cinerama.uz/1035/tracks-v1a1/mono.m3u8
+Сарафан ТВ	    https://files.cinerama.uz/images/tv_channels/2023/09/11/a98a4db3-0485-456b-8368-929637173cc4.jpeg	https://stream1.cinerama.uz/1249/tracks-v1a1/mono.m3u8
+Авто Плюс	    https://files.cinerama.uz/images/tv_channels/2020/06/12/f2718904-a3f8-4fd0-81e9-e3e47ed8ce3f.png	https://stream1.cinerama.uz/1036/tracks-v1a1/mono.m3u8
+Авто 24	    https://files.cinerama.uz/images/tv_channels/2023/08/14/c6f1c2d7-4d26-481b-a4e4-71142ba1872b.png	https://stream1.cinerama.uz/1430/tracks-v1a1/mono.m3u8
+Drive	    https://files.cinerama.uz/images/tv_channels/2023/08/14/e3ceccb0-25be-4f1b-831d-57028e086c81.png	https://stream1.cinerama.uz/1421/tracks-v1a1/mono.m3u8
+Fashion TV	    https://files.cinerama.uz/images/tv_channels/2021/12/14/ad0b928c-20ad-4e6d-9216-be5c0e47ce45.png	https://stream1.cinerama.uz/1053/tracks-v1a1/mono.m3u8
+NHK World Japan	    https://files.cinerama.uz/images/tv_channels/2023/08/31/c6398eb1-d6e4-450e-9bb5-dbc933d00880.png	https://stream1.cinerama.uz/1449/tracks-v1a1/mono.m3u8
+KBS World HD	    https://files.cinerama.uz/images/tv_channels/2023/09/11/2748b52c-ad9f-443f-b520-1a8d2c32a9e4.jpeg	https://stream1.cinerama.uz/1448/tracks-v1a1/mono.m3u8
+TRT AVAZ	    https://files.cinerama.uz/images/tv_channels/2023/08/31/6f16729d-25ff-4611-8cd3-8e7ef87d48ce.png	https://stream1.cinerama.uz/1458/tracks-v1a1/mono.m3u8
+OʻzbekistonTV	https://files.cinerama.uz/images/tv_channels/2020/06/12/80f29007-3f69-44fd-a8de-4c5d9783beb1.png	https://stream1.cinerama.uz/1001/tracks-v1a1/mono.m3u8
+Yoshlar	https://files.cinerama.uz/images/tv_channels/2020/06/12/f9b7dca1-6d47-480d-9958-7ce77b63ba8d.png	https://stream1.cinerama.uz/1002/tracks-v1a1/mono.m3u8
+Toshkent	https://files.cinerama.uz/images/tv_channels/2020/06/12/2eb5212f-fda5-42f3-a1cf-56bda22bbb77.png	https://stream1.cinerama.uz/1003/tracks-v1a1/mono.m3u8
+Sevimli TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/035fe5e3-f968-45fd-93af-31e4b91cdebf.png	https://stream8.cinerama.uz/1017/tracks-v1a1/playlist.m3u8
+Milliy SD	https://files.cinerama.uz/images/tv_channels/2021/12/14/044a1ecc-cf92-4c32-8a8b-54ce07c69546.png	https://stream1.cinerama.uz/1216/tracks-v1a1/mono.m3u8
+MY5 HD	https://files.itv.uz/uploads/iptv/channels/2021/11/03//5a52a0580d30e504a5dbf424962bed82-q-500x500.jpeg	https://stream1.cinerama.uz/1012/tracks-v1a1/mono.m3u8
+MY5 SD	https://files.itv.uz/uploads/iptv/channels/2021/11/03//2675cdc82b452ba3267237a976d173fc-q-500x500.jpeg	https://stream1.cinerama.uz/1217/tracks-v1a1/mono.m3u8
+MYDAYTV	https://files.cinerama.uz/images/tv_channels/2023/08/14/23bab5dc-4a74-4db8-8a30-6b10918cdd4f.png	https://stream1.cinerama.uz/1265/tracks-v1a1/mono.m3u8
+Renessans TV	https://files.itv.uz/uploads/iptv/channels/2024/01/24//4a4b31ebb4248789549263ad774c2c61-q-500x500.jpeg	https://stream1.cinerama.uz/1221/tracks-v1a1/mono.m3u8
+BizTV HD	https://files.itv.uz/uploads/iptv/channels/2022/12/06//d650b7a25deeb8a4f48a899eca793598-q-500x500.jpeg	https://stream1.cinerama.uz/1211/tracks-v1a1/mono.m3u8
+DasturxonTV	https://files.cinerama.uz/images/tv_channels/2021/04/27/4db20de5-0bb9-4126-b12e-908d327ecf70.png	https://stream1.cinerama.uz/1206/tracks-v1a1/mono.m3u8
+Mahalla	    https://files.itv.uz/uploads/iptv/channels/2023/05/31//27e8188e91570f9ccf5c29121c183e6a-q-500x500.jpeg	https://stream1.cinerama.uz/1013/tracks-v1a1/mono.m3u8
+Taraqqiyot TV	https://files.cinerama.uz/images/tv_channels/2021/12/14/56fe1797-3b4e-4f18-816b-e633ebc34316.png	https://stream1.cinerama.uz/1204/tracks-v1a1/mono.m3u8
+S-Ikbol	https://files.cinerama.uz/images/tv_channels/2023/08/14/5951e3a5-db4d-41c0-a9f2-1d485801aa0e.png	https://stream1.cinerama.uz/1282/tracks-v1a1/mono.m3u8
+Gold Television	https://files.cinerama.uz/images/tv_channels/2023/08/14/5951e3a5-db4d-41c0-a9f2-1d485801aa0e.png	https://stream1.cinerama.uz/4007/tracks-v1a1/mono.m3u8
+Ruxsor TV	https://files.cinerama.uz/images/tv_channels/2023/08/14/74ed2467-9e28-4f29-a355-9f4e0d240fd7.png	https://stream1.cinerama.uz/1260/tracks-v1a1/mono.m3u8
+LUX.TV 	https://files.cinerama.uz/images/tv_channels/2024/01/30/e2b9fdd9-560a-494f-bf8f-4a085d042624.jpeg	https://stream1.cinerama.uz/1210/tracks-v1a1/mono.m3u8
+NTV	https://files.itv.uz/uploads/iptv/channels/2023/07/26//3b502b779ef41d61b37bc535bf869f87-q-500x500.jpeg	https://stream1.cinerama.uz/1284/tracks-v1a1/mono.m3u8
+Istiqlol TV	https://files.itv.uz/uploads/iptv/channels/2023/07/26//0cc702bdf78b38aff615d7c502dd4fe2-q-500x500.jpeg	https://stream1.cinerama.uz/1283/tracks-v1a1/mono.m3u8
+
+
+
+
+Category:Ta'lim
+Техно24	    https://files.cinerama.uz/images/tv_channels/2020/06/12/d594cc06-a359-45cf-87f3-ba70b0a7620b.png	https://stream1.cinerama.uz/1037/tracks-v1a1/mono.m3u8
+Телекафе	    https://files.cinerama.uz/images/tv_channels/2020/06/12/4d874ae0-f0f4-4442-91f8-e1578211a205.png	https://stream1.cinerama.uz/1035/tracks-v1a1/mono.m3u8
+Россия Культура	    https://files.cinerama.uz/images/tv_channels/2020/06/12/f0e8b85f-fdaa-48aa-837d-af8b45b8812f.png	https://stream1.cinerama.uz/1048/tracks-v1a1/mono.m3u8
+Авто Плюс	    https://files.cinerama.uz/images/tv_channels/2020/06/12/f2718904-a3f8-4fd0-81e9-e3e47ed8ce3f.png	https://stream1.cinerama.uz/1036/tracks-v1a1/mono.m3u8
+Viasat History	    https://files.cinerama.uz/images/tv_channels/2020/06/12/d032aa68-76e4-493c-8a7b-12415116a651.png	https://stream1.cinerama.uz/1046/tracks-v1a1/mono.m3u8
+Viasat Explore	    https://files.cinerama.uz/images/tv_channels/2023/08/14/93452822-8b5e-45c7-bbf3-6500dd360548.png	https://stream1.cinerama.uz/1045/tracks-v1a1/mono.m3u8
+Охота и рыбалка	    https://files.cinerama.uz/images/tv_channels/2020/06/12/970392a9-92cc-4243-9d33-95618de26709.png	https://stream1.cinerama.uz/1038/tracks-v1a1/mono.m3u8
+Taraqqiyot TV	https://files.cinerama.uz/images/tv_channels/2021/12/14/56fe1797-3b4e-4f18-816b-e633ebc34316.png	https://stream1.cinerama.uz/1204/tracks-v1a1/mono.m3u8
+
+
+
+
+
+Category:Ta'lim va ilm fan
+Звезда     https://files.cinerama.uz/images/tv_channels/2020/06/12/2dc3746e-056b-4aa1-9a03-ac38cf13032b.png	https://stream1.cinerama.uz/1050/tracks-v1a1/mono.m3u8
+Техно24	    https://files.cinerama.uz/images/tv_channels/2020/06/12/d594cc06-a359-45cf-87f3-ba70b0a7620b.png	https://stream1.cinerama.uz/1037/tracks-v1a1/mono.m3u8
+Россия Культура	    https://files.cinerama.uz/images/tv_channels/2020/06/12/f0e8b85f-fdaa-48aa-837d-af8b45b8812f.png	https://stream1.cinerama.uz/1048/tracks-v1a1/mono.m3u8
+Кухня ТВ	    https://files.cinerama.uz/images/tv_channels/2020/10/16/a1626abe-9239-4977-8c39-4e761fc8a8c2.png	https://stream1.cinerama.uz/1236/tracks-v1a1/mono.m3u8
+Доктор	    https://files.cinerama.uz/images/tv_channels/2024/02/20/daf362fb-ce6f-4f29-a7f4-2a10f896715d.jpeg	https://stream1.cinerama.uz/1409/tracks-v1a1/mono.m3u8
+English Club	    https://files.cinerama.uz/images/tv_channels/2023/09/11/8e593295-871a-4312-a866-5c7c5cf6bafd.png	https://stream1.cinerama.uz/1442/tracks-v1a1/mono.m3u8
+Insight TV	    https://files.cinerama.uz/images/tv_channels/2023/09/11/e1b6d80d-feb7-4c7d-a11c-09d3fef0011f.jpeg	https://stream1.cinerama.uz/1416/tracks-v1a1/mono.m3u8
+Арсенал ТВ	    https://files.cinerama.uz/images/tv_channels/2023/09/11/0895b2f1-9f45-44c3-9490-56b3e7091202.jpeg	https://stream1.cinerama.uz/1414/tracks-v1a1/mono.m3u8
+Viasat History	    https://files.cinerama.uz/images/tv_channels/2020/06/12/d032aa68-76e4-493c-8a7b-12415116a651.png	https://stream1.cinerama.uz/1046/tracks-v1a1/mono.m3u8
+365 Дней HD	    https://files.cinerama.uz/images/tv_channels/2020/10/16/d6272265-7650-4882-a492-c6ed67165ccd.png	https://stream1.cinerama.uz/1242/tracks-v1a1/mono.m3u8
+История	    https://files.cinerama.uz/images/tv_channels/2023/09/11/d6814a51-a758-4277-8c23-40ee01a81037.jpeg		https://stream1.cinerama.uz/1266/tracks-v1a1/mono.m3u8
+Viasat Explore	    https://files.cinerama.uz/images/tv_channels/2023/08/14/93452822-8b5e-45c7-bbf3-6500dd360548.png	https://stream1.cinerama.uz/1045/tracks-v1a1/mono.m3u8
+Discovery Science	    https://files.cinerama.uz/images/tv_channels/2023/08/14/3ffac294-52bf-400d-813c-d7c20f6d932b.png		https://stream1.cinerama.uz/1040/tracks-v1a1/mono.m3u8
+Discovery	    https://files.cinerama.uz/images/tv_channels/2023/08/14/e82ab440-56b6-44ab-8f7d-e7e41432c39f.png		https://stream1.cinerama.uz/1039/tracks-v1a1/mono.m3u8
+Наука ТВ	    https://files.cinerama.uz/images/tv_channels/2023/09/11/3b40ca30-297f-416d-b054-ca948550e1b5.jpeg		https://stream1.cinerama.uz/1248/tracks-v1a1/mono.m3u8
+Вопросы и Ответы	    https://files.cinerama.uz/images/tv_channels/2023/08/14/be254af5-4ced-40ce-98bf-bdee3cdb1a63.png		https://stream1.cinerama.uz/1429/tracks-v1a1/mono.m3u8
+Космический ТВ	    https://files.cinerama.uz/images/tv_channels/2023/09/11/898764bc-5f23-4af8-b1e2-30126b8ca4dd.jpeg		https://stream1.cinerama.uz/1415/tracks-v1a1/mono.m3u8
+National Geographic HD	    https://files.cinerama.uz/images/tv_channels/2020/06/12/3581815e-23b6-4e2b-9d15-141be8b5e5f2.png		https://stream1.cinerama.uz/1041/tracks-v1a1/mono.m3u8
+Nat Geo Wild HD	   https://files.cinerama.uz/images/tv_channels/2020/06/12/e315edeb-2758-4831-8e33-f4c4e104626a.png		https://stream1.cinerama.uz/1042/tracks-v1a1/mono.m3u8
+Animal Planet    https://files.cinerama.uz/images/tv_channels/2020/06/12/e315edeb-2758-4831-8e33-f4c4e104626a.png		https://stream1.cinerama.uz/1043/tracks-v1a1/mono.m3u8
+Охота и рыбалка	    https://files.cinerama.uz/images/tv_channels/2020/06/12/970392a9-92cc-4243-9d33-95618de26709.png	https://stream1.cinerama.uz/1038/tracks-v1a1/mono.m3u8
+ZooПарк	    https://files.cinerama.uz/images/tv_channels/2023/09/11/e2168492-0948-47b2-b6e4-c8373add1961.jpeg	https://stream1.cinerama.uz/1417/tracks-v1a1/mono.m3u8
+Наша Сибирь	    https://files.cinerama.uz/images/tv_channels/2023/08/14/1495fed7-420b-491a-800a-078be172df55.png	https://stream1.cinerama.uz/1424/tracks-v1a1/mono.m3u8
+В мире животных	    https://files.cinerama.uz/images/tv_channels/2023/09/11/ab5c73a2-7512-496d-a624-7bad876cd19c.jpeg	https://stream1.cinerama.uz/1404/tracks-v1a1/mono.m3u8
+Домашние Животные	    https://files.cinerama.uz/images/tv_channels/2023/08/14/a8b8eae3-4d47-43f8-96b9-120bdecf3078.png	https://stream1.cinerama.uz/1426/tracks-v1a1/mono.m3u8
+Viasat Nature HD	    https://files.cinerama.uz/images/tv_channels/2023/08/14/a8b8eae3-4d47-43f8-96b9-120bdecf3078.png	https://stream1.cinerama.uz/1228/tracks-v1a1/mono.m3u8
+Живая Планета ТВ	    https://files.cinerama.uz/images/tv_channels/2023/09/11/b22f025f-74b3-443c-8251-e84a3af77acd.jpeg	https://stream1.cinerama.uz/1250/tracks-v1a1/mono.m3u8
+Усадьба	    https://files.cinerama.uz/images/tv_channels/2023/08/14/0d1b728f-7442-4448-8ff8-1e232aa72859.png	https://stream1.cinerama.uz/1427/tracks-v1a1/mono.m3u8
+Загородный     https://files.cinerama.uz/images/tv_channels/2023/09/11/c3404c27-1b99-421a-a84b-9fe997c5f720.jpeg	https://stream1.cinerama.uz/1410/tracks-v1a1/mono.m3u8
+Моя планета   https://files.cinerama.uz/images/tv_channels/2023/09/11/58ff5cb1-6568-429e-91c7-5a44e80d8108.jpeg		https://stream1.cinerama.uz/1247/tracks-v1a1/mono.m3u8
+Здоровое ТВ    https://files.cinerama.uz/images/tv_channels/2023/08/14/775fe752-e2e3-4b4c-ac09-2f60a91ecbfa.png	https://stream1.cinerama.uz/1428/tracks-v1a1/mono.m3u8
+Живи    https://files.cinerama.uz/images/tv_channels/2023/08/14/6cb32a2d-19e2-4474-80af-6c4ce11eed9e.png	https://stream1.cinerama.uz/1419/tracks-v1a1/mono.m3u8
+Живи активно    https://files.cinerama.uz/images/tv_channels/2023/09/11/0c18930a-be53-4597-88fc-27a943b6b48d.jpeg	https://stream1.cinerama.uz/1405/tracks-v1a1/mono.m3u8
+Life HD    https://files.cinerama.uz/images/tv_channels/2020/10/16/5288ea73-2795-434f-907e-6e3c19c00c1c.png	https://stream1.cinerama.uz/1222/tracks-v1a1/mono.m3u8
+Приключения    https://files.cinerama.uz/images/tv_channels/2023/08/14/18a5b475-ed03-4ab6-b255-73e093bb71f8.png	https://stream1.cinerama.uz/1420/tracks-v1a1/mono.m3u8
+Глазами Туриста    https://files.cinerama.uz/images/tv_channels/2023/08/14/45ee918d-9034-480b-9995-910d4e049960.png	https://stream1.cinerama.uz/1423/tracks-v1a1/mono.m3u8
+Madaniyat va Marifat	https://files.itv.uz/uploads/iptv/channels/2023/05/31//95737b9a2b913a6fadf576f61933a635-q-500x500.jpeg	https://stream1.cinerama.uz/1005/tracks-v1a1/mono.m3u8
+O'zbekiston Tarixi HD	https://files.itv.uz/uploads/iptv/channels/2020/06/17//58b2e970ecde5f03f461b8fe59550fac-q-500x500.jpeg	https://stream1.cinerama.uz/1209/tracks-v1a1/mono.m3u8
+Dunyo bo`ylab	https://files.itv.uz/uploads/iptv/channels/2020/06/17//622d1ccb45505a6a0c4a5b231a1664eb-q-500x500.jpeg	https://stream1.cinerama.uz/1006/tracks-v1a1/mono.m3u8
+Nurafshon TV	https://files.itv.uz/uploads/iptv/channels/2022/01/22//4a58120210414aef66c88ca130dd3650-q-500x500.jpeg	https://stream1.cinerama.uz/1220/tracks-v1a1/mono.m3u8
+TTV UZ	https://files.itv.uz/uploads/iptv/channels/2024/10/16//17af904b28e714551e8396fcc077e11a-q-500x500.jpeg	https://stream2.cinerama.uz/1494/tracks-v1a1/mono.m3u8
+
