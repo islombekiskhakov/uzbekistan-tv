@@ -106,7 +106,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
         video.play().catch(() => {});
       });
     } else {
-      setError('HLS playback is not supported in this browser.');
+      setError('Ushbu brauzerda HLS qo\'llab-quvvatlanmaydi.');
       setLoading(false);
     }
   }, [url]);
