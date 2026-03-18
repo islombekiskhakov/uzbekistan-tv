@@ -21,7 +21,7 @@ const Index: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   const [activeChannel, setActiveChannel] = useState<Channel | null>(null);
-  const [history, setHistory] = useLocalStorage<WatchHistoryEntry[]>('aether-history', []);
+  const [history, setHistory] = useLocalStorage<WatchHistoryEntry[]>('uztv-history', []);
 
   const channelCounts = useMemo(() => {
     const counts: Record<string, number> = {};
