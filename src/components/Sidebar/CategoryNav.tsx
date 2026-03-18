@@ -25,47 +25,54 @@ interface Props {
 }
 
 export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSelect, channelCounts, favoritesCount = 0, showFavorites, onToggleFavorites }) => {
+  const pillClass = (active: boolean) =>
+    `relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 overflow-hidden ${
+      active
+        ? 'bg-primary text-primary-foreground glow-sm'
+        : 'bg-secondary/60 text-secondary-foreground hover:bg-secondary hover:text-foreground'
+    }`;
+
   return (
-    <nav className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
-      <button
+    <nav className="flex gap-2 overflow-x-auto pb-3 scrollbar-none -mx-1 px-1">
+      <motion.button
+        whileTap={{ scale: 0.95 }}
         onClick={() => { onSelect(null); if (showFavorites && onToggleFavorites) onToggleFavorites(); }}
-        className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-          activeCategory === null && !showFavorites
-            ? 'bg-primary text-primary-foreground'
-            : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-        }`}
+        className={pillClass(activeCategory === null && !showFavorites)}
       >
         <LayoutGrid className="w-4 h-4" />
         Barchasi
-      </button>
+      </motion.button>
+
       {favoritesCount > 0 && onToggleFavorites && (
-        <button
+        <motion.button
+          whileTap={{ scale: 0.95 }}
           onClick={() => { onSelect(null); onToggleFavorites(); }}
-          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
+          className={`relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-semibold whitespace-nowrap transition-all duration-300 flex-shrink-0 overflow-hidden ${
             showFavorites
-              ? 'bg-destructive text-destructive-foreground'
-              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+              ? 'bg-accent text-accent-foreground glow-sm'
+              : 'bg-secondary/60 text-secondary-foreground hover:bg-secondary hover:text-foreground'
           }`}
         >
           <Heart className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`} />
           Sevimlilar
-          <span className="text-[10px] opacity-60">{favoritesCount}</span>
-        </button>
+          <span className="text-[10px] opacity-70 font-bold">{favoritesCount}</span>
+        </motion.button>
       )}
-      {categories.map((cat) => (
-        <button
+
+      {categories.map((cat, i) => (
+        <motion.button
           key={cat}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.03, duration: 0.3 }}
           onClick={() => { if (showFavorites && onToggleFavorites) onToggleFavorites(); onSelect(cat); }}
-          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-            activeCategory === cat && !showFavorites
-              ? 'bg-primary text-primary-foreground'
-              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
-          }`}
+          className={pillClass(activeCategory === cat && !showFavorites)}
         >
           {CATEGORY_ICONS[cat] || <Tv className="w-4 h-4" />}
           {cat}
-          <span className="text-[10px] opacity-60">{channelCounts[cat] || 0}</span>
-        </button>
+          <span className="text-[10px] opacity-60 font-bold">{channelCounts[cat] || 0}</span>
+        </motion.button>
       ))}
     </nav>
   );

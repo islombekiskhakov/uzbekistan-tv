@@ -84,14 +84,16 @@ const Index: React.FC = () => {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background noise">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="flex flex-col items-center gap-4"
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col items-center gap-5"
         >
-          <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center glow-md">
-            <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+          <div className="relative w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center glow-lg">
+            <div className="w-7 h-7 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+            <div className="absolute inset-0 rounded-2xl bg-primary/5 animate-pulse" />
           </div>
-          <p className="text-sm text-muted-foreground font-medium">Kanallar yuklanmoqda...</p>
+          <p className="text-sm text-muted-foreground font-semibold tracking-wide">Kanallar yuklanmoqda...</p>
         </motion.div>
       </div>
     );
@@ -99,8 +101,14 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background noise">
-      <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-4 md:py-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+      {/* Ambient background glow */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-primary/[0.03] blur-[120px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-accent/[0.03] blur-[120px]" />
+      </div>
+
+      <div className="relative max-w-[1600px] mx-auto px-4 md:px-6 py-5 md:py-8">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-8">
           <Header />
           <div className="sm:ml-auto w-full sm:w-auto">
             <SearchBar value={search} onChange={setSearch} />
@@ -111,19 +119,20 @@ const Index: React.FC = () => {
           {activeChannel && (
             <motion.div
               key={activeChannel.id}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="mb-6"
+              initial={{ opacity: 0, y: -20, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.98 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-8"
             >
-              <button
+              <motion.button
+                whileHover={{ x: -4 }}
                 onClick={() => setActiveChannel(null)}
-                className="flex items-center gap-2 mb-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="flex items-center gap-2 mb-4 text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Kanallar ro'yxatiga qaytish
-              </button>
+              </motion.button>
               <div className="max-w-4xl mx-auto">
                 <VideoPlayer
                   url={activeChannel.url}
@@ -143,7 +152,6 @@ const Index: React.FC = () => {
             onClear={handleClearHistory}
           />
         )}
-
 
         <div className="mb-6">
           <CategoryNav

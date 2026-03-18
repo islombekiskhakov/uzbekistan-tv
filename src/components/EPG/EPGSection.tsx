@@ -14,18 +14,18 @@ const ProgramRow: React.FC<{ program: Program; compact?: boolean }> = ({ program
   const isPast = program.progress === 100 && !program.isLive;
 
   return (
-    <div className={`flex items-center gap-3 py-1.5 ${isPast ? 'opacity-40' : ''}`}>
-      <span className={`text-[11px] font-mono flex-shrink-0 ${program.isLive ? 'text-primary font-semibold' : 'text-muted-foreground'}`}>
+    <div className={`flex items-center gap-3 py-1.5 ${isPast ? 'opacity-30' : ''}`}>
+      <span className={`text-[11px] font-mono flex-shrink-0 ${program.isLive ? 'text-primary font-bold' : 'text-muted-foreground'}`}>
         {formatTime(program.startTime)}
       </span>
       {program.isLive && (
         <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />
       )}
-      <span className={`text-xs truncate ${program.isLive ? 'text-foreground font-medium' : 'text-muted-foreground'}`}>
+      <span className={`text-xs truncate ${program.isLive ? 'text-foreground font-semibold' : 'text-muted-foreground'}`}>
         {program.title}
       </span>
       {program.isLive && !compact && (
-        <span className="ml-auto text-[9px] text-primary font-semibold flex-shrink-0">
+        <span className="ml-auto text-[9px] text-primary font-bold flex-shrink-0 bg-primary/10 px-1.5 py-0.5 rounded-full">
           {program.progress}%
         </span>
       )}
@@ -44,8 +44,6 @@ const ChannelEPGRow: React.FC<{
   const upcoming = getUpcomingPrograms(epg, 2);
   const [imgError, setImgError] = useState(false);
 
-  // Get all programs for expanded view
-  const now = new Date();
   const relevantPrograms = useMemo(() => {
     const nowIdx = epg.programs.findIndex(p => p.isLive);
     if (nowIdx === -1) return epg.programs.slice(0, 8);
@@ -57,11 +55,11 @@ const ChannelEPGRow: React.FC<{
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="glass rounded-xl overflow-hidden hover:border-primary/20 transition-all duration-200"
+      whileHover={{ y: -1, transition: { duration: 0.15 } }}
+      className="glass rounded-2xl overflow-hidden gradient-border hover:glow-sm transition-all duration-300"
     >
-      {/* Main row */}
-      <div className="flex items-center gap-3 p-3 cursor-pointer" onClick={() => onSelect(channel)}>
-        <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-muted flex-shrink-0">
+      <div className="flex items-center gap-3 p-3.5 cursor-pointer" onClick={() => onSelect(channel)}>
+        <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-muted/50 flex-shrink-0 ring-1 ring-border/20">
           {!imgError && channel.logo ? (
             <img
               src={channel.logo}
@@ -79,23 +77,23 @@ const ChannelEPGRow: React.FC<{
 
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-semibold text-foreground truncate">{channel.name}</span>
+            <span className="text-sm font-bold text-foreground truncate">{channel.name}</span>
             {currentProgram && (
-              <Radio className="w-3 h-3 text-primary flex-shrink-0" />
+              <Radio className="w-3 h-3 text-primary flex-shrink-0 animate-pulse-glow" />
             )}
           </div>
           {currentProgram && (
-            <div className="mt-1">
+            <div className="mt-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-xs text-foreground/80 truncate">{currentProgram.title}</span>
+                <span className="text-xs text-foreground/70 truncate">{currentProgram.title}</span>
                 <span className="text-[10px] text-muted-foreground flex-shrink-0">
                   {formatTime(currentProgram.endTime)} gacha
                 </span>
               </div>
-              {/* Progress bar */}
-              <div className="w-full h-1 bg-muted rounded-full mt-1.5 overflow-hidden">
+              <div className="w-full h-1 bg-muted/60 rounded-full mt-2 overflow-hidden">
                 <motion.div
-                  className="h-full bg-primary rounded-full"
+                  className="h-full rounded-full"
+                  style={{ background: 'linear-gradient(90deg, hsl(262 83% 58%), hsl(330 80% 60%))' }}
                   initial={{ width: 0 }}
                   animate={{ width: `${currentProgram.progress}%` }}
                   transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -108,33 +106,33 @@ const ChannelEPGRow: React.FC<{
           )}
         </div>
 
-        <button
+        <motion.button
+          whileTap={{ scale: 0.9 }}
           onClick={(e) => { e.stopPropagation(); onToggle(); }}
-          className="p-1.5 rounded-lg hover:bg-foreground/5 transition-colors text-muted-foreground flex-shrink-0"
+          className="p-2 rounded-xl hover:bg-secondary transition-colors text-muted-foreground flex-shrink-0"
         >
           {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-        </button>
+        </motion.button>
       </div>
 
-      {/* Expanded schedule */}
       <AnimatePresence>
         {isExpanded && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden"
           >
-            <div className="px-3 pb-3 pt-1 border-t border-border/50">
+            <div className="px-3.5 pb-3.5 pt-1 border-t border-border/30">
               <div className="space-y-0.5">
                 {relevantPrograms.map(program => (
                   <ProgramRow key={program.id} program={program} />
                 ))}
               </div>
               {upcoming.length > 0 && (
-                <div className="mt-2 pt-2 border-t border-border/30">
-                  <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">Keyingi</span>
+                <div className="mt-2.5 pt-2.5 border-t border-border/20">
+                  <span className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">Keyingi</span>
                   {upcoming.map(p => (
                     <ProgramRow key={p.id} program={p} compact />
                   ))}
@@ -158,7 +156,6 @@ export const EPGSection: React.FC<Props> = ({ channels, epgData, onSelectChannel
     return map;
   }, [epgData]);
 
-  // Show channels that have a current live program first
   const sortedChannels = useMemo(() => {
     return [...channels].sort((a, b) => {
       const aLive = epgMap.get(a.id)?.programs.some(p => p.isLive) ? 1 : 0;
@@ -170,11 +167,18 @@ export const EPGSection: React.FC<Props> = ({ channels, epgData, onSelectChannel
   const displayChannels = showAll ? sortedChannels : sortedChannels.slice(0, 10);
 
   return (
-    <section className="mb-8">
-      <div className="flex items-center gap-2 mb-4">
-        <Calendar className="w-4.5 h-4.5 text-primary" />
-        <h2 className="text-base font-display font-bold text-foreground">Dastur jadvali</h2>
-        <span className="text-xs text-muted-foreground">— Bugun</span>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="mb-8"
+    >
+      <div className="flex items-center gap-2.5 mb-5">
+        <div className="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center">
+          <Calendar className="w-4 h-4 text-primary" />
+        </div>
+        <h2 className="text-base font-display font-extrabold text-foreground">Dastur jadvali</h2>
+        <span className="text-xs text-muted-foreground font-medium">— Bugun</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -195,23 +199,27 @@ export const EPGSection: React.FC<Props> = ({ channels, epgData, onSelectChannel
       </div>
 
       {sortedChannels.length > 10 && (
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="mt-4 mx-auto flex items-center gap-2 px-5 py-2.5 rounded-xl bg-secondary hover:bg-secondary/80 text-secondary-foreground text-sm font-medium transition-colors"
-        >
-          {showAll ? (
-            <>
-              <ChevronUp className="w-4 h-4" />
-              Kamroq ko'rsatish
-            </>
-          ) : (
-            <>
-              <ChevronRight className="w-4 h-4" />
-              Barcha kanallar jadvali ({sortedChannels.length})
-            </>
-          )}
-        </button>
+        <motion.div className="flex justify-center mt-5">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-secondary/60 hover:bg-secondary border border-border/30 text-sm font-semibold text-secondary-foreground hover:text-foreground transition-all duration-300"
+          >
+            {showAll ? (
+              <>
+                <ChevronUp className="w-4 h-4" />
+                Kamroq ko'rsatish
+              </>
+            ) : (
+              <>
+                <ChevronRight className="w-4 h-4" />
+                Barcha kanallar jadvali ({sortedChannels.length})
+              </>
+            )}
+          </motion.button>
+        </motion.div>
       )}
-    </section>
+    </motion.section>
   );
 };
