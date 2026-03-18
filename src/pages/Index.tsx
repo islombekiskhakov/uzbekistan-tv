@@ -68,7 +68,7 @@ const Index: React.FC = () => {
           <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center glow-md">
             <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin" />
           </div>
-          <p className="text-sm text-muted-foreground font-medium">Loading channels...</p>
+          <p className="text-sm text-muted-foreground font-medium">Kanallar yuklanmoqda...</p>
         </motion.div>
       </div>
     );
