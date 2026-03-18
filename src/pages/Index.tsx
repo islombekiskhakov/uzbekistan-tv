@@ -164,6 +164,14 @@ const Index: React.FC = () => {
           onToggleFavorite={handleToggleFavorite}
         />
 
+        {!activeChannel && !search && !activeCategory && !showFavorites && (
+          <EPGSection
+            channels={channels}
+            epgData={epgData}
+            onSelectChannel={handleSelect}
+          />
+        )}
+
         <Footer />
       </div>
     </div>
