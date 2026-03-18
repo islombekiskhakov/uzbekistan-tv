@@ -263,7 +263,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
               </span>
               <span className="ml-auto flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-destructive/90 text-destructive-foreground text-[10px] font-bold uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-destructive-foreground animate-pulse-glow" />
-                Live
+                Jonli
               </span>
             </div>
 
