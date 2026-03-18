@@ -15,7 +15,7 @@ export const Header: React.FC<{ children?: React.ReactNode }> = ({ children }) =
           <div className="w-9 h-9 rounded-xl bg-primary/15 flex items-center justify-center">
             <Tv className="w-5 h-5 text-primary" />
           </div>
-          <div className="hidden sm:block">
+          <div>
             <h1 className="text-lg font-display font-extrabold tracking-tight leading-none">
               <span className="text-foreground">Uzbekistan</span>
               <span className="text-gradient">TV</span>
