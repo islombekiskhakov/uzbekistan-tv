@@ -93,7 +93,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
           } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
             hls.recoverMediaError();
           } else {
-            setError('Playback error. Try again.');
+            setError('Ijro xatosi. Qaytadan urinib ko\'ring.');
           }
         }
       });
