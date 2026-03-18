@@ -18,9 +18,13 @@ export const ChannelGrid: React.FC<Props> = ({ channels, onSelect, favorites, on
 
   if (channels.length === 0) {
     return (
-      <div className="flex items-center justify-center py-20 text-muted-foreground text-sm">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="flex items-center justify-center py-20 text-muted-foreground text-sm"
+      >
         Kanallar topilmadi
-      </div>
+      </motion.div>
     );
   }
 
@@ -49,10 +53,17 @@ export const ChannelGrid: React.FC<Props> = ({ channels, onSelect, favorites, on
       </div>
 
       {showToggle && (
-        <div className="flex justify-center mt-6">
-          <button
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="flex justify-center mt-8"
+        >
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => setExpanded(prev => !prev)}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-muted/60 hover:bg-muted text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            className="flex items-center gap-2.5 px-8 py-3 rounded-2xl bg-secondary/60 hover:bg-secondary border border-border/30 text-sm font-semibold text-muted-foreground hover:text-foreground transition-all duration-300 hover:glow-sm"
           >
             {expanded ? (
               <>
@@ -63,8 +74,8 @@ export const ChannelGrid: React.FC<Props> = ({ channels, onSelect, favorites, on
                 Barchasini ko'rish ({channels.length}) <ChevronDown className="w-4 h-4" />
               </>
             )}
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       )}
     </div>
   );
