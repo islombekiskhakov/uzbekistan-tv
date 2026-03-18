@@ -279,11 +279,11 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ opacity: 0, y: 6, scale: 0.95 }}
+          initial={{ opacity: 0, y: 8, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 6, scale: 0.95 }}
-          transition={{ duration: 0.15 }}
-          className="absolute bottom-full right-0 mb-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-1.5 min-w-[140px] shadow-xl"
+          exit={{ opacity: 0, y: 8, scale: 0.9 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute bottom-full right-0 mb-3 bg-background/90 backdrop-blur-2xl border border-border/40 rounded-2xl p-2 min-w-[160px] shadow-2xl shadow-background/50"
         >
           {children}
         </motion.div>
@@ -292,8 +292,10 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
   );
 
   const menuItemClass = (active: boolean) =>
-    `w-full text-left px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-      active ? 'bg-primary text-primary-foreground' : 'text-foreground hover:bg-secondary'
+    `w-full text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-150 ${
+      active
+        ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+        : 'text-foreground/80 hover:bg-foreground/8 hover:text-foreground'
     }`;
 
   return (
@@ -364,17 +366,19 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
             className="absolute inset-0 flex flex-col justify-between pointer-events-none"
           >
             {/* Top bar */}
-            <div className="bg-gradient-to-b from-background/70 via-background/20 to-transparent p-4 md:p-5 flex items-center gap-3 pointer-events-auto">
+            <div className="bg-gradient-to-b from-background/80 via-background/30 to-transparent p-4 md:p-5 flex items-center gap-3 pointer-events-auto">
               {channelLogo && (
-                <img src={channelLogo} alt="" className="w-9 h-9 rounded-lg object-cover border border-border/30" />
+                <div className="w-10 h-10 rounded-xl overflow-hidden border border-foreground/10 bg-card/50 backdrop-blur-sm flex-shrink-0">
+                  <img src={channelLogo} alt="" className="w-full h-full object-cover" />
+                </div>
               )}
               <div className="min-w-0">
-                <span className="font-display font-bold text-sm text-foreground truncate block">
+                <span className="font-display font-bold text-sm text-foreground truncate block drop-shadow-lg">
                   {channelName}
                 </span>
               </div>
               <div className="ml-auto flex items-center gap-2">
-                <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-destructive/90 text-destructive-foreground text-[10px] font-bold uppercase tracking-wider">
+                <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-destructive text-destructive-foreground text-[10px] font-extrabold uppercase tracking-wider shadow-lg shadow-destructive/30">
                   <Radio className="w-3 h-3 animate-pulse-glow" />
                   Jonli
                 </span>
@@ -382,48 +386,69 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
             </div>
 
             {/* Bottom bar */}
-            <div className="bg-gradient-to-t from-background/85 via-background/30 to-transparent p-4 md:p-5 pointer-events-auto">
-              <div className="flex items-center gap-2 md:gap-3">
-                {/* Play/Pause */}
-                <button onClick={togglePlay} className="p-2 rounded-full hover:bg-foreground/10 transition-colors text-foreground" title={playing ? 'Pauza (K)' : "Ijro (K)"}>
-                  {playing ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-current" />}
-                </button>
+            <div className="bg-gradient-to-t from-background/90 via-background/40 to-transparent p-4 md:p-5 pointer-events-auto">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                {/* Play/Pause — big decorative button */}
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={togglePlay}
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-foreground/15 backdrop-blur-md border border-foreground/10 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all duration-200"
+                  title={playing ? 'Pauza (K)' : "Ijro (K)"}
+                >
+                  {playing ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-current ml-0.5" />}
+                </motion.button>
 
                 {/* Volume */}
-                <div className="flex items-center gap-1 group/vol">
-                  <button onClick={toggleMute} className="p-1.5 rounded-full hover:bg-foreground/10 transition-colors text-foreground" title="Ovoz (M)">
+                <div className="flex items-center gap-0.5 group/vol">
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
+                    onClick={toggleMute}
+                    className="w-9 h-9 rounded-xl bg-foreground/10 backdrop-blur-md border border-foreground/5 flex items-center justify-center text-foreground hover:bg-foreground/20 transition-all duration-200"
+                    title="Ovoz (M)"
+                  >
                     <VolumeIcon className="w-4 h-4" />
-                  </button>
-                  <input
-                    type="range"
-                    min={0}
-                    max={1}
-                    step={0.05}
-                    value={muted ? 0 : volume}
-                    onChange={e => changeVolume(Number(e.target.value))}
-                    className="w-0 group-hover/vol:w-20 h-1 accent-primary transition-all duration-200 cursor-pointer overflow-hidden"
-                  />
+                  </motion.button>
+                  <div className="w-0 group-hover/vol:w-24 overflow-hidden transition-all duration-300 ml-1">
+                    <div className="relative w-24 h-9 flex items-center px-2 rounded-xl bg-foreground/10 backdrop-blur-md border border-foreground/5">
+                      <input
+                        type="range"
+                        min={0}
+                        max={1}
+                        step={0.05}
+                        value={muted ? 0 : volume}
+                        onChange={e => changeVolume(Number(e.target.value))}
+                        className="w-full h-1 accent-primary cursor-pointer"
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex-1" />
 
                 {/* Playback speed */}
                 <div className="relative hidden md:block" data-menu>
-                  <button
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
                     onClick={(e) => { e.stopPropagation(); closeAllMenus(); setShowRateMenu(!showRateMenu); }}
-                    className="px-2.5 py-1.5 rounded-lg hover:bg-foreground/10 transition-colors text-foreground text-xs font-bold"
+                    className={`h-9 px-3 rounded-xl backdrop-blur-md border flex items-center justify-center text-xs font-bold transition-all duration-200 ${
+                      showRateMenu
+                        ? 'bg-primary/20 border-primary/30 text-primary'
+                        : 'bg-foreground/10 border-foreground/5 text-foreground hover:bg-foreground/20'
+                    }`}
                     title="Tezlik"
                   >
                     {playbackRate}x
-                  </button>
+                  </motion.button>
                   <MenuPopup show={showRateMenu}>
+                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider px-3.5 py-1.5">Tezlik</p>
                     {[0.5, 0.75, 1, 1.25, 1.5, 2].map(rate => (
                       <button
                         key={rate}
                         onClick={(e) => { e.stopPropagation(); changeRate(rate); }}
                         className={menuItemClass(playbackRate === rate)}
                       >
-                        {rate}x {rate === 1 && '(Normal)'}
+                        {rate}x {rate === 1 && '— Normal'}
                       </button>
                     ))}
                   </MenuPopup>
@@ -432,22 +457,28 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
                 {/* Quality */}
                 {qualityLevels.length > 1 && (
                   <div className="relative" data-menu>
-                    <button
+                    <motion.button
+                      whileTap={{ scale: 0.9 }}
                       onClick={(e) => { e.stopPropagation(); closeAllMenus(); setShowQualityMenu(!showQualityMenu); }}
-                      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-foreground/10 transition-colors text-foreground text-xs font-semibold"
+                      className={`h-9 px-3 rounded-xl backdrop-blur-md border flex items-center gap-1.5 text-xs font-semibold transition-all duration-200 ${
+                        showQualityMenu
+                          ? 'bg-primary/20 border-primary/30 text-primary'
+                          : 'bg-foreground/10 border-foreground/5 text-foreground hover:bg-foreground/20'
+                      }`}
                       title="Sifat"
                     >
                       <Settings className="w-3.5 h-3.5" />
                       <span className="hidden sm:inline">
-                        {currentQuality === -1 ? 'Avto' : `${qualityLevels[currentQuality]?.label}`}
+                        {currentQuality === -1 ? 'Avto' : qualityLevels[currentQuality]?.label}
                       </span>
-                    </button>
+                    </motion.button>
                     <MenuPopup show={showQualityMenu}>
+                      <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider px-3.5 py-1.5">Sifat</p>
                       <button
                         onClick={(e) => { e.stopPropagation(); switchQuality(-1); }}
                         className={menuItemClass(currentQuality === -1)}
                       >
-                        Avto
+                        ✨ Avto
                       </button>
                       {[...qualityLevels].sort((a, b) => b.height - a.height).map(q => (
                         <button
@@ -456,7 +487,7 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
                           className={menuItemClass(currentQuality === q.id)}
                         >
                           {q.label}
-                          {q.height >= 1080 && <span className="ml-1 text-[9px] text-accent font-bold">HD</span>}
+                          {q.height >= 1080 && <span className="ml-1.5 text-[9px] text-accent font-extrabold bg-accent/15 px-1.5 py-0.5 rounded-md">HD</span>}
                         </button>
                       ))}
                     </MenuPopup>
@@ -466,15 +497,21 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
                 {/* Audio tracks */}
                 {audioTracks.length > 1 && (
                   <div className="relative" data-menu>
-                    <button
+                    <motion.button
+                      whileTap={{ scale: 0.9 }}
                       onClick={(e) => { e.stopPropagation(); closeAllMenus(); setShowAudioMenu(!showAudioMenu); }}
-                      className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-foreground/10 transition-colors text-foreground text-xs font-semibold"
+                      className={`h-9 px-3 rounded-xl backdrop-blur-md border flex items-center gap-1.5 text-xs font-semibold transition-all duration-200 ${
+                        showAudioMenu
+                          ? 'bg-primary/20 border-primary/30 text-primary'
+                          : 'bg-foreground/10 border-foreground/5 text-foreground hover:bg-foreground/20'
+                      }`}
                       title="Til"
                     >
                       <Languages className="w-3.5 h-3.5" />
                       <span className="hidden sm:inline">{audioTracks[currentAudioTrack]?.label || 'Til'}</span>
-                    </button>
+                    </motion.button>
                     <MenuPopup show={showAudioMenu}>
+                      <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-wider px-3.5 py-1.5">Audio</p>
                       {audioTracks.map((track) => (
                         <button
                           key={track.id}
@@ -490,27 +527,41 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
 
                 {/* PiP */}
                 {'pictureInPictureEnabled' in document && (
-                  <button
+                  <motion.button
+                    whileTap={{ scale: 0.9 }}
                     onClick={togglePiP}
-                    className="p-1.5 rounded-lg hover:bg-foreground/10 transition-colors text-foreground hidden md:flex"
+                    className="w-9 h-9 rounded-xl bg-foreground/10 backdrop-blur-md border border-foreground/5 items-center justify-center text-foreground hover:bg-foreground/20 transition-all duration-200 hidden md:flex"
                     title="Kichik oyna"
                   >
                     <PictureInPicture2 className="w-4 h-4" />
-                  </button>
+                  </motion.button>
                 )}
 
                 {/* Fullscreen */}
-                <button onClick={toggleFullscreen} className="p-2 rounded-full hover:bg-foreground/10 transition-colors text-foreground" title="To'liq ekran (F)">
+                <motion.button
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={toggleFullscreen}
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-foreground/15 backdrop-blur-md border border-foreground/10 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 transition-all duration-200"
+                  title="To'liq ekran (F)"
+                >
                   {isFullscreen ? <Minimize className="w-5 h-5" /> : <Maximize className="w-5 h-5" />}
-                </button>
+                </motion.button>
               </div>
 
               {/* Keyboard hints */}
-              <div className="hidden md:flex items-center gap-3 mt-2 text-[10px] text-foreground/30">
-                <span>K — Ijro/Pauza</span>
-                <span>M — Ovoz</span>
-                <span>F — To'liq ekran</span>
-                <span>↑↓ — Ovoz balandligi</span>
+              <div className="hidden md:flex items-center gap-4 mt-3">
+                {[
+                  ['K', 'Ijro/Pauza'],
+                  ['M', 'Ovoz'],
+                  ['F', 'To\'liq ekran'],
+                  ['↑↓', 'Ovoz +/-'],
+                ].map(([key, label]) => (
+                  <span key={key} className="flex items-center gap-1.5 text-[10px] text-foreground/25">
+                    <kbd className="px-1.5 py-0.5 rounded-md bg-foreground/8 border border-foreground/10 text-foreground/40 font-mono text-[9px]">{key}</kbd>
+                    {label}
+                  </span>
+                ))}
               </div>
             </div>
           </motion.div>
