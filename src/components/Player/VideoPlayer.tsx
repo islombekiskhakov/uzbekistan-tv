@@ -279,11 +279,11 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ opacity: 0, y: 6, scale: 0.95 }}
+          initial={{ opacity: 0, y: 8, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 6, scale: 0.95 }}
-          transition={{ duration: 0.15 }}
-          className="absolute bottom-full right-0 mb-2 bg-card/95 backdrop-blur-xl border border-border/50 rounded-xl p-1.5 min-w-[140px] shadow-xl"
+          exit={{ opacity: 0, y: 8, scale: 0.9 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute bottom-full right-0 mb-3 bg-background/90 backdrop-blur-2xl border border-border/40 rounded-2xl p-2 min-w-[160px] shadow-2xl shadow-background/50"
         >
           {children}
         </motion.div>
@@ -292,8 +292,10 @@ export const VideoPlayer: React.FC<Props> = ({ url, channelName, channelLogo, on
   );
 
   const menuItemClass = (active: boolean) =>
-    `w-full text-left px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
-      active ? 'bg-primary text-primary-foreground' : 'text-foreground hover:bg-secondary'
+    `w-full text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all duration-150 ${
+      active
+        ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+        : 'text-foreground/80 hover:bg-foreground/8 hover:text-foreground'
     }`;
 
   return (
