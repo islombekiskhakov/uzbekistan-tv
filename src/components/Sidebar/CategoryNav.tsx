@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tv, Film, Newspaper, Baby, Trophy, Music, Sparkles, GraduationCap, FlaskConical, LayoutGrid } from 'lucide-react';
+import { Tv, Film, Newspaper, Baby, Trophy, Music, Sparkles, GraduationCap, FlaskConical, LayoutGrid, Heart } from 'lucide-react';
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   'Milliy': <Tv className="w-4 h-4" />,
@@ -19,15 +19,18 @@ interface Props {
   activeCategory: string | null;
   onSelect: (category: string | null) => void;
   channelCounts: Record<string, number>;
+  favoritesCount?: number;
+  showFavorites?: boolean;
+  onToggleFavorites?: () => void;
 }
 
-export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSelect, channelCounts }) => {
+export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSelect, channelCounts, favoritesCount = 0, showFavorites, onToggleFavorites }) => {
   return (
     <nav className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
       <button
-        onClick={() => onSelect(null)}
+        onClick={() => { onSelect(null); if (showFavorites && onToggleFavorites) onToggleFavorites(); }}
         className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-          activeCategory === null
+          activeCategory === null && !showFavorites
             ? 'bg-primary text-primary-foreground'
             : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
         }`}
@@ -35,12 +38,26 @@ export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSel
         <LayoutGrid className="w-4 h-4" />
         Barchasi
       </button>
+      {favoritesCount > 0 && onToggleFavorites && (
+        <button
+          onClick={() => { onSelect(null); onToggleFavorites(); }}
+          className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
+            showFavorites
+              ? 'bg-destructive text-destructive-foreground'
+              : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
+          }`}
+        >
+          <Heart className={`w-4 h-4 ${showFavorites ? 'fill-current' : ''}`} />
+          Sevimlilar
+          <span className="text-[10px] opacity-60">{favoritesCount}</span>
+        </button>
+      )}
       {categories.map((cat) => (
         <button
           key={cat}
-          onClick={() => onSelect(cat)}
+          onClick={() => { if (showFavorites && onToggleFavorites) onToggleFavorites(); onSelect(cat); }}
           className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-            activeCategory === cat
+            activeCategory === cat && !showFavorites
               ? 'bg-primary text-primary-foreground'
               : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
           }`}
