@@ -26,7 +26,7 @@ interface Props {
 
 export const CategoryNav: React.FC<Props> = ({ categories, activeCategory, onSelect, channelCounts, favoritesCount = 0, showFavorites, onToggleFavorites }) => {
   const pill = (active: boolean, variant?: 'accent') =>
-    `flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
+    `flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
       active
         ? variant === 'accent'
           ? 'bg-accent text-accent-foreground'
