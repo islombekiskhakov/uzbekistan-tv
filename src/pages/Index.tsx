@@ -189,7 +189,8 @@ const Index: React.FC = () => {
           <div className="space-y-8">
             {categories.slice(0, 6).map(cat => {
               const catChannelIds = categoryMap[cat] || [];
-              const catChannels = channels.filter(c => catChannelIds.includes(c.id));
+              const channelMap = new Map(channels.map(c => [c.id, c]));
+              const catChannels = catChannelIds.map(id => channelMap.get(id)).filter(Boolean) as Channel[];
               return (
                 <ChannelRow
                   key={cat}
