@@ -107,5 +107,13 @@ export function parseChannels(text: string): {
   }
 
   const channels = Array.from(channelsByKey.values());
+
+  // Put Sport first in category order
+  const sportIndex = categoryOrder.indexOf('Sport');
+  if (sportIndex > 0) {
+    categoryOrder.splice(sportIndex, 1);
+    categoryOrder.unshift('Sport');
+  }
+
   return { channels, categories: categoryOrder, categoryMap };
 }
