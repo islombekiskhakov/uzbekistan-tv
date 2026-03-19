@@ -40,7 +40,7 @@ MakonTV HD	https://files.itv.uz/uploads/iptv/channels/2024/12/18//e6505a1ed9a0e6
 S Cinema	https://files.cinerama.uz/images/tv_channels/2025/02/07/f9bf163d-632a-49f5-928c-a40d47df8bf7.jpeg	https://stream2.cinerama.uz/1498/tracks-v1a1/mono.m3u8
 Farg'ona MTRK	https://files.itv.uz/uploads/iptv/channels/2024/04/20//a413e4713cb517535bb72e3adddfe943-q-500x500.jpeg	https://stream1.cinerama.uz/1458/tracks-v1a1/mono.m3u8
 Surxondaryo MTRK	https://files.itv.uz/uploads/iptv/channels/2024/04/20//a0534f66a3cce9a795ff7027b1a23c94-q-500x500.jpeg	https://stream1.cinerama.uz/1463/tracks-v1a1/mono.m3u8
-Futbol TV UZ	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream2.cinerama.uz/1010/tracks-v1a1/mono.m3u8
+Futbol TV UZ	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 Xorazm MTRK 	https://files.cinerama.uz/images/tv_channels/2024/06/03/38994bac-c9a5-4e72-b25e-cc25237390ac.jpeg	https://stream1.cinerama.uz/1464/tracks-v1a1/mono.m3u8
 S Music	 https://files.itv.uz/uploads/iptv/channels/2024/10/14//2aad1133ca08fb62b06d06edf1b052b1-q-500x500.jpeg	  https://stream2.cinerama.uz/1245/tracks-v2a1/mono.m3u8
 TTV UZ	https://files.itv.uz/uploads/iptv/channels/2024/10/16//17af904b28e714551e8396fcc077e11a-q-500x500.jpeg	https://stream2.cinerama.uz/1494/tracks-v1a1/mono.m3u8
@@ -153,7 +153,7 @@ Fuel TV HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/b434f380-9aa1
 Точка Отрыва	https://files.cinerama.uz/images/tv_channels/2023/08/14/1c887f6c-eefc-48a7-8618-1b302f032766.png	https://stream1.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 Trace Sport Starts HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/87cb45de-8c74-4194-88ca-e5f709c11621.jpeg	https://stream1.cinerama.uz/1274/tracks-v1a1/mono.m3u8
 Eurosport HD	https://files.cinerama.uz/images/tv_channels/2023/08/14/3fa5ec93-3e9c-4bba-a02c-3611f8a3be5a.png	https://stream8.cinerama.uz/1439/tracks-v1a1/mono.m3u8
-Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream1.cinerama.uz/1010/tracks-v1a1/mono.m3u8
+Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 
 
 
