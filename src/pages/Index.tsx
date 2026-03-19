@@ -60,12 +60,15 @@ const Index: React.FC = () => {
   const isFiltering = !!(search.trim() || activeCategory || showFavorites);
 
   const filteredChannels = useMemo(() => {
-    let result = channels;
+    let result: Channel[];
     if (showFavorites) {
-      result = result.filter(c => favoritesSet.has(c.id));
+      result = channels.filter(c => favoritesSet.has(c.id));
     } else if (activeCategory) {
-      const ids = new Set(categoryMap[activeCategory] || []);
-      result = result.filter(c => ids.has(c.id));
+      const ids = categoryMap[activeCategory] || [];
+      const channelMap = new Map(channels.map(c => [c.id, c]));
+      result = ids.map(id => channelMap.get(id)).filter(Boolean) as Channel[];
+    } else {
+      result = channels;
     }
     if (search.trim()) {
       const q = search.toLowerCase().trim();
@@ -186,7 +189,8 @@ const Index: React.FC = () => {
           <div className="space-y-8">
             {categories.slice(0, 6).map(cat => {
               const catChannelIds = categoryMap[cat] || [];
-              const catChannels = channels.filter(c => catChannelIds.includes(c.id));
+              const channelMap = new Map(channels.map(c => [c.id, c]));
+              const catChannels = catChannelIds.map(id => channelMap.get(id)).filter(Boolean) as Channel[];
               return (
                 <ChannelRow
                   key={cat}
