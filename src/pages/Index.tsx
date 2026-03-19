@@ -159,10 +159,6 @@ const Index: React.FC = () => {
           />
         )}
 
-        {/* Hero Banner — only when not filtering */}
-        {!activeChannel && !isFiltering && (
-          <HeroBanner channels={channels} epgData={epgData} onSelect={handleSelect} />
-        )}
 
         {/* Category pills */}
         <CategoryNav
