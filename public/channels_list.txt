@@ -1,7 +1,7 @@
 Category:Milliy
 Zo'r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/7016/tracks-v3a1/mono.m3u8
 iTV Cinema	https://files.itv.uz/uploads/iptv/channels/2023/05/31//91c58d573e4a8e351e68a0ebcbe724ab-q-500x500.jpeg	https://stream2.cinerama.uz/4000/tracks-v1a1/mono.m3u8
-Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream1.cinerama.uz/1004/tracks-v1a1/mono.m3u8
+Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
 iTV Music	https://files.itv.uz/uploads/iptv/channels/2023/05/31//27d9324713264f6d8c4cc6986cf4ae86-q-500x500.jpeg	https://stream2.cinerama.uz/4001/tracks-v1a1/mono.m3u8
 Milliy TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/3754e8d4-89b5-496d-8c81-448121f35002.png	https://stream1.cinerama.uz/1014/tracks-v1a1/mono.m3u8
 OʻzbekistonTV	https://files.cinerama.uz/images/tv_channels/2020/06/12/80f29007-3f69-44fd-a8de-4c5d9783beb1.png	https://stream1.cinerama.uz/1001/tracks-v1a1/mono.m3u8
@@ -141,7 +141,7 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 
 
 Category:Sport
-Zo'r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream1.cinerama.uz/1016/tracks-v1a1/mono.m3u8
+Zo'r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/7016/tracks-v3a1/mono.m3u8
 Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream8.cinerama.uz/7263/tracks-v1a1/mono.m3u8
 Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream8.cinerama.uz/7264/tracks-v1a1/mono.m3u8
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
@@ -152,7 +152,7 @@ MMA TV	https://files.cinerama.uz/images/tv_channels/2023/03/05/851c6f61-d4ec-43e
 Fuel TV HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/b434f380-9aa1-425d-a942-864d676707a9.png	https://stream1.cinerama.uz/1280/tracks-v1a1/mono.m3u8
 Точка Отрыва	https://files.cinerama.uz/images/tv_channels/2023/08/14/1c887f6c-eefc-48a7-8618-1b302f032766.png	https://stream1.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 Trace Sport Starts HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/87cb45de-8c74-4194-88ca-e5f709c11621.jpeg	https://stream1.cinerama.uz/1274/tracks-v1a1/mono.m3u8
-Eurosport HD	https://files.cinerama.uz/images/tv_channels/2023/08/14/3fa5ec93-3e9c-4bba-a02c-3611f8a3be5a.png	https://stream1.cinerama.uz/1439/tracks-v1a1/mono.m3u8
+Eurosport HD	https://files.cinerama.uz/images/tv_channels/2023/08/14/3fa5ec93-3e9c-4bba-a02c-3611f8a3be5a.png	https://stream8.cinerama.uz/1439/tracks-v1a1/mono.m3u8
 Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream1.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 
 
@@ -180,7 +180,7 @@ S-Music	https://files.cinerama.uz/images/tv_channels/2025/02/07/6b8fa054-cd8d-47
 
 
 Category:Ko'ngil Ochar
-Zo'r TV	    https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream1.cinerama.uz/1016/tracks-v1a1/mono.m3u8
+Zo'r TV	    https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/7016/tracks-v3a1/mono.m3u8
 ТВ3	    https://files.cinerama.uz/images/tv_channels/2023/08/14/7fb948c8-222c-46e0-bd73-0db6b36d3c45.png	https://stream1.cinerama.uz/1435/tracks-v1a1/mono.m3u8
 Milliy TV HD	https://files.cinerama.uz/images/tv_channels/2020/06/12/3754e8d4-89b5-496d-8c81-448121f35002.png	https://stream1.cinerama.uz/1014/tracks-v1a1/mono.m3u8
 Домашний International	    https://files.cinerama.uz/images/tv_channels/2023/08/14/e41544a7-6d40-442e-a517-e6ba42eb7e87.png	https://stream1.cinerama.uz/1436/tracks-v1a1/mono.m3u8
