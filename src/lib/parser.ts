@@ -48,9 +48,20 @@ export function parseChannels(text: string): {
       continue;
     }
 
-    // Channel line: Name\tLogoURL\tStreamURL (tab-separated)
-    // Handle multiple tabs and spaces
-    const parts = line.split('\t').map(p => p.trim()).filter(Boolean);
+    // Channel line: Name\tLogoURL\tStreamURL (tab-separated, or multiple spaces)
+    // First try tab splitting, then fall back to space-based splitting for URLs
+    const parts = line.includes('\t')
+      ? line.split('\t').map(p => p.trim()).filter(Boolean)
+      : line.split(/\s{2,}/).map(p => p.trim()).filter(Boolean);
+    
+    // Also handle single-space separation if parts contain URLs
+    if (parts.length < 3) {
+      const urlParts = line.match(/^(.+?)\s+(https?:\/\/\S+)\s+(https?:\/\/\S+)/);
+      if (urlParts) {
+        parts.length = 0;
+        parts.push(urlParts[1].trim(), urlParts[2].trim(), urlParts[3].trim());
+      }
+    }
     if (parts.length < 3) continue;
 
     const name = parts[0].replace(/\+$/, '').trim();
