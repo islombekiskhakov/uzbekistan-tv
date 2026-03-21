@@ -12,7 +12,7 @@ interface Props {
   onScrollToSport: () => void;
 }
 
-export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
+export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
   const { matches, loading, hasLive } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
