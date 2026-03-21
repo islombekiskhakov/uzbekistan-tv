@@ -12,6 +12,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
 import { EPGSection } from '@/components/EPG/EPGSection';
 import { UCLBanner } from '@/components/UCLBanner/UCLBanner';
+import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { generateEPG } from '@/lib/epg';
@@ -111,7 +112,9 @@ const Index: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background noise">
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground />
+      <div className="relative z-10 noise">
       {/* Sticky Header */}
       <Header>
         <div className="flex-1" />
@@ -149,22 +152,32 @@ const Index: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="max-w-[1600px] mx-auto pt-5 space-y-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="max-w-[1600px] mx-auto pt-5 space-y-6"
+      >
         {/* Football Banner */}
         {!activeChannel && (
-          <UCLBanner
-            channels={channels}
-            onSelect={handleSelect}
-            onScrollToSport={() => {
-              setActiveCategory('Sport');
-              setShowFavorites(false);
-              // Scroll to category nav area
-              setTimeout(() => {
-                const catNav = document.querySelector('[data-category-nav]');
-                if (catNav) catNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100);
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <UCLBanner
+              channels={channels}
+              onSelect={handleSelect}
+              onScrollToSport={() => {
+                setActiveCategory('Sport');
+                setShowFavorites(false);
+                setTimeout(() => {
+                  const catNav = document.querySelector('[data-category-nav]');
+                  if (catNav) catNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }}
+            />
+          </motion.div>
         )}
 
         {/* Continue Watching */}
@@ -232,6 +245,7 @@ const Index: React.FC = () => {
         )}
 
         <Footer />
+      </motion.div>
       </div>
     </div>
   );
