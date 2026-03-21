@@ -218,8 +218,28 @@ export function useUCLMatches() {
   };
 
   useEffect(() => {
+    // Budget: 100 requests/day. Active window: 19:00–03:00 (UTC+5 Uzbekistan).
+    // That's 8 hours = 480 min → fetch every 5 min = ~96 requests/day.
+    // Between 03:00–19:00 local time, no fetches (no matches playing).
+    const INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+
+    const isActiveHour = () => {
+      const now = new Date();
+      // Convert to UTC+5 (Uzbekistan)
+      const uzHour = (now.getUTCHours() + 5) % 24;
+      // Active: 19:00–03:00 UZT (i.e. hour >= 19 OR hour < 3)
+      return uzHour >= 19 || uzHour < 3;
+    };
+
+    const smartFetch = () => {
+      if (isActiveHour()) {
+        fetchMatches();
+      }
+    };
+
+    // Initial fetch: always fetch once to populate data, then schedule
     fetchMatches();
-    intervalRef.current = setInterval(fetchMatches, 60000);
+    intervalRef.current = setInterval(smartFetch, INTERVAL_MS);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
