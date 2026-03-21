@@ -248,5 +248,5 @@ export function useUCLMatches() {
     };
   }, []);
 
-  return { matches, loading, error, hasLive };
+  return { matches, loading, error, hasLive, lastUpdated };
 }
