@@ -15,6 +15,9 @@ interface Props {
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
   const { matches, loading, hasLive, lastUpdated } = useUCLMatches();
+  const bannerRef = React.useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: bannerRef, offset: ['start end', 'end start'] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
