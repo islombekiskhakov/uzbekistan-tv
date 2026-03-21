@@ -10,7 +10,7 @@ import { CategoryNav } from '@/components/Sidebar/CategoryNav';
 import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
 import { EPGSection } from '@/components/EPG/EPGSection';
-import { HeroBanner } from '@/components/HeroBanner';
+import { UCLBanner } from '@/components/UCLBanner/UCLBanner';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { generateEPG } from '@/lib/epg';
@@ -149,6 +149,11 @@ const Index: React.FC = () => {
       </AnimatePresence>
 
       <div className="max-w-[1600px] mx-auto pt-5 space-y-6">
+        {/* UCL Banner */}
+        {!activeChannel && (
+          <UCLBanner channels={channels} onSelect={handleSelect} />
+        )}
+
         {/* Continue Watching */}
         {!activeChannel && (
           <ContinueWatching
