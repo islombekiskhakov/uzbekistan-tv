@@ -245,6 +245,7 @@ const Index: React.FC = () => {
         )}
 
         <Footer />
+      </motion.div>
       </div>
     </div>
   );
