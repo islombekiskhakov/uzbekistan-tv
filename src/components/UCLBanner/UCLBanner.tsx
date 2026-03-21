@@ -45,11 +45,8 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
   }, [emblaApi, matches.length]);
 
   const handleWatch = useCallback(() => {
-    const setanta = channels.find(c =>
-      c.name.toLowerCase().includes('setanta')
-    );
-    if (setanta) onSelect(setanta);
-  }, [channels, onSelect]);
+    onScrollToSport();
+  }, [onScrollToSport]);
 
   if (loading || matches.length === 0) return null;
 

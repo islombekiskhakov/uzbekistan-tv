@@ -171,7 +171,7 @@ export function useUCLMatches() {
       for (const leagueId of SELECTED_LEAGUES) {
         const season = today.getMonth() >= 7 ? today.getFullYear() : today.getFullYear() - 1;
         const res = await fetch(
-          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(tomorrow)}&timezone=UTC`,
+          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(dayAfterTomorrow)}&timezone=UTC`,
           { headers: { 'x-apisports-key': API_KEY } }
         );
 
