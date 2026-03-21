@@ -52,6 +52,8 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
 
   if (loading || matches.length === 0) return null;
 
+  const displayMatches = matches;
+
   const displayMatches = matches.slice(0, 3);
 
   return (
