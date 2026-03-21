@@ -90,6 +90,7 @@ const ChannelTile: React.FC<{
   onToggleFavorite?: (id: string) => void;
 }> = ({ channel, index, onSelect, isFavorite, onToggleFavorite }) => {
   const [imgError, setImgError] = useState(false);
+  const { ref, style: tilt, handleMouseMove, handleMouseLeave } = useTilt3D(14);
 
   return (
     <motion.div
@@ -97,10 +98,17 @@ const ChannelTile: React.FC<{
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.35, delay: Math.min(index * 0.03, 0.4) }}
       className="group flex-shrink-0 w-[130px] md:w-[150px]"
+      style={{ perspective: 500 }}
     >
-      <div
+      <motion.div
+        ref={ref}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         onClick={() => onSelect(channel)}
+        animate={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         className="relative aspect-square rounded-2xl overflow-hidden bg-card border border-border/30 cursor-pointer hover:border-primary/40 transition-all duration-300 hover:shadow-[0_8px_30px_-8px_hsl(var(--glow)/0.2)]"
+        style={{ transformStyle: 'preserve-3d' }}
       >
         {!imgError && channel.logo ? (
           <img
@@ -115,6 +123,14 @@ const ChannelTile: React.FC<{
             <span className="text-2xl font-display font-bold text-muted-foreground">{channel.name.charAt(0)}</span>
           </div>
         )}
+
+        {/* Shine effect on hover */}
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{
+            background: `linear-gradient(${105 + tilt.rotateY * 3}deg, transparent 40%, hsl(var(--primary) / 0.08) 50%, transparent 60%)`,
+          }}
+        />
 
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-4">
@@ -132,7 +148,7 @@ const ChannelTile: React.FC<{
             <Heart className={`w-3 h-3 ${isFavorite ? 'text-accent fill-accent' : 'text-foreground/70'}`} />
           </button>
         )}
-      </div>
+      </motion.div>
       <p className="mt-2 text-xs font-semibold text-foreground/80 text-center truncate px-1">{channel.name}</p>
     </motion.div>
   );
