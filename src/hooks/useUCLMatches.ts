@@ -137,7 +137,10 @@ export function useUCLMatches() {
 
   const fetchMatches = async () => {
     try {
-      // First: fetch ALL currently live matches across all leagues
+      // Selected leagues: EPL(39), UCL(2), La Liga(140), Uzbekistan Super League(373), Serie A(135), Bundesliga(78)
+      const SELECTED_LEAGUES = [39, 2, 140, 373, 135, 78];
+
+      // First: fetch live matches, filtered to our leagues
       const liveRes = await fetch(
         `https://${API_HOST}/fixtures?live=all`,
         { headers: { 'x-apisports-key': API_KEY } }
@@ -153,8 +156,9 @@ export function useUCLMatches() {
       let allMatches: UCLMatch[] = [];
 
       if (liveData.response && liveData.response.length > 0) {
-        // We have live matches! Map them all
-        allMatches = liveData.response.map(mapFixture);
+        allMatches = liveData.response
+          .filter((f: any) => SELECTED_LEAGUES.includes(f.league.id))
+          .map(mapFixture);
       }
 
       // Also fetch upcoming matches from top leagues if we have few live matches
