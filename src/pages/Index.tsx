@@ -218,35 +218,44 @@ const Index: React.FC = () => {
         </div>
 
         {/* Content */}
-        {isFiltering ? (
-          /* Grid when filtering/searching */
-          <ChannelGrid
-            channels={filteredChannels}
-            onSelect={handleSelect}
-            favorites={favoritesSet}
-            onToggleFavorite={handleToggleFavorite}
-          />
-        ) : (
-          /* Horizontal rows by category */
-          <div className="space-y-8">
-            {categories.slice(0, 6).map(cat => {
-              const catChannelIds = categoryMap[cat] || [];
-              const channelMap = new Map(channels.map(c => [c.id, c]));
-              const catChannels = catChannelIds.map(id => channelMap.get(id)).filter(Boolean) as Channel[];
-              return (
-                <ChannelRow
-                  key={cat}
-                  title={cat}
-                  icon={CATEGORY_ICONS[cat] || <Tv className="w-4 h-4 text-primary" />}
-                  channels={catChannels}
-                  onSelect={handleSelect}
-                  favorites={favoritesSet}
-                  onToggleFavorite={handleToggleFavorite}
-                />
-              );
-            })}
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory || (showFavorites ? 'favs' : 'all')}
+            id="channel-content"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {isFiltering ? (
+              <ChannelGrid
+                channels={filteredChannels}
+                onSelect={handleSelect}
+                favorites={favoritesSet}
+                onToggleFavorite={handleToggleFavorite}
+              />
+            ) : (
+              <div className="space-y-8">
+                {categories.slice(0, 6).map(cat => {
+                  const catChannelIds = categoryMap[cat] || [];
+                  const channelMap = new Map(channels.map(c => [c.id, c]));
+                  const catChannels = catChannelIds.map(id => channelMap.get(id)).filter(Boolean) as Channel[];
+                  return (
+                    <ChannelRow
+                      key={cat}
+                      title={cat}
+                      icon={CATEGORY_ICONS[cat] || <Tv className="w-4 h-4 text-primary" />}
+                      channels={catChannels}
+                      onSelect={handleSelect}
+                      favorites={favoritesSet}
+                      onToggleFavorite={handleToggleFavorite}
+                    />
+                  );
+                })}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
 
         {/* EPG */}
         {!activeChannel && !isFiltering && (
