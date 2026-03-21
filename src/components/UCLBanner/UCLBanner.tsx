@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
-  const { matches, loading } = useUCLMatches();
+  const { matches, loading, hasLive } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
@@ -81,15 +81,10 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
         <div className="flex items-center justify-center gap-3 mb-5">
           <div className="h-px w-8 bg-gradient-to-r from-transparent to-amber-500/40" />
           <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" />
-            </svg>
+            <span className="text-lg">⚽</span>
             <h2 className="text-white/90 font-bold text-sm md:text-base tracking-[0.15em] uppercase">
-              Champions League
+              {hasLive ? 'Jonli o\'yinlar' : 'Futbol'}
             </h2>
-            <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" />
-            </svg>
           </div>
           <div className="h-px w-8 bg-gradient-to-l from-transparent to-amber-500/40" />
         </div>
