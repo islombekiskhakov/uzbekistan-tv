@@ -38,7 +38,7 @@
       "name": "UzbekistanTV",
       "alternateName": ["Uzbekistan TV", "O'zbek TV", "O'zbekiston TV kanallari"],
       "url": "https://uzbekistantv.uz",
-      "description": "O'zbek va xalqaro telekanallari jonli efirda bepul onlayn tomosha qiling",
+      "description": "O'zbek va xalqaro telekanallari jonli efirda bepul onlayn. Futbol jonli natijalar va sport translatsiyalari.",
       "inLanguage": "uz",
       "potentialAction": {
         "@type": "SearchAction",
@@ -53,7 +53,7 @@
       "@type": "Organization",
       "name": "UzbekistanTV",
       "url": "https://uzbekistantv.uz",
-      "description": "O'zbekistonning eng yaxshi onlayn TV platformasi",
+      "description": "O'zbekistonning eng yaxshi onlayn TV va sport platformasi",
       "areaServed": {
         "@type": "Country",
         "name": "Uzbekistan"
@@ -65,12 +65,60 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Bosh sahifa",
-        "item": "https://uzbekistantv.uz"
-      }]
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Bosh sahifa",
+          "item": "https://uzbekistantv.uz"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Jonli o'yinlar — Futbol natijalar",
+          "item": "https://uzbekistantv.uz/#jonli-oyinlar"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sport kanallari",
+          "item": "https://uzbekistantv.uz/#sport"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsEvent",
+      "name": "Futbol jonli natijalar — UEFA Champions League, APL, La Liga, Serie A",
+      "description": "UEFA Champions League, Angliya Premier Ligasi, La Liga, Serie A, Bundesliga va O'zbekiston Superligasi o'yinlari jonli natijalar bilan UzbekistanTV da",
+      "url": "https://uzbekistantv.uz/#jonli-oyinlar",
+      "sport": "Football",
+      "location": {
+        "@type": "VirtualLocation",
+        "url": "https://uzbekistantv.uz"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "UzbekistanTV",
+        "url": "https://uzbekistantv.uz"
+      },
+      "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "TV Kategoriyalari",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Sport — Futbol jonli", "url": "https://uzbekistantv.uz/#sport"},
+        {"@type": "ListItem", "position": 2, "name": "Milliy kanallar", "url": "https://uzbekistantv.uz/#milliy"},
+        {"@type": "ListItem", "position": 3, "name": "Kino kanallari", "url": "https://uzbekistantv.uz/#kino"},
+        {"@type": "ListItem", "position": 4, "name": "Yangiliklar", "url": "https://uzbekistantv.uz/#yangiliklar"},
+        {"@type": "ListItem", "position": 5, "name": "Bolalar uchun", "url": "https://uzbekistantv.uz/#bolalar"}
+      ]
     }
     </script>
   </head>
