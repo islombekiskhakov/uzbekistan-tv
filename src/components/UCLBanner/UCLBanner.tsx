@@ -52,7 +52,7 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
 
   if (loading || matches.length === 0) return null;
 
-  const displayMatches = matches.slice(0, 3);
+  const displayMatches = matches;
 
   return (
     <motion.section
