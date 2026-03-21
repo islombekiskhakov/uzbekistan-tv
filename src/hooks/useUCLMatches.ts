@@ -163,8 +163,8 @@ export function useUCLMatches() {
 
       // Always fetch upcoming matches from selected leagues
       const today = new Date();
-      const tomorrow = new Date(today);
-      tomorrow.setDate(tomorrow.getDate() + 1);
+      const dayAfterTomorrow = new Date(today);
+      dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
       const formatDate = (d: Date) => d.toISOString().split('T')[0];
 
       // Fetch today's and tomorrow's fixtures for our leagues
