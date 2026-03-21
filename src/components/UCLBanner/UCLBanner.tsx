@@ -54,8 +54,6 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
 
   const displayMatches = matches;
 
-  const displayMatches = matches.slice(0, 3);
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
