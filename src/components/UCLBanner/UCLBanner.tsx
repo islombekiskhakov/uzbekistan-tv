@@ -58,6 +58,7 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
 
   return (
     <motion.section
+      ref={bannerRef}
       id="jonli-oyinlar"
       aria-label="Futbol jonli natijalar va kelgusi o'yinlar"
       initial={{ opacity: 0 }}
@@ -65,12 +66,13 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden rounded-2xl mx-4 md:mx-8"
     >
-      {/* Stadium background image with slow zoom */}
+      {/* Stadium background with parallax + slow zoom */}
       <motion.div
         className="absolute inset-[-20px]"
         animate={{ scale: [1, 1.08, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
         style={{
+          y: bgY,
           backgroundImage: `url(${footballBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 40%',
