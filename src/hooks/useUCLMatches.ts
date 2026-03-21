@@ -207,11 +207,13 @@ export function useUCLMatches() {
       const live = allMatches.some(m => ['IN_PLAY', 'LIVE', 'PAUSED'].includes(m.status));
       setMatches(allMatches.slice(0, 15));
       setHasLive(live);
+      setLastUpdated(new Date());
       setError(null);
     } catch (err) {
       console.warn('API-Football fetch failed, using fallback:', err);
       setMatches(FALLBACK_MATCHES);
       setHasLive(false);
+      setLastUpdated(new Date());
       setError('Using fallback data');
     } finally {
       setLoading(false);
