@@ -12,6 +12,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { ContinueWatching } from '@/components/ContinueWatching';
 import { EPGSection } from '@/components/EPG/EPGSection';
 import { UCLBanner } from '@/components/UCLBanner/UCLBanner';
+import { AnimatedBackground } from '@/components/AnimatedBackground';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { generateEPG } from '@/lib/epg';
