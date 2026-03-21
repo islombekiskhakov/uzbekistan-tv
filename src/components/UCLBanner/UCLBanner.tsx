@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useUCLMatches } from '@/hooks/useUCLMatches';
 import { MatchCard } from './MatchCard';
 import type { Channel } from '@/lib/parser';
+import footballBg from '@/assets/football-banner-bg.jpg';
 
 interface Props {
   channels: Channel[];
