@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Trophy } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useUCLMatches } from '@/hooks/useUCLMatches';
 import { MatchCard } from './MatchCard';
@@ -17,22 +17,29 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
     align: 'center',
     loop: true,
     slidesToScroll: 1,
+    containScroll: false,
   });
 
   const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
+  const [canScrollNext, setCanScrollNext] = React.useState(false);
 
   React.useEffect(() => {
     if (!emblaApi) return;
-    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+    };
     emblaApi.on('select', onSelect);
     onSelect();
     return () => { emblaApi.off('select', onSelect); };
   }, [emblaApi]);
 
-  // Auto-scroll every 6 seconds
+  // Auto-scroll every 5 seconds
   React.useEffect(() => {
     if (!emblaApi || matches.length <= 1) return;
-    const interval = setInterval(() => emblaApi.scrollNext(), 6000);
+    const interval = setInterval(() => emblaApi.scrollNext(), 5000);
     return () => clearInterval(interval);
   }, [emblaApi, matches.length]);
 
@@ -49,64 +56,87 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
       className="relative overflow-hidden rounded-2xl mx-4 md:mx-8"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0d2818] to-[#0a1628]" />
+      {/* Layered background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#060e1a] via-[#0a1a12] to-[#060e1a]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.06),transparent_60%)]" />
 
-      {/* Football pitch pattern */}
-      <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="pitch" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-            <rect width="60" height="60" fill="none" stroke="white" strokeWidth="0.5" />
-            <circle cx="30" cy="30" r="10" fill="none" stroke="white" strokeWidth="0.5" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#pitch)" />
-      </svg>
+      {/* Noise texture */}
+      <div className="absolute inset-0 noise opacity-[0.03]" />
 
-      {/* Glow effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* UCL starball watermark */}
+      <div className="absolute right-[-60px] top-[-60px] w-[200px] h-[200px] opacity-[0.03]">
+        <svg viewBox="0 0 100 100" fill="white">
+          <polygon points="50,5 61,35 95,35 67,55 78,85 50,67 22,85 33,55 5,35 39,35" />
+        </svg>
+      </div>
 
-      <div className="relative z-10 py-8 md:py-10">
+      <div className="relative z-10 py-6 md:py-8">
         {/* Header */}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <Trophy className="w-5 h-5 text-amber-400" />
-          <h2 className="text-white font-bold text-lg md:text-xl tracking-tight">
-            UEFA Champions League
-          </h2>
-          <Trophy className="w-5 h-5 text-amber-400" />
-        </div>
-
-        {/* Carousel */}
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {displayMatches.map((match) => (
-              <div
-                key={match.id}
-                className="flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_40%] min-w-0 px-2 md:px-3"
-              >
-                <MatchCard match={match} onWatch={handleWatch} />
-              </div>
-            ))}
+        <div className="flex items-center justify-center gap-3 mb-5">
+          <div className="h-px w-8 bg-gradient-to-r from-transparent to-amber-500/40" />
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" />
+            </svg>
+            <h2 className="text-white/90 font-bold text-sm md:text-base tracking-[0.15em] uppercase">
+              Champions League
+            </h2>
+            <svg className="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" />
+            </svg>
           </div>
+          <div className="h-px w-8 bg-gradient-to-l from-transparent to-amber-500/40" />
         </div>
 
-        {/* Dots */}
+        {/* Carousel with nav arrows */}
+        <div className="relative group/carousel">
+          {/* Prev arrow */}
+          <button
+            onClick={() => emblaApi?.scrollPrev()}
+            className="absolute left-1 md:left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.08] flex items-center justify-center text-white/40 hover:text-white/80 transition-all opacity-0 group-hover/carousel:opacity-100"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div className="overflow-hidden px-2" ref={emblaRef}>
+            <div className="flex">
+              {displayMatches.map((match, i) => (
+                <div
+                  key={match.id}
+                  className="flex-[0_0_88%] md:flex-[0_0_48%] lg:flex-[0_0_38%] min-w-0 px-2"
+                >
+                  <MatchCard match={match} onWatch={handleWatch} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Next arrow */}
+          <button
+            onClick={() => emblaApi?.scrollNext()}
+            className="absolute right-1 md:right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.08] flex items-center justify-center text-white/40 hover:text-white/80 transition-all opacity-0 group-hover/carousel:opacity-100"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Minimal dots */}
         {displayMatches.length > 1 && (
-          <div className="flex justify-center gap-2 mt-5">
+          <div className="flex justify-center gap-1.5 mt-4">
             {displayMatches.map((_, i) => (
               <button
                 key={i}
                 onClick={() => emblaApi?.scrollTo(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-1 rounded-full transition-all duration-500 ${
                   i === selectedIndex
-                    ? 'bg-white w-6'
-                    : 'bg-white/30 hover:bg-white/50'
+                    ? 'bg-white/60 w-5'
+                    : 'bg-white/15 w-1.5 hover:bg-white/25'
                 }`}
               />
             ))}
