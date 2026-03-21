@@ -164,8 +164,7 @@ export function useUCLMatches() {
       // Also fetch upcoming matches from top leagues if we have few live matches
       if (allMatches.length < 10) {
         const season = new Date().getFullYear();
-        // Top leagues: UCL(2), EPL(39), La Liga(140), Serie A(135), Bundesliga(78), Ligue 1(61), Europa League(3)
-        const topLeagues = [2, 3, 39, 140, 135, 78, 61];
+        const topLeagues = SELECTED_LEAGUES;
         
         // Fetch next upcoming matches
         const upcomingRes = await fetch(
