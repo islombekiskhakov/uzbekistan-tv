@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
-  const { matches, loading, hasLive } = useUCLMatches();
+  const { matches, loading, hasLive, lastUpdated } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
