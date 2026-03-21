@@ -9,6 +9,7 @@ import type { Channel } from '@/lib/parser';
 interface Props {
   channels: Channel[];
   onSelect: (channel: Channel) => void;
+  onScrollToSport: () => void;
 }
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
