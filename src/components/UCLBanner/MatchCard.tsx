@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, Zap } from 'lucide-react';
+import { Play, Radio } from 'lucide-react';
 import type { UCLMatch } from '@/hooks/useUCLMatches';
 
 interface Props {
@@ -18,17 +18,18 @@ function formatMatchDate(utcDate: string): string {
   tomorrow.setDate(tomorrow.getDate() + 1);
   const isTomorrow = date.toDateString() === tomorrow.toDateString();
 
-  const time = date.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' });
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const time = `${hours}:${minutes}`;
 
   if (isToday) return `Bugun, ${time}`;
   if (isTomorrow) return `Ertaga, ${time}`;
 
-  return date.toLocaleDateString('uz-UZ', {
-    day: 'numeric',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+  const day = date.getDate();
+  const monthNames = ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'Iyun', 'Iyul', 'Avgust', 'Sentabr', 'Oktabr', 'Noyabr', 'Dekabr'];
+  const month = monthNames[date.getMonth()];
+
+  return `${day}-${month}, ${time}`;
 }
 
 export const MatchCard: React.FC<Props> = ({ match, onWatch }) => {
@@ -36,93 +37,105 @@ export const MatchCard: React.FC<Props> = ({ match, onWatch }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8"
+      className="relative group"
     >
-      {/* Live pulse background */}
-      {live && (
-        <div className="absolute inset-0 bg-red-500/5 animate-pulse pointer-events-none" />
-      )}
-
-      {/* Status badge */}
-      <div className="flex justify-center mb-5">
-        {live ? (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            Jonli
-          </span>
-        ) : (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white/60 text-xs font-medium">
-            <Clock className="w-3 h-3" />
-            {formatMatchDate(match.utcDate)}
-          </span>
+      {/* Card container */}
+      <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-2xl">
+        {/* Live glow ring */}
+        {live && (
+          <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-500/40 via-orange-500/40 to-red-500/40 animate-pulse pointer-events-none" />
         )}
-      </div>
 
-      {/* Teams */}
-      <div className="flex items-center justify-between gap-4 md:gap-8">
-        {/* Home Team */}
-        <div className="flex flex-col items-center gap-3 flex-1 min-w-0">
-          <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/10 p-2 flex items-center justify-center">
-            <img
-              src={match.homeTeam.crest}
-              alt={match.homeTeam.shortName}
-              className="w-full h-full object-contain"
-              loading="lazy"
-            />
+        <div className="relative p-5 md:p-7">
+          {/* Top bar: stage + status */}
+          <div className="flex items-center justify-between mb-6">
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-medium">
+              {match.stage?.replace(/_/g, ' ')}
+            </span>
+            {live ? (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 text-[11px] font-bold uppercase tracking-wider">
+                <Radio className="w-3 h-3 animate-pulse" />
+                Jonli efir
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.06] text-white/50 text-[11px] font-medium">
+                {formatMatchDate(match.utcDate)}
+              </span>
+            )}
           </div>
-          <span className="text-white font-semibold text-sm md:text-base text-center truncate w-full">
-            {match.homeTeam.shortName}
-          </span>
-        </div>
 
-        {/* Score / VS */}
-        <div className="flex flex-col items-center gap-1 shrink-0">
-          {live ? (
-            <div className="flex items-center gap-3">
-              <span className="text-3xl md:text-4xl font-black text-white tabular-nums">
-                {match.score.fullTime.home ?? 0}
-              </span>
-              <span className="text-lg text-white/30 font-light">:</span>
-              <span className="text-3xl md:text-4xl font-black text-white tabular-nums">
-                {match.score.fullTime.away ?? 0}
-              </span>
+          {/* Teams row */}
+          <div className="flex items-center gap-3 md:gap-5">
+            {/* Home Team */}
+            <div className="flex items-center gap-3 flex-1 min-w-0">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/[0.06] p-1.5 flex items-center justify-center shrink-0 ring-1 ring-white/[0.05]">
+                <img
+                  src={match.homeTeam.crest}
+                  alt={match.homeTeam.shortName}
+                  className="w-full h-full object-contain drop-shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <div className="min-w-0">
+                <span className="text-white font-bold text-sm md:text-base block truncate">
+                  {match.homeTeam.shortName}
+                </span>
+                <span className="text-white/25 text-[10px] uppercase tracking-wider">{match.homeTeam.tla}</span>
+              </div>
             </div>
-          ) : (
-            <span className="text-2xl md:text-3xl font-black text-white/20">VS</span>
-          )}
-          <span className="text-[10px] text-white/30 uppercase tracking-widest mt-1">
-            {match.stage?.replace(/_/g, ' ')}
-          </span>
-        </div>
 
-        {/* Away Team */}
-        <div className="flex flex-col items-center gap-3 flex-1 min-w-0">
-          <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/10 p-2 flex items-center justify-center">
-            <img
-              src={match.awayTeam.crest}
-              alt={match.awayTeam.shortName}
-              className="w-full h-full object-contain"
-              loading="lazy"
-            />
+            {/* Score / VS center */}
+            <div className="shrink-0 flex flex-col items-center">
+              {live ? (
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl md:text-4xl font-black text-white tabular-nums drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                    {match.score.fullTime.home ?? 0}
+                  </span>
+                  <span className="text-white/20 text-xl font-thin">–</span>
+                  <span className="text-3xl md:text-4xl font-black text-white tabular-nums drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+                    {match.score.fullTime.away ?? 0}
+                  </span>
+                </div>
+              ) : (
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center">
+                  <span className="text-xs font-bold text-white/20 uppercase">vs</span>
+                </div>
+              )}
+            </div>
+
+            {/* Away Team */}
+            <div className="flex items-center gap-3 flex-1 min-w-0 justify-end">
+              <div className="min-w-0 text-right">
+                <span className="text-white font-bold text-sm md:text-base block truncate">
+                  {match.awayTeam.shortName}
+                </span>
+                <span className="text-white/25 text-[10px] uppercase tracking-wider">{match.awayTeam.tla}</span>
+              </div>
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/[0.06] p-1.5 flex items-center justify-center shrink-0 ring-1 ring-white/[0.05]">
+                <img
+                  src={match.awayTeam.crest}
+                  alt={match.awayTeam.shortName}
+                  className="w-full h-full object-contain drop-shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
-          <span className="text-white font-semibold text-sm md:text-base text-center truncate w-full">
-            {match.awayTeam.shortName}
-          </span>
-        </div>
-      </div>
 
-      {/* Watch Button */}
-      <div className="mt-6 flex justify-center">
-        <button
-          onClick={onWatch}
-          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/25 active:scale-95"
-        >
-          <Zap className="w-4 h-4" />
-          Tomosha qilish
-        </button>
+          {/* Watch Button */}
+          <div className="mt-5 flex justify-center">
+            <button
+              onClick={onWatch}
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.14] text-white/80 hover:text-white font-medium text-xs tracking-wide transition-all duration-300 border border-white/[0.06] hover:border-white/[0.12] hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] active:scale-95"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" />
+              Tomosha qilish
+            </button>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
