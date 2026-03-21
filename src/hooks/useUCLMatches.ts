@@ -163,15 +163,15 @@ export function useUCLMatches() {
 
       // Always fetch upcoming matches from selected leagues
       const today = new Date();
-      const tomorrow = new Date(today);
-      tomorrow.setDate(tomorrow.getDate() + 1);
+      const dayAfterTomorrow = new Date(today);
+      dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
       const formatDate = (d: Date) => d.toISOString().split('T')[0];
 
       // Fetch today's and tomorrow's fixtures for our leagues
       for (const leagueId of SELECTED_LEAGUES) {
         const season = today.getMonth() >= 7 ? today.getFullYear() : today.getFullYear() - 1;
         const res = await fetch(
-          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(tomorrow)}&timezone=UTC`,
+          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(dayAfterTomorrow)}&timezone=UTC`,
           { headers: { 'x-apisports-key': API_KEY } }
         );
 

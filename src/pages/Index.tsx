@@ -149,9 +149,21 @@ const Index: React.FC = () => {
       </AnimatePresence>
 
       <div className="max-w-[1600px] mx-auto pt-5 space-y-6">
-        {/* UCL Banner */}
+        {/* Football Banner */}
         {!activeChannel && (
-          <UCLBanner channels={channels} onSelect={handleSelect} />
+          <UCLBanner
+            channels={channels}
+            onSelect={handleSelect}
+            onScrollToSport={() => {
+              setActiveCategory('Sport');
+              setShowFavorites(false);
+              // Scroll to category nav area
+              setTimeout(() => {
+                const catNav = document.querySelector('[data-category-nav]');
+                if (catNav) catNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 100);
+            }}
+          />
         )}
 
         {/* Continue Watching */}
@@ -166,15 +178,17 @@ const Index: React.FC = () => {
 
 
         {/* Category pills */}
-        <CategoryNav
-          categories={categories}
-          activeCategory={activeCategory}
-          onSelect={setActiveCategory}
-          channelCounts={channelCounts}
-          favoritesCount={favoriteIds.length}
-          showFavorites={showFavorites}
-          onToggleFavorites={handleToggleFavoritesFilter}
-        />
+        <div data-category-nav>
+          <CategoryNav
+            categories={categories}
+            activeCategory={activeCategory}
+            onSelect={setActiveCategory}
+            channelCounts={channelCounts}
+            favoritesCount={favoriteIds.length}
+            showFavorites={showFavorites}
+            onToggleFavorites={handleToggleFavoritesFilter}
+          />
+        </div>
 
         {/* Content */}
         {isFiltering ? (

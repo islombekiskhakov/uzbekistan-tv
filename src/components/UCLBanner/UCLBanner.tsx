@@ -9,9 +9,10 @@ import type { Channel } from '@/lib/parser';
 interface Props {
   channels: Channel[];
   onSelect: (channel: Channel) => void;
+  onScrollToSport: () => void;
 }
 
-export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
+export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
   const { matches, loading, hasLive } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
@@ -44,11 +45,8 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
   }, [emblaApi, matches.length]);
 
   const handleWatch = useCallback(() => {
-    const setanta = channels.find(c =>
-      c.name.toLowerCase().includes('setanta')
-    );
-    if (setanta) onSelect(setanta);
-  }, [channels, onSelect]);
+    onScrollToSport();
+  }, [onScrollToSport]);
 
   if (loading || matches.length === 0) return null;
 
