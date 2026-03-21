@@ -112,7 +112,9 @@ const Index: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background noise">
+    <div className="min-h-screen bg-background relative">
+      <AnimatedBackground />
+      <div className="relative z-10 noise">
       {/* Sticky Header */}
       <Header>
         <div className="flex-1" />
