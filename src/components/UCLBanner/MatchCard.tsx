@@ -42,26 +42,29 @@ export const MatchCard: React.FC<Props> = ({ match, onWatch }) => {
       transition={{ duration: 0.5 }}
       className="relative group"
     >
-      {/* Card container */}
       <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.07] to-white/[0.02] backdrop-blur-2xl">
-        {/* Live glow ring */}
         {live && (
           <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-red-500/40 via-orange-500/40 to-red-500/40 animate-pulse pointer-events-none" />
         )}
 
         <div className="relative p-5 md:p-7">
-          {/* Top bar: stage + status */}
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 font-medium">
-              {match.stage?.replace(/_/g, ' ')}
-            </span>
+          {/* Top bar: league + status */}
+          <div className="flex items-center justify-between mb-5">
+            <div className="flex items-center gap-2 min-w-0">
+              {match.leagueLogo && (
+                <img src={match.leagueLogo} alt="" className="w-4 h-4 object-contain shrink-0" />
+              )}
+              <span className="text-[10px] uppercase tracking-[0.15em] text-white/40 font-medium truncate">
+                {match.leagueName}
+              </span>
+            </div>
             {live ? (
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 text-[11px] font-bold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 text-[11px] font-bold uppercase tracking-wider shrink-0">
                 <Radio className="w-3 h-3 animate-pulse" />
-                Jonli efir
+                LIVE
               </span>
             ) : (
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.06] text-white/50 text-[11px] font-medium">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.06] text-white/50 text-[11px] font-medium shrink-0">
                 {formatMatchDate(match.utcDate)}
               </span>
             )}
@@ -69,25 +72,16 @@ export const MatchCard: React.FC<Props> = ({ match, onWatch }) => {
 
           {/* Teams row */}
           <div className="flex items-center gap-3 md:gap-5">
-            {/* Home Team */}
             <div className="flex items-center gap-3 flex-1 min-w-0">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/[0.06] p-1.5 flex items-center justify-center shrink-0 ring-1 ring-white/[0.05]">
-                <img
-                  src={match.homeTeam.crest}
-                  alt={match.homeTeam.shortName}
-                  className="w-full h-full object-contain drop-shadow-lg"
-                  loading="lazy"
-                />
+                <img src={match.homeTeam.crest} alt={match.homeTeam.shortName} className="w-full h-full object-contain drop-shadow-lg" loading="lazy" />
               </div>
               <div className="min-w-0">
-                <span className="text-white font-bold text-sm md:text-base block truncate">
-                  {match.homeTeam.shortName}
-                </span>
+                <span className="text-white font-bold text-sm md:text-base block truncate">{match.homeTeam.shortName}</span>
                 <span className="text-white/25 text-[10px] uppercase tracking-wider">{match.homeTeam.tla}</span>
               </div>
             </div>
 
-            {/* Score / VS center */}
             <div className="shrink-0 flex flex-col items-center">
               {live ? (
                 <div className="flex items-baseline gap-2">
@@ -106,21 +100,13 @@ export const MatchCard: React.FC<Props> = ({ match, onWatch }) => {
               )}
             </div>
 
-            {/* Away Team */}
             <div className="flex items-center gap-3 flex-1 min-w-0 justify-end">
               <div className="min-w-0 text-right">
-                <span className="text-white font-bold text-sm md:text-base block truncate">
-                  {match.awayTeam.shortName}
-                </span>
+                <span className="text-white font-bold text-sm md:text-base block truncate">{match.awayTeam.shortName}</span>
                 <span className="text-white/25 text-[10px] uppercase tracking-wider">{match.awayTeam.tla}</span>
               </div>
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white/[0.06] p-1.5 flex items-center justify-center shrink-0 ring-1 ring-white/[0.05]">
-                <img
-                  src={match.awayTeam.crest}
-                  alt={match.awayTeam.shortName}
-                  className="w-full h-full object-contain drop-shadow-lg"
-                  loading="lazy"
-                />
+                <img src={match.awayTeam.crest} alt={match.awayTeam.shortName} className="w-full h-full object-contain drop-shadow-lg" loading="lazy" />
               </div>
             </div>
           </div>
