@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useUCLMatches } from '@/hooks/useUCLMatches';
@@ -15,6 +15,9 @@ interface Props {
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
   const { matches, loading, hasLive, lastUpdated } = useUCLMatches();
+  const bannerRef = React.useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: bannerRef, offset: ['start end', 'end start'] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
@@ -55,6 +58,7 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
 
   return (
     <motion.section
+      ref={bannerRef}
       id="jonli-oyinlar"
       aria-label="Futbol jonli natijalar va kelgusi o'yinlar"
       initial={{ opacity: 0 }}
@@ -62,12 +66,13 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden rounded-2xl mx-4 md:mx-8"
     >
-      {/* Stadium background image with slow zoom */}
+      {/* Stadium background with parallax + slow zoom */}
       <motion.div
         className="absolute inset-[-20px]"
         animate={{ scale: [1, 1.08, 1] }}
         transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
         style={{
+          y: bgY,
           backgroundImage: `url(${footballBg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center 40%',
