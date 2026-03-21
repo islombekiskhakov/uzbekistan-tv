@@ -12,7 +12,7 @@ interface Props {
 }
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect }) => {
-  const { matches, loading } = useUCLMatches();
+  const { matches, loading, hasLive } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
