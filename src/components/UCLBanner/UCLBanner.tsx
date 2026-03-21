@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useUCLMatches } from '@/hooks/useUCLMatches';
 import { MatchCard } from './MatchCard';
 import type { Channel } from '@/lib/parser';
+import footballBg from '@/assets/football-banner-bg.jpg';
 
 interface Props {
   channels: Channel[];
@@ -61,20 +62,21 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden rounded-2xl mx-4 md:mx-8"
     >
-      {/* Layered background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#060e1a] via-[#0a1a12] to-[#060e1a]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.08),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.06),transparent_60%)]" />
+      {/* Stadium background image */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${footballBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+        }}
+      />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.1),transparent_60%)]" />
 
       {/* Noise texture */}
       <div className="absolute inset-0 noise opacity-[0.03]" />
-
-      {/* UCL starball watermark */}
-      <div className="absolute right-[-60px] top-[-60px] w-[200px] h-[200px] opacity-[0.03]">
-        <svg viewBox="0 0 100 100" fill="white">
-          <polygon points="50,5 61,35 95,35 67,55 78,85 50,67 22,85 33,55 5,35 39,35" />
-        </svg>
-      </div>
 
       <div className="relative z-10 py-6 md:py-8">
         {/* Header */}
