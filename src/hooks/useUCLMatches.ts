@@ -161,30 +161,29 @@ export function useUCLMatches() {
           .map(mapFixture);
       }
 
-      // Also fetch upcoming matches from top leagues if we have few live matches
-      if (allMatches.length < 10) {
-        const season = new Date().getFullYear();
-        const topLeagues = SELECTED_LEAGUES;
-        
-        // Fetch next upcoming matches
-        const upcomingRes = await fetch(
-          `https://${API_HOST}/fixtures?next=15&timezone=UTC`,
+      // Always fetch upcoming matches from selected leagues
+      const today = new Date();
+      const tomorrow = new Date(today);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const formatDate = (d: Date) => d.toISOString().split('T')[0];
+
+      // Fetch today's and tomorrow's fixtures for our leagues
+      for (const leagueId of SELECTED_LEAGUES) {
+        const season = today.getMonth() >= 7 ? today.getFullYear() : today.getFullYear() - 1;
+        const res = await fetch(
+          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(tomorrow)}&timezone=UTC`,
           { headers: { 'x-apisports-key': API_KEY } }
         );
 
-        if (upcomingRes.ok) {
-          const upcomingData = await upcomingRes.json();
-          if (upcomingData.response) {
-            // Filter for top leagues and map
-            const upcoming = upcomingData.response
-              .filter((f: any) => topLeagues.includes(f.league.id))
-              .map(mapFixture);
-            
-            // Merge, avoiding duplicates
+        if (res.ok) {
+          const data = await res.json();
+          if (data.response) {
             const existingIds = new Set(allMatches.map(m => m.id));
-            for (const m of upcoming) {
-              if (!existingIds.has(m.id)) {
-                allMatches.push(m);
+            for (const f of data.response) {
+              const mapped = mapFixture(f);
+              if (!existingIds.has(mapped.id)) {
+                allMatches.push(mapped);
+                existingIds.add(mapped.id);
               }
             }
           }
