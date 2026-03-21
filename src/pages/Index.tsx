@@ -192,15 +192,28 @@ const Index: React.FC = () => {
 
 
         {/* Category pills */}
-        <div data-category-nav>
+        <div data-category-nav id="category-nav">
           <CategoryNav
             categories={categories}
             activeCategory={activeCategory}
-            onSelect={setActiveCategory}
+            onSelect={(cat) => {
+              setActiveCategory(cat);
+              // Smooth scroll to content area after category switch
+              setTimeout(() => {
+                const content = document.getElementById('channel-content');
+                if (content) content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }, 50);
+            }}
             channelCounts={channelCounts}
             favoritesCount={favoriteIds.length}
             showFavorites={showFavorites}
-            onToggleFavorites={handleToggleFavoritesFilter}
+            onToggleFavorites={() => {
+              handleToggleFavoritesFilter();
+              setTimeout(() => {
+                const content = document.getElementById('channel-content');
+                if (content) content.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }, 50);
+            }}
           />
         </div>
 
