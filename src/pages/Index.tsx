@@ -149,6 +149,11 @@ const Index: React.FC = () => {
       </AnimatePresence>
 
       <div className="max-w-[1600px] mx-auto pt-5 space-y-6">
+        {/* UCL Banner */}
+        {!activeChannel && (
+          <UCLBanner channels={channels} onSelect={handleSelect} />
+        )}
+
         {/* Continue Watching */}
         {!activeChannel && (
           <ContinueWatching
