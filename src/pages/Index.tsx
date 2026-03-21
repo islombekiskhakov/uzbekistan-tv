@@ -152,7 +152,12 @@ const Index: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="max-w-[1600px] mx-auto pt-5 space-y-6">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="max-w-[1600px] mx-auto pt-5 space-y-6"
+      >
         {/* Football Banner */}
         {!activeChannel && (
           <UCLBanner
