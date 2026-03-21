@@ -160,19 +160,24 @@ const Index: React.FC = () => {
       >
         {/* Football Banner */}
         {!activeChannel && (
-          <UCLBanner
-            channels={channels}
-            onSelect={handleSelect}
-            onScrollToSport={() => {
-              setActiveCategory('Sport');
-              setShowFavorites(false);
-              // Scroll to category nav area
-              setTimeout(() => {
-                const catNav = document.querySelector('[data-category-nav]');
-                if (catNav) catNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }, 100);
-            }}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <UCLBanner
+              channels={channels}
+              onSelect={handleSelect}
+              onScrollToSport={() => {
+                setActiveCategory('Sport');
+                setShowFavorites(false);
+                setTimeout(() => {
+                  const catNav = document.querySelector('[data-category-nav]');
+                  if (catNav) catNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+              }}
+            />
+          </motion.div>
         )}
 
         {/* Continue Watching */}
