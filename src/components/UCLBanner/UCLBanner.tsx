@@ -62,18 +62,20 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
       transition={{ duration: 0.8 }}
       className="relative overflow-hidden rounded-2xl mx-4 md:mx-8"
     >
-      {/* Stadium background image */}
-      <div
-        className="absolute inset-0"
+      {/* Stadium background image with slow zoom */}
+      <motion.div
+        className="absolute inset-[-20px]"
+        animate={{ scale: [1, 1.08, 1] }}
+        transition={{ duration: 30, repeat: Infinity, ease: 'easeInOut' }}
         style={{
           backgroundImage: `url(${footballBg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundPosition: 'center 40%',
         }}
       />
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.1),transparent_60%)]" />
+      {/* Dark overlays for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/75" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
 
       {/* Noise texture */}
       <div className="absolute inset-0 noise opacity-[0.03]" />
