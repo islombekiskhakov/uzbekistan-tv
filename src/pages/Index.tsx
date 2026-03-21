@@ -178,15 +178,17 @@ const Index: React.FC = () => {
 
 
         {/* Category pills */}
-        <CategoryNav
-          categories={categories}
-          activeCategory={activeCategory}
-          onSelect={setActiveCategory}
-          channelCounts={channelCounts}
-          favoritesCount={favoriteIds.length}
-          showFavorites={showFavorites}
-          onToggleFavorites={handleToggleFavoritesFilter}
-        />
+        <div data-category-nav>
+          <CategoryNav
+            categories={categories}
+            activeCategory={activeCategory}
+            onSelect={setActiveCategory}
+            channelCounts={channelCounts}
+            favoritesCount={favoriteIds.length}
+            showFavorites={showFavorites}
+            onToggleFavorites={handleToggleFavoritesFilter}
+          />
+        </div>
 
         {/* Content */}
         {isFiltering ? (
