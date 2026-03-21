@@ -54,6 +54,8 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
 
   return (
     <motion.section
+      id="jonli-oyinlar"
+      aria-label="Futbol jonli natijalar va kelgusi o'yinlar"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
