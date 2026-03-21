@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 import type { Channel } from '@/lib/parser';
+import { useTilt3D } from '@/hooks/useTilt3D';
 
 interface Props {
   title: string;
