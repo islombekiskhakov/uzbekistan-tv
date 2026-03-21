@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Tv, Film, Newspaper, Baby, Trophy, Music, Sparkles, GraduationCap, FlaskConical } from 'lucide-react';
 import { useChannels } from '@/hooks/useChannels';
