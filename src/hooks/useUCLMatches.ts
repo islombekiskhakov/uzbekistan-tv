@@ -133,6 +133,7 @@ export function useUCLMatches() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hasLive, setHasLive] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const fetchMatches = async () => {
@@ -206,11 +207,13 @@ export function useUCLMatches() {
       const live = allMatches.some(m => ['IN_PLAY', 'LIVE', 'PAUSED'].includes(m.status));
       setMatches(allMatches.slice(0, 15));
       setHasLive(live);
+      setLastUpdated(new Date());
       setError(null);
     } catch (err) {
       console.warn('API-Football fetch failed, using fallback:', err);
       setMatches(FALLBACK_MATCHES);
       setHasLive(false);
+      setLastUpdated(new Date());
       setError('Using fallback data');
     } finally {
       setLoading(false);
@@ -245,5 +248,5 @@ export function useUCLMatches() {
     };
   }, []);
 
-  return { matches, loading, error, hasLive };
+  return { matches, loading, error, hasLive, lastUpdated };
 }

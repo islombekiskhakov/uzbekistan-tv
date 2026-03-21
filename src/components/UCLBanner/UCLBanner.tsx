@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport }) => {
-  const { matches, loading, hasLive } = useUCLMatches();
+  const { matches, loading, hasLive, lastUpdated } = useUCLMatches();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'center',
     loop: true,
@@ -121,22 +121,29 @@ export const UCLBanner: React.FC<Props> = ({ channels, onSelect, onScrollToSport
           </button>
         </div>
 
-        {/* Minimal dots */}
-        {displayMatches.length > 1 && (
-          <div className="flex justify-center gap-1.5 mt-4">
-            {displayMatches.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => emblaApi?.scrollTo(i)}
-                className={`h-1 rounded-full transition-all duration-500 ${
-                  i === selectedIndex
-                    ? 'bg-white/60 w-5'
-                    : 'bg-white/15 w-1.5 hover:bg-white/25'
-                }`}
-              />
-            ))}
-          </div>
-        )}
+        {/* Dots + last updated */}
+        <div className="flex flex-col items-center gap-2 mt-4">
+          {displayMatches.length > 1 && (
+            <div className="flex justify-center gap-1.5">
+              {displayMatches.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => emblaApi?.scrollTo(i)}
+                  className={`h-1 rounded-full transition-all duration-500 ${
+                    i === selectedIndex
+                      ? 'bg-white/60 w-5'
+                      : 'bg-white/15 w-1.5 hover:bg-white/25'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+          {lastUpdated && (
+            <p className="text-[10px] text-white/25 tracking-wide">
+              Yangilangan: {lastUpdated.toLocaleTimeString('uz-UZ', { hour: '2-digit', minute: '2-digit' })}
+            </p>
+          )}
+        </div>
       </div>
     </motion.section>
   );
