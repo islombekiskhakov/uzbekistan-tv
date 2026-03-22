@@ -144,8 +144,12 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 Category:Sport
 Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream8.cinerama.uz/7263/tracks-v1a1/mono.m3u8
 Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream8.cinerama.uz/7264/tracks-v1a1/mono.m3u8
-Матч! Футбол 3	https://futboltv.az/upload/tv/b_match-futbol-3-logo_20241027195644.png	https://stream.teleuz.app/api/proxy/7b44ae9b-4e9d-4833-b88b-7c03b559c734/index.m3u8   
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
+Матч! Футбол 3	https://antifriz.tv/storage/images/channel_logos/match-futbol3-hd.png	https://stream.teleuz.app/api/proxy/7b44ae9b-4e9d-4833-b88b-7c03b559c734/index.m3u8
+Матч! Футбол 1	https://antifriz.tv/storage/images/channel_logos/match-futbol1-hd.png	https://stream.teleuz.app/api/proxy/29098816-21ac-4492-8df1-4616ce303700/index.m3u8
+ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.teleuz.app/api/proxy/0b646908-ae6b-4c48-9f8f-542046b69510/index.m3u8
+Футбол	https://www.cableman.ru/sites/default/files/futbol_0.jpg	https://stream.teleuz.app/api/proxy/6d0c7487-b4e5-4328-9d60-c22347a342e9/index.m3u8
+Sky Sports Football HD	https://images.everyeye.it/img-notizie/quanto-costa-pacchetto-sky-sport-cosa-vedere-prezzi-aprile-2021-v3-511200-1280x720.webp	https://stream.teleuz.app/api/proxy/a3e3f1a3-b996-47b7-a229-7e8e709a2aec/index.m3u8
 Viasat Sport HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/da09ba3d-82ae-4d47-8e9a-4d934522f4f2.png	https://stream1.cinerama.uz/1229/tracks-v1a1/mono.m3u8
 Матч Планета	https://files.cinerama.uz/images/tv_channels/2023/09/11/90d59b30-09b3-484e-bea8-952da4cfcc46.jpeg	https://stream1.cinerama.uz/1243/tracks-v1a1/mono.m3u8
 КХЛ	https://files.cinerama.uz/images/tv_channels/2023/08/14/8bf48f18-393d-4553-a8d3-73c602fd0036.png	https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
