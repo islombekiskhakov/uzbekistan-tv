@@ -154,7 +154,7 @@ Megogo Футбол 4 HD	https://s1.vcdn.biz/static/f/3725126461/image.jpg	https
 Megogo Футбол 5 HD	https://s1.vcdn.biz/static/f/3725109901/image.jpg	https://stream.teleuz.app/api/proxy/71c86b5e-380c-4497-86d0-01549785f475/index.m3u8
 ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.teleuz.app/api/proxy/0b646908-ae6b-4c48-9f8f-542046b69510/index.m3u8
 Футбол	https://www.cableman.ru/sites/default/files/futbol_0.jpg	https://stream.teleuz.app/api/proxy/6d0c7487-b4e5-4328-9d60-c22347a342e9/index.m3u8
-Sky Sports Football HD	https://images.everyeye.it/img-notizie/quanto-costa-pacchetto-sky-sport-cosa-vedere-prezzi-aprile-2021-v3-511200-1280x720.webp	https://stream.teleuz.app/api/proxy/a3e3f1a3-b996-47b7-a229-7e8e709a2aec/index.m3u8
+Sky Sports Football HD	https://d11p0alxbet5ud.cloudfront.net/Pictures/1024x536/8/8/4/1423884_skysportslogoround_648813.jpg	https://stream.teleuz.app/api/proxy/a3e3f1a3-b996-47b7-a229-7e8e709a2aec/index.m3u8
 Viasat Sport HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/da09ba3d-82ae-4d47-8e9a-4d934522f4f2.png	https://stream1.cinerama.uz/1229/tracks-v1a1/mono.m3u8
 Матч Планета	https://files.cinerama.uz/images/tv_channels/2023/09/11/90d59b30-09b3-484e-bea8-952da4cfcc46.jpeg	https://stream1.cinerama.uz/1243/tracks-v1a1/mono.m3u8
 КХЛ	https://files.cinerama.uz/images/tv_channels/2023/08/14/8bf48f18-393d-4553-a8d3-73c602fd0036.png	https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
