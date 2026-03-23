@@ -162,37 +162,12 @@ export function useUCLMatches() {
           .map(mapFixture);
       }
 
-      // Always fetch upcoming matches from selected leagues
-      const today = new Date();
-      const dayAfterTomorrow = new Date(today);
-      dayAfterTomorrow.setDate(dayAfterTomorrow.getDate() + 2);
-      const formatDate = (d: Date) => d.toISOString().split('T')[0];
-
-      // Fetch today's and tomorrow's fixtures for our leagues
-      for (const leagueId of SELECTED_LEAGUES) {
-        const season = today.getMonth() >= 7 ? today.getFullYear() : today.getFullYear() - 1;
-        const res = await fetch(
-          `https://${API_HOST}/fixtures?league=${leagueId}&season=${season}&from=${formatDate(today)}&to=${formatDate(dayAfterTomorrow)}&timezone=UTC`,
-          { headers: { 'x-apisports-key': API_KEY } }
-        );
-
-        if (res.ok) {
-          const data = await res.json();
-          if (data.response) {
-            const existingIds = new Set(allMatches.map(m => m.id));
-            for (const f of data.response) {
-              const mapped = mapFixture(f);
-              if (!existingIds.has(mapped.id)) {
-                allMatches.push(mapped);
-                existingIds.add(mapped.id);
-              }
-            }
-          }
-        }
-      }
+      // Note: API-Sports free plan only supports seasons 2022-2024,
+      // so we cannot fetch scheduled fixtures for the current season.
+      // We only rely on the live endpoint for real-time data.
 
       if (allMatches.length === 0) {
-        throw new Error('No matches found');
+        throw new Error('No live matches from selected leagues');
       }
 
       // Sort: live first, then by date
