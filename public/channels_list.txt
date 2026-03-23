@@ -149,7 +149,7 @@ Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-
 Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	https://stream.teleuz.app/api/proxy/29098816-21ac-4492-8df1-4616ce303700/index.m3u8
 Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	https://stream.teleuz.app/api/proxy/a76ca9bf-801a-4f6e-ac7f-1807df123f20/index.m3u8
 Матч! Футбол 3	https://tricolor-38.ru/KANALY_4/matsh-fytbol-3hd.png	https://stream.teleuz.app/api/proxy/7b44ae9b-4e9d-4833-b88b-7c03b559c734/index.m3u8
-Megogo Спорт HD	https://upload.wikimedia.org/wikipedia/commons/6/6d/MEGOGO_%D0%A1%D0%BF%D0%BE%D1%80%D1%82.png	https://stream.teleuz.app/api/proxy/85956c1a-b45a-4e7d-a9cb-209691a87152/index.m3u8
+Megogo Спорт HD	https://s9.vcdn.biz/static/f/3725125911/image.jpg	https://stream.teleuz.app/api/proxy/85956c1a-b45a-4e7d-a9cb-209691a87152/index.m3u8
 Megogo Футбол 4 HD	https://s1.vcdn.biz/static/f/3725126461/image.jpg	https://stream.teleuz.app/api/proxy/2b9f4728-bd35-4d67-873b-3d5b2858a69f/index.m3u8
 Megogo Футбол 5 HD	https://s1.vcdn.biz/static/f/3725109901/image.jpg	https://stream.teleuz.app/api/proxy/71c86b5e-380c-4497-86d0-01549785f475/index.m3u8
 ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.teleuz.app/api/proxy/0b646908-ae6b-4c48-9f8f-542046b69510/index.m3u8
