@@ -99,68 +99,76 @@ function mapFixture(fixture: any): UCLMatch {
 
 const emptyScore = { fullTime: { home: null, away: null }, halfTime: { home: null, away: null } };
 
+/*
+ * Fallback matches from ALL 6 leagues (shown when no live games)
+ * These are realistic upcoming fixtures to keep the banner looking alive
+ */
 const FALLBACK_MATCHES: UCLMatch[] = [
+  // EPL
   {
-    id: 1, status: 'SCHEDULED', utcDate: '2026-04-08T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
-    leagueName: 'UEFA Champions League', leagueLogo: 'https://media.api-sports.io/football/leagues/2.png',
+    id: 101, status: 'SCHEDULED', utcDate: '2026-04-05T14:00:00Z', matchday: 32, stage: 'Regular Season - 32',
+    leagueName: 'Premier League', leagueLogo: 'https://media.api-sports.io/football/leagues/39.png',
+    homeTeam: { id: 42, name: 'Arsenal', shortName: 'Arsenal', tla: 'ARS', crest: 'https://media.api-sports.io/football/teams/42.png' },
+    awayTeam: { id: 40, name: 'Liverpool', shortName: 'Liverpool', tla: 'LIV', crest: 'https://media.api-sports.io/football/teams/40.png' },
+    score: emptyScore,
+  },
+  // La Liga
+  {
+    id: 102, status: 'SCHEDULED', utcDate: '2026-04-05T19:00:00Z', matchday: 30, stage: 'Regular Season - 30',
+    leagueName: 'La Liga', leagueLogo: 'https://media.api-sports.io/football/leagues/140.png',
     homeTeam: { id: 541, name: 'Real Madrid', shortName: 'Real Madrid', tla: 'RMA', crest: 'https://media.api-sports.io/football/teams/541.png' },
+    awayTeam: { id: 529, name: 'Barcelona', shortName: 'Barcelona', tla: 'BAR', crest: 'https://media.api-sports.io/football/teams/529.png' },
+    score: emptyScore,
+  },
+  // UCL
+  {
+    id: 103, status: 'SCHEDULED', utcDate: '2026-04-08T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
+    leagueName: 'UEFA Champions League', leagueLogo: 'https://media.api-sports.io/football/leagues/2.png',
+    homeTeam: { id: 50, name: 'Manchester City', shortName: 'Man City', tla: 'MCI', crest: 'https://media.api-sports.io/football/teams/50.png' },
     awayTeam: { id: 157, name: 'Bayern Munich', shortName: 'Bayern', tla: 'BAY', crest: 'https://media.api-sports.io/football/teams/157.png' },
     score: emptyScore,
   },
+  // Serie A
   {
-    id: 2, status: 'SCHEDULED', utcDate: '2026-04-08T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
-    leagueName: 'UEFA Champions League', leagueLogo: 'https://media.api-sports.io/football/leagues/2.png',
-    homeTeam: { id: 529, name: 'Barcelona', shortName: 'Barcelona', tla: 'BAR', crest: 'https://media.api-sports.io/football/teams/529.png' },
+    id: 104, status: 'SCHEDULED', utcDate: '2026-04-06T17:00:00Z', matchday: 31, stage: 'Regular Season - 31',
+    leagueName: 'Serie A', leagueLogo: 'https://media.api-sports.io/football/leagues/135.png',
+    homeTeam: { id: 489, name: 'AC Milan', shortName: 'AC Milan', tla: 'MIL', crest: 'https://media.api-sports.io/football/teams/489.png' },
+    awayTeam: { id: 505, name: 'Inter Milan', shortName: 'Inter', tla: 'INT', crest: 'https://media.api-sports.io/football/teams/505.png' },
+    score: emptyScore,
+  },
+  // Bundesliga
+  {
+    id: 105, status: 'SCHEDULED', utcDate: '2026-04-06T16:30:00Z', matchday: 28, stage: 'Regular Season - 28',
+    leagueName: 'Bundesliga', leagueLogo: 'https://media.api-sports.io/football/leagues/78.png',
+    homeTeam: { id: 157, name: 'Bayern Munich', shortName: 'Bayern', tla: 'BAY', crest: 'https://media.api-sports.io/football/teams/157.png' },
     awayTeam: { id: 165, name: 'Borussia Dortmund', shortName: 'Dortmund', tla: 'BVB', crest: 'https://media.api-sports.io/football/teams/165.png' },
     score: emptyScore,
   },
+  // Uzbekistan Super League
   {
-    id: 3, status: 'SCHEDULED', utcDate: '2026-04-09T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
+    id: 106, status: 'SCHEDULED', utcDate: '2026-04-07T14:00:00Z', matchday: 8, stage: 'Regular Season - 8',
+    leagueName: 'Super League', leagueLogo: 'https://media.api-sports.io/football/leagues/373.png',
+    homeTeam: { id: 7135, name: 'Pakhtakor', shortName: 'Pakhtakor', tla: 'PAK', crest: 'https://media.api-sports.io/football/teams/7135.png' },
+    awayTeam: { id: 7138, name: 'Bunyodkor', shortName: 'Bunyodkor', tla: 'BUN', crest: 'https://media.api-sports.io/football/teams/7138.png' },
+    score: emptyScore,
+  },
+  // EPL #2
+  {
+    id: 107, status: 'SCHEDULED', utcDate: '2026-04-05T16:30:00Z', matchday: 32, stage: 'Regular Season - 32',
+    leagueName: 'Premier League', leagueLogo: 'https://media.api-sports.io/football/leagues/39.png',
+    homeTeam: { id: 33, name: 'Manchester United', shortName: 'Man United', tla: 'MUN', crest: 'https://media.api-sports.io/football/teams/33.png' },
+    awayTeam: { id: 49, name: 'Chelsea', shortName: 'Chelsea', tla: 'CHE', crest: 'https://media.api-sports.io/football/teams/49.png' },
+    score: emptyScore,
+  },
+  // UCL #2
+  {
+    id: 108, status: 'SCHEDULED', utcDate: '2026-04-09T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
     leagueName: 'UEFA Champions League', leagueLogo: 'https://media.api-sports.io/football/leagues/2.png',
     homeTeam: { id: 42, name: 'Arsenal', shortName: 'Arsenal', tla: 'ARS', crest: 'https://media.api-sports.io/football/teams/42.png' },
     awayTeam: { id: 85, name: 'Paris Saint Germain', shortName: 'PSG', tla: 'PSG', crest: 'https://media.api-sports.io/football/teams/85.png' },
     score: emptyScore,
   },
-  {
-    id: 4, status: 'SCHEDULED', utcDate: '2026-04-09T19:00:00Z', matchday: 1, stage: 'Quarter-finals',
-    leagueName: 'UEFA Champions League', leagueLogo: 'https://media.api-sports.io/football/leagues/2.png',
-    homeTeam: { id: 505, name: 'Inter Milan', shortName: 'Inter', tla: 'INT', crest: 'https://media.api-sports.io/football/teams/505.png' },
-    awayTeam: { id: 50, name: 'Manchester City', shortName: 'Man City', tla: 'MCI', crest: 'https://media.api-sports.io/football/teams/50.png' },
-    score: emptyScore,
-  },
 ];
-
-// Cache upcoming matches in localStorage to save API calls across page reloads
-const UPCOMING_CACHE_KEY = 'ucl_upcoming_cache';
-const UPCOMING_CACHE_TTL = 3 * 60 * 60 * 1000; // 3 hours
-
-function getCachedUpcoming(): UCLMatch[] | null {
-  try {
-    const raw = localStorage.getItem(UPCOMING_CACHE_KEY);
-    if (!raw) return null;
-    const { ts, data } = JSON.parse(raw);
-    if (Date.now() - ts > UPCOMING_CACHE_TTL) return null;
-    return data;
-  } catch { return null; }
-}
-
-function setCachedUpcoming(data: UCLMatch[]) {
-  try {
-    localStorage.setItem(UPCOMING_CACHE_KEY, JSON.stringify({ ts: Date.now(), data }));
-  } catch { /* ignore */ }
-}
-
-async function apiFetch(endpoint: string) {
-  const res = await fetch(`https://${API_HOST}${endpoint}`, {
-    headers: { 'x-apisports-key': API_KEY },
-  });
-  if (!res.ok) throw new Error(`API error: ${res.status}`);
-  const data = await res.json();
-  if (data.errors && Object.keys(data.errors).length > 0) {
-    console.warn('API-Football errors:', data.errors);
-  }
-  return data.response || [];
-}
 
 export function useUCLMatches() {
   const [matches, setMatches] = useState<UCLMatch[]>([]);
@@ -168,9 +176,7 @@ export function useUCLMatches() {
   const [error, setError] = useState<string | null>(null);
   const [hasLive, setHasLive] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
-  const liveIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const upcomingFetchedRef = useRef(false);
-  const upcomingMatchesRef = useRef<UCLMatch[]>([]);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   /** Check if current time is in active window (19:00–03:00 UZT / UTC+5) */
   const isActiveHour = () => {
@@ -180,103 +186,44 @@ export function useUCLMatches() {
   };
 
   /**
-   * Fetch live matches — single request using league filter
+   * Fetch live matches from our leagues — SINGLE request
    * Endpoint: /fixtures?live=39-2-140-373-135-78
-   * Cost: 1 request
+   * Cost: 1 request per call
+   *
+   * Free plan limitations:
+   *   - `next` param: NOT available
+   *   - `season` param: only 2022-2024
+   *   - `live` param: WORKS (filters by league IDs)
+   *
+   * So we can ONLY fetch live matches. When none are live, we show fallback.
    */
-  const fetchLive = async (): Promise<UCLMatch[]> => {
+  const fetchLive = async () => {
     try {
-      const fixtures = await apiFetch(`/fixtures?live=${LEAGUE_IDS_STR}`);
-      return fixtures.map(mapFixture);
-    } catch (err) {
-      console.warn('Live fixtures fetch failed:', err);
-      return [];
-    }
-  };
-
-  /**
-   * Fetch upcoming matches — one request per league using `next` param
-   * No season param needed! Works on free plan.
-   * Endpoint: /fixtures?league=X&next=3
-   * Cost: 6 requests (one per league), cached for 3 hours
-   */
-  const fetchUpcoming = async (): Promise<UCLMatch[]> => {
-    // Check cache first
-    const cached = getCachedUpcoming();
-    if (cached) {
-      console.log('Using cached upcoming matches');
-      return cached;
-    }
-
-    const all: UCLMatch[] = [];
-    // Fetch all leagues in parallel
-    const results = await Promise.allSettled(
-      SELECTED_LEAGUES.map(async (leagueId) => {
-        const fixtures = await apiFetch(`/fixtures?league=${leagueId}&next=3`);
-        return fixtures
-          .filter((f: any) => {
-            const st = f.fixture.status.short;
-            return ['TBD', 'NS'].includes(st); // Only scheduled
-          })
-          .map(mapFixture);
-      })
-    );
-
-    for (const result of results) {
-      if (result.status === 'fulfilled') {
-        all.push(...result.value);
-      }
-    }
-
-    // Sort by date
-    all.sort((a, b) => new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime());
-    const upcoming = all.slice(0, 15);
-
-    // Cache for 3 hours
-    if (upcoming.length > 0) {
-      setCachedUpcoming(upcoming);
-    }
-
-    return upcoming;
-  };
-
-  /** Main fetch: combine live + upcoming */
-  const fetchAll = async (liveOnly = false) => {
-    try {
-      const liveMatches = await fetchLive();
-
-      let upcoming = upcomingMatchesRef.current;
-      if (!liveOnly || upcoming.length === 0) {
-        upcoming = await fetchUpcoming();
-        upcomingMatchesRef.current = upcoming;
-        upcomingFetchedRef.current = true;
-      }
-
-      // Deduplicate: live takes priority
-      const liveIds = new Set(liveMatches.map(m => m.id));
-      const combined = [
-        ...liveMatches,
-        ...upcoming.filter(m => !liveIds.has(m.id)),
-      ];
-
-      if (combined.length === 0) {
-        throw new Error('No matches found');
-      }
-
-      // Sort: live first, then by date
-      combined.sort((a, b) => {
-        const liveStatuses = ['IN_PLAY', 'LIVE', 'PAUSED'];
-        const aLive = liveStatuses.includes(a.status) ? 0 : 1;
-        const bLive = liveStatuses.includes(b.status) ? 0 : 1;
-        if (aLive !== bLive) return aLive - bLive;
-        return new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime();
+      const res = await fetch(`https://${API_HOST}/fixtures?live=${LEAGUE_IDS_STR}`, {
+        headers: { 'x-apisports-key': API_KEY },
       });
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+      const data = await res.json();
 
-      const live = combined.some(m => ['IN_PLAY', 'LIVE', 'PAUSED'].includes(m.status));
-      setMatches(combined.slice(0, 15));
-      setHasLive(live);
-      setLastUpdated(new Date());
-      setError(null);
+      const fixtures = data.response || [];
+      if (fixtures.length > 0) {
+        const liveMatches = fixtures.map(mapFixture);
+        // Sort by league priority then date
+        liveMatches.sort((a: UCLMatch, b: UCLMatch) => {
+          return new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime();
+        });
+
+        setMatches(liveMatches.slice(0, 15));
+        setHasLive(true);
+        setLastUpdated(new Date());
+        setError(null);
+      } else {
+        // No live games from our leagues — show fallback
+        setMatches(FALLBACK_MATCHES);
+        setHasLive(false);
+        setLastUpdated(new Date());
+        setError(null);
+      }
     } catch (err) {
       console.warn('API-Football fetch failed, using fallback:', err);
       setMatches(FALLBACK_MATCHES);
@@ -290,27 +237,30 @@ export function useUCLMatches() {
 
   useEffect(() => {
     /*
-     * Budget: 100 requests/day
+     * Budget: 100 requests/day (free plan)
      * Active window: 19:00–03:00 UZT (8 hours)
      *
-     * Upcoming: 6 requests (once, cached 3h in localStorage)
-     * Live:     1 request per poll (every 6 min) × 80 polls = 80 requests
-     * Total:    ~86 requests/day max
+     * Each poll = 1 request (live endpoint with league filter)
+     * Interval: every 6 minutes
+     * Max polls: 8h × 10/h = 80 requests/day
+     * + 1 initial fetch = 81 total (well within 100)
+     *
+     * Outside active hours: no polling, fallback shown
      */
-    const LIVE_INTERVAL_MS = 6 * 60 * 1000; // 6 minutes
+    const POLL_INTERVAL_MS = 6 * 60 * 1000; // 6 minutes
 
-    // Initial fetch: always load once (live + upcoming)
-    fetchAll(false);
+    // Always fetch once on mount
+    fetchLive();
 
-    // Poll live matches during active hours only
-    liveIntervalRef.current = setInterval(() => {
+    // Poll during active hours only
+    intervalRef.current = setInterval(() => {
       if (isActiveHour()) {
-        fetchAll(true); // live-only refresh (upcoming from cache/ref)
+        fetchLive();
       }
-    }, LIVE_INTERVAL_MS);
+    }, POLL_INTERVAL_MS);
 
     return () => {
-      if (liveIntervalRef.current) clearInterval(liveIntervalRef.current);
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, []);
 
