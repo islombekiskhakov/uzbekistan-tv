@@ -145,6 +145,7 @@ Category:Sport
 Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream8.cinerama.uz/7263/tracks-v1a1/mono.m3u8
 Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream8.cinerama.uz/7264/tracks-v1a1/mono.m3u8
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
+Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 Матч! Футбол 1	https://antifriz.tv/storage/images/channel_logos/match-futbol1-hd.png	https://stream.teleuz.app/api/proxy/29098816-21ac-4492-8df1-4616ce303700/index.m3u8
 Матч! Футбол 2 HD	https://www.oreol.tv/channels/match-futbol-2-hd.html	https://stream.teleuz.app/api/proxy/a76ca9bf-801a-4f6e-ac7f-1807df123f20/index.m3u8
 Матч! Футбол 3	https://antifriz.tv/storage/images/channel_logos/match-futbol3-hd.png	https://stream.teleuz.app/api/proxy/7b44ae9b-4e9d-4833-b88b-7c03b559c734/index.m3u8
@@ -162,7 +163,6 @@ Fuel TV HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/b434f380-9aa1
 Точка Отрыва	https://files.cinerama.uz/images/tv_channels/2023/08/14/1c887f6c-eefc-48a7-8618-1b302f032766.png	https://stream1.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 Trace Sport Starts HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/87cb45de-8c74-4194-88ca-e5f709c11621.jpeg	https://stream1.cinerama.uz/1274/tracks-v1a1/mono.m3u8
 Eurosport HD	https://files.cinerama.uz/images/tv_channels/2023/08/14/3fa5ec93-3e9c-4bba-a02c-3611f8a3be5a.png	https://stream8.cinerama.uz/1439/tracks-v1a1/mono.m3u8
-Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 Zo’r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/7016/tracks-v3a1/mono.m3u8
 
 
