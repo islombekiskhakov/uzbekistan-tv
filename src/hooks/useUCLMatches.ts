@@ -27,6 +27,10 @@ export interface UCLMatch {
 const API_KEY = 'c5798e9b8b89728e719f4deeb37a5d99';
 const API_HOST = 'v3.football.api-sports.io';
 
+// EPL(39), UCL(2), La Liga(140), Uzbekistan Super League(373), Serie A(135), Bundesliga(78)
+const SELECTED_LEAGUES = [39, 2, 140, 373, 135, 78];
+const LEAGUE_IDS_STR = SELECTED_LEAGUES.join('-');
+
 function mapStatus(shortStatus: string): UCLMatch['status'] {
   const map: Record<string, UCLMatch['status']> = {
     'TBD': 'SCHEDULED', 'NS': 'SCHEDULED',
@@ -42,7 +46,6 @@ function mapStatus(shortStatus: string): UCLMatch['status'] {
 
 function shortenName(name: string): string {
   if (name.length <= 14) return name;
-  // Common shortenings
   const shorts: Record<string, string> = {
     'Manchester United': 'Man United',
     'Manchester City': 'Man City',
@@ -59,7 +62,6 @@ function shortenName(name: string): string {
     'Brighton And Hove Albion': 'Brighton',
   };
   if (shorts[name]) return shorts[name];
-  // Fallback: first two words
   const words = name.split(' ');
   if (words.length > 2) return words.slice(0, 2).join(' ');
   return name;
@@ -128,50 +130,141 @@ const FALLBACK_MATCHES: UCLMatch[] = [
   },
 ];
 
+// Cache upcoming matches in localStorage to save API calls across page reloads
+const UPCOMING_CACHE_KEY = 'ucl_upcoming_cache';
+const UPCOMING_CACHE_TTL = 3 * 60 * 60 * 1000; // 3 hours
+
+function getCachedUpcoming(): UCLMatch[] | null {
+  try {
+    const raw = localStorage.getItem(UPCOMING_CACHE_KEY);
+    if (!raw) return null;
+    const { ts, data } = JSON.parse(raw);
+    if (Date.now() - ts > UPCOMING_CACHE_TTL) return null;
+    return data;
+  } catch { return null; }
+}
+
+function setCachedUpcoming(data: UCLMatch[]) {
+  try {
+    localStorage.setItem(UPCOMING_CACHE_KEY, JSON.stringify({ ts: Date.now(), data }));
+  } catch { /* ignore */ }
+}
+
+async function apiFetch(endpoint: string) {
+  const res = await fetch(`https://${API_HOST}${endpoint}`, {
+    headers: { 'x-apisports-key': API_KEY },
+  });
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  const data = await res.json();
+  if (data.errors && Object.keys(data.errors).length > 0) {
+    console.warn('API-Football errors:', data.errors);
+  }
+  return data.response || [];
+}
+
 export function useUCLMatches() {
   const [matches, setMatches] = useState<UCLMatch[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hasLive, setHasLive] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const liveIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const upcomingFetchedRef = useRef(false);
+  const upcomingMatchesRef = useRef<UCLMatch[]>([]);
 
-  const fetchMatches = async () => {
+  /** Check if current time is in active window (19:00–03:00 UZT / UTC+5) */
+  const isActiveHour = () => {
+    const now = new Date();
+    const uzHour = (now.getUTCHours() + 5) % 24;
+    return uzHour >= 19 || uzHour < 3;
+  };
+
+  /**
+   * Fetch live matches — single request using league filter
+   * Endpoint: /fixtures?live=39-2-140-373-135-78
+   * Cost: 1 request
+   */
+  const fetchLive = async (): Promise<UCLMatch[]> => {
     try {
-      // Selected leagues: EPL(39), UCL(2), La Liga(140), Uzbekistan Super League(373), Serie A(135), Bundesliga(78)
-      const SELECTED_LEAGUES = [39, 2, 140, 373, 135, 78];
+      const fixtures = await apiFetch(`/fixtures?live=${LEAGUE_IDS_STR}`);
+      return fixtures.map(mapFixture);
+    } catch (err) {
+      console.warn('Live fixtures fetch failed:', err);
+      return [];
+    }
+  };
 
-      // First: fetch live matches, filtered to our leagues
-      const liveRes = await fetch(
-        `https://${API_HOST}/fixtures?live=all`,
-        { headers: { 'x-apisports-key': API_KEY } }
-      );
+  /**
+   * Fetch upcoming matches — one request per league using `next` param
+   * No season param needed! Works on free plan.
+   * Endpoint: /fixtures?league=X&next=3
+   * Cost: 6 requests (one per league), cached for 3 hours
+   */
+  const fetchUpcoming = async (): Promise<UCLMatch[]> => {
+    // Check cache first
+    const cached = getCachedUpcoming();
+    if (cached) {
+      console.log('Using cached upcoming matches');
+      return cached;
+    }
 
-      if (!liveRes.ok) throw new Error(`API error: ${liveRes.status}`);
-      const liveData = await liveRes.json();
-
-      if (liveData.errors && Object.keys(liveData.errors).length > 0) {
-        throw new Error(JSON.stringify(liveData.errors));
-      }
-
-      let allMatches: UCLMatch[] = [];
-
-      if (liveData.response && liveData.response.length > 0) {
-        allMatches = liveData.response
-          .filter((f: any) => SELECTED_LEAGUES.includes(f.league.id))
+    const all: UCLMatch[] = [];
+    // Fetch all leagues in parallel
+    const results = await Promise.allSettled(
+      SELECTED_LEAGUES.map(async (leagueId) => {
+        const fixtures = await apiFetch(`/fixtures?league=${leagueId}&next=3`);
+        return fixtures
+          .filter((f: any) => {
+            const st = f.fixture.status.short;
+            return ['TBD', 'NS'].includes(st); // Only scheduled
+          })
           .map(mapFixture);
+      })
+    );
+
+    for (const result of results) {
+      if (result.status === 'fulfilled') {
+        all.push(...result.value);
+      }
+    }
+
+    // Sort by date
+    all.sort((a, b) => new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime());
+    const upcoming = all.slice(0, 15);
+
+    // Cache for 3 hours
+    if (upcoming.length > 0) {
+      setCachedUpcoming(upcoming);
+    }
+
+    return upcoming;
+  };
+
+  /** Main fetch: combine live + upcoming */
+  const fetchAll = async (liveOnly = false) => {
+    try {
+      const liveMatches = await fetchLive();
+
+      let upcoming = upcomingMatchesRef.current;
+      if (!liveOnly || upcoming.length === 0) {
+        upcoming = await fetchUpcoming();
+        upcomingMatchesRef.current = upcoming;
+        upcomingFetchedRef.current = true;
       }
 
-      // Note: API-Sports free plan only supports seasons 2022-2024,
-      // so we cannot fetch scheduled fixtures for the current season.
-      // We only rely on the live endpoint for real-time data.
+      // Deduplicate: live takes priority
+      const liveIds = new Set(liveMatches.map(m => m.id));
+      const combined = [
+        ...liveMatches,
+        ...upcoming.filter(m => !liveIds.has(m.id)),
+      ];
 
-      if (allMatches.length === 0) {
-        throw new Error('No live matches from selected leagues');
+      if (combined.length === 0) {
+        throw new Error('No matches found');
       }
 
       // Sort: live first, then by date
-      allMatches.sort((a, b) => {
+      combined.sort((a, b) => {
         const liveStatuses = ['IN_PLAY', 'LIVE', 'PAUSED'];
         const aLive = liveStatuses.includes(a.status) ? 0 : 1;
         const bLive = liveStatuses.includes(b.status) ? 0 : 1;
@@ -179,8 +272,8 @@ export function useUCLMatches() {
         return new Date(a.utcDate).getTime() - new Date(b.utcDate).getTime();
       });
 
-      const live = allMatches.some(m => ['IN_PLAY', 'LIVE', 'PAUSED'].includes(m.status));
-      setMatches(allMatches.slice(0, 15));
+      const live = combined.some(m => ['IN_PLAY', 'LIVE', 'PAUSED'].includes(m.status));
+      setMatches(combined.slice(0, 15));
       setHasLive(live);
       setLastUpdated(new Date());
       setError(null);
@@ -196,30 +289,28 @@ export function useUCLMatches() {
   };
 
   useEffect(() => {
-    // Budget: 100 requests/day. Active window: 19:00–03:00 (UTC+5 Uzbekistan).
-    // That's 8 hours = 480 min → fetch every 5 min = ~96 requests/day.
-    // Between 03:00–19:00 local time, no fetches (no matches playing).
-    const INTERVAL_MS = 5 * 60 * 1000; // 5 minutes
+    /*
+     * Budget: 100 requests/day
+     * Active window: 19:00–03:00 UZT (8 hours)
+     *
+     * Upcoming: 6 requests (once, cached 3h in localStorage)
+     * Live:     1 request per poll (every 6 min) × 80 polls = 80 requests
+     * Total:    ~86 requests/day max
+     */
+    const LIVE_INTERVAL_MS = 6 * 60 * 1000; // 6 minutes
 
-    const isActiveHour = () => {
-      const now = new Date();
-      // Convert to UTC+5 (Uzbekistan)
-      const uzHour = (now.getUTCHours() + 5) % 24;
-      // Active: 19:00–03:00 UZT (i.e. hour >= 19 OR hour < 3)
-      return uzHour >= 19 || uzHour < 3;
-    };
+    // Initial fetch: always load once (live + upcoming)
+    fetchAll(false);
 
-    const smartFetch = () => {
+    // Poll live matches during active hours only
+    liveIntervalRef.current = setInterval(() => {
       if (isActiveHour()) {
-        fetchMatches();
+        fetchAll(true); // live-only refresh (upcoming from cache/ref)
       }
-    };
+    }, LIVE_INTERVAL_MS);
 
-    // Initial fetch: always fetch once to populate data, then schedule
-    fetchMatches();
-    intervalRef.current = setInterval(smartFetch, INTERVAL_MS);
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (liveIntervalRef.current) clearInterval(liveIntervalRef.current);
     };
   }, []);
 
