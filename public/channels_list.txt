@@ -142,8 +142,8 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 
 
 Category:Sport
-Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream8.cinerama.uz/7263/tracks-v1a1/mono.m3u8
-Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream8.cinerama.uz/7264/tracks-v1a1/mono.m3u8
+Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2023/01/04/2a6ba8bc-7ec9-4c01-84b1-66699ff68d5c.png	https://stream1.cinerama.uz/7263/tracks-v1a1/mono.m3u8
+Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2023/01/04/582bec09-2662-4cf0-adb5-6584f5c26f7b.png	https://stream1.cinerama.uz/7264/tracks-v1a1/mono.m3u8
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
 Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	https://stream.teleuz.app/api/proxy/1810a2dc-7400-48e3-b6f8-3e9ebb24c07f/index.m3u8
