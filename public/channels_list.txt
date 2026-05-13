@@ -144,7 +144,7 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 Category:Sport
 Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2026/04/30/2877d9e7-7de0-42c8-bbd4-55bc778cc5d7.png	https://stream1.cinerama.uz/7263/tracks-v1a1/mono.m3u8
 Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2026/04/30/eb700ccc-993a-444b-932a-1fe3660c679d.png	https://stream1.cinerama.uz/7264/tracks-v1a1/mono.m3u8
-Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
+Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
 Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
 Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	https://stream.teleuz.app/api/proxy/1810a2dc-7400-48e3-b6f8-3e9ebb24c07f/index.m3u8
 Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	https://stream.teleuz.app/api/proxy/bf23d2ee-ada0-4fd0-84b6-62912429392d/index.m3u8
@@ -158,7 +158,7 @@ Sky Sports Football HD	https://d11p0alxbet5ud.cloudfront.net/Pictures/1024x536/8
 Viasat Sport HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/da09ba3d-82ae-4d47-8e9a-4d934522f4f2.png	https://stream1.cinerama.uz/1229/tracks-v1a1/mono.m3u8
 Матч Планета	https://files.cinerama.uz/images/tv_channels/2023/09/11/90d59b30-09b3-484e-bea8-952da4cfcc46.jpeg	https://stream1.cinerama.uz/1243/tracks-v1a1/mono.m3u8
 КХЛ	https://files.cinerama.uz/images/tv_channels/2023/08/14/8bf48f18-393d-4553-a8d3-73c602fd0036.png	https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
-MMA TV	https://files.cinerama.uz/images/tv_channels/2023/03/05/851c6f61-d4ec-43e7-b68f-8d90a811a6e3.png	https://stream1.cinerama.uz/1226/tracks-v1a1/mono.m3u8
+MMA TV	https://files.cinerama.uz/images/tv_channels/2023/03/05/851c6f61-d4ec-43e7-b68f-8d90a811a6e3.png	https://stream8.cinerama.uz/1226/tracks-v1a1/mono.m3u8
 Fuel TV HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/b434f380-9aa1-425d-a942-864d676707a9.png	https://stream1.cinerama.uz/1280/tracks-v1a1/mono.m3u8
 Точка Отрыва	https://files.cinerama.uz/images/tv_channels/2023/08/14/1c887f6c-eefc-48a7-8618-1b302f032766.png	https://stream1.cinerama.uz/1031/tracks-v1a1/mono.m3u8
 Trace Sport Starts HD	https://files.cinerama.uz/images/tv_channels/2023/09/11/87cb45de-8c74-4194-88ca-e5f709c11621.jpeg	https://stream1.cinerama.uz/1274/tracks-v1a1/mono.m3u8
