@@ -1,5 +1,5 @@
 Category:Milliy
-Zo’r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/7016/tracks-v3a1/mono.m3u8
+Zo’r TV	https://files.itv.uz/uploads/iptv/channels/2025/02/10//0468ff22219c4d1b9cb00666ba2b2e60-q-500x500.jpeg	https://stream8.cinerama.uz/1016/tracks-v1a1/mono.m3u8
 iTV Cinema	https://files.itv.uz/uploads/iptv/channels/2023/05/31//91c58d573e4a8e351e68a0ebcbe724ab-q-500x500.jpeg	https://stream2.cinerama.uz/4000/tracks-v1a1/mono.m3u8
 Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/7004/tracks-v1a1/mono.m3u8
 iTV Music	https://files.itv.uz/uploads/iptv/channels/2023/05/31//27d9324713264f6d8c4cc6986cf4ae86-q-500x500.jpeg	https://stream2.cinerama.uz/4001/tracks-v1a1/mono.m3u8
@@ -142,19 +142,17 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 
 
 Category:Sport
-Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2026/04/30/2877d9e7-7de0-42c8-bbd4-55bc778cc5d7.png	https://stream1.cinerama.uz/7263/tracks-v1a1/mono.m3u8
-Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2026/04/30/eb700ccc-993a-444b-932a-1fe3660c679d.png	https://stream1.cinerama.uz/7264/tracks-v1a1/mono.m3u8
+Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2026/04/30/2877d9e7-7de0-42c8-bbd4-55bc778cc5d7.png	https://stream.saytchi.online/api/proxy/7d6444a0-55fb-47ec-8f8f-9e3508e6ce3c/index.m3u8
+Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2026/04/30/eb700ccc-993a-444b-932a-1fe3660c679d.png	https://stream.saytchi.online/api/proxy/316884ff-1a1b-4947-a272-aeaf0b9ce26e/index.m3u8
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
 Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
-Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	https://stream.teleuz.app/api/proxy/1810a2dc-7400-48e3-b6f8-3e9ebb24c07f/index.m3u8
-Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	https://stream.teleuz.app/api/proxy/bf23d2ee-ada0-4fd0-84b6-62912429392d/index.m3u8
-Матч! Футбол 3	https://tricolor-38.ru/KANALY_4/matsh-fytbol-3hd.png	https://stream.teleuz.app/api/proxy/ed829011-96f1-487c-9331-1ce71fb18837/index.m3u8
-Megogo Спорт HD	https://s9.vcdn.biz/static/f/3725125911/image.jpg	https://stream.teleuz.app/api/proxy/d9c1e01f-c649-485d-972f-2c6525596dd5/index.m3u8
-Megogo Футбол 4 HD	https://s1.vcdn.biz/static/f/3725126461/image.jpg	https://stream.teleuz.app/api/proxy/a5a6398d-da39-480a-aacd-82c4023e55a4/index.m3u8
-Megogo Футбол 5 HD	https://s1.vcdn.biz/static/f/3725109901/image.jpg	https://stream.teleuz.app/api/proxy/f337dfa4-ee92-43bb-852c-155212092896/index.m3u8
-ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.teleuz.app/api/proxy/0710855e-c1d1-4388-b4ce-38c1d896c216/index.m3u8
-Футбол	https://www.cableman.ru/sites/default/files/futbol_0.jpg	https://stream.teleuz.app/api/proxy/9becc258-47c3-4e4d-aca1-a77c67442b71/index.m3u8
-Sky Sports Football HD	https://d11p0alxbet5ud.cloudfront.net/Pictures/1024x536/8/8/4/1423884_skysportslogoround_648813.jpg	https://stream.teleuz.app/api/proxy/faf4ef2c-f03b-46b1-a0fd-d7091dbc43d5/index.m3u8
+Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	https://stream.saytchi.online/api/proxy/b17b2ec4-4559-4c99-bb21-b2504c7567d0/index.m3u8
+Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	https://stream.saytchi.online/api/proxy/fbfd299d-4ca6-4a30-a025-94c1c6d203fa/index.m3u8
+Матч! Футбол 3	https://tricolor-38.ru/KANALY_4/matsh-fytbol-3hd.png	https://stream.saytchi.online/api/proxy/bc23a092-0df1-4799-b8b8-a2f167224ab0/index.m3u8
+Megogo Спорт HD	https://s9.vcdn.biz/static/f/3725125911/image.jpg	https://stream.saytchi.online/api/proxy/820d5761-fc29-42d0-8f07-e026846f2357/index.m3u8
+ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.saytchi.online/api/proxy/f71e6d14-7137-42b2-b9bb-264334603b2d/index.m3u8
+Футбол	https://www.cableman.ru/sites/default/files/futbol_0.jpg	https://stream.saytchi.online/api/proxy/76864bdb-ead7-49c5-884a-457f2fa56e53/index.m3u8
+Sky Sports Football HD	https://d11p0alxbet5ud.cloudfront.net/Pictures/1024x536/8/8/4/1423884_skysportslogoround_648813.jpg	https://stream.saytchi.online/api/proxy/30034e1f-4a95-4155-a165-a6e402b19913/index.m3u8
 Viasat Sport HD	https://files.cinerama.uz/images/tv_channels/2020/10/16/da09ba3d-82ae-4d47-8e9a-4d934522f4f2.png	https://stream1.cinerama.uz/1229/tracks-v1a1/mono.m3u8
 Матч Планета	https://files.cinerama.uz/images/tv_channels/2023/09/11/90d59b30-09b3-484e-bea8-952da4cfcc46.jpeg	https://stream1.cinerama.uz/1243/tracks-v1a1/mono.m3u8
 КХЛ	https://files.cinerama.uz/images/tv_channels/2023/08/14/8bf48f18-393d-4553-a8d3-73c602fd0036.png	https://stream1.cinerama.uz/1422/tracks-v1a1/mono.m3u8
