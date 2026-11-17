@@ -142,14 +142,14 @@ Aqlvoy	https://files.itv.uz/uploads/iptv/channels/2021/03/23//bc4fba2dcb3166bd9a
 
 
 Category:Sport
-Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2026/04/30/2877d9e7-7de0-42c8-bbd4-55bc778cc5d7.png	https://stream8.cinerama.uz/1263/tracks-v1a1/mono.m3u8
-Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2026/04/30/eb700ccc-993a-444b-932a-1fe3660c679d.png	https://stream8.cinerama.uz/1264/tracks-v1a1/mono.m3u8
+Setanta Sports 1	https://files.cinerama.uz/images/tv_channels/2026/04/30/2877d9e7-7de0-42c8-bbd4-55bc778cc5d7.png	https://stream.saytchi.online/api/proxy/7d6444a0-55fb-47ec-8f8f-9e3508e6ce3c/index.m3u8
+Setanta Sports 2	https://files.cinerama.uz/images/tv_channels/2026/04/30/eb700ccc-993a-444b-932a-1fe3660c679d.png	https://stream.saytchi.online/api/proxy/316884ff-1a1b-4947-a272-aeaf0b9ce26e/index.m3u8
 Setanta Sports 2 UA https://tvnews.by/uploads/posts/2019-02/1550666408_setanta-sport.jpeg http://stream.mcquack.net/235/index.m3u8
 Uz Sport	https://files.cinerama.uz/images/tv_channels/2020/06/12/7936782f-4d41-4885-824d-0e6e55345572.png	https://stream8.cinerama.uz/1004/tracks-v1a1/mono.m3u8
 Futbol TV	https://files.cinerama.uz/images/tv_channels/2025/02/07/9f3be78e-6f6a-418f-8ccb-d88dd7c16729.jpeg	https://stream8.cinerama.uz/1010/tracks-v1a1/mono.m3u8
-Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	http://31.148.5.241:80/Match_Football_1_HD/index.m3u8
-Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	http://31.148.5.241:80/Match_Football_2_HD/index.m3u8
-Матч! Футбол 3	https://tricolor-38.ru/KANALY_4/matsh-fytbol-3hd.png	http://31.148.5.241:80/Match_Football_3_HD/index.m3u8
+Матч! Футбол 1	https://tricolor-38.ru/KANALY_4/matsh-fytbol-1hd.png	hhttps://stream.saytchi.online/api/proxy/b17b2ec4-4559-4c99-bb21-b2504c7567d0/index.m3u8
+Матч! Футбол 2 HD	https://tricolor-38.ru/KANALY_4/matsh-fytbol-2hd.png	https://stream.saytchi.online/api/proxy/fbfd299d-4ca6-4a30-a025-94c1c6d203fa/index.m3u8
+Матч! Футбол 3	https://tricolor-38.ru/KANALY_4/matsh-fytbol-3hd.png	https://stream.saytchi.online/api/proxy/bc23a092-0df1-4799-b8b8-a2f167224ab0/index.m3u8
 Megogo Спорт HD	https://s9.vcdn.biz/static/f/3725125911/image.jpg	https://stream.saytchi.online/api/proxy/820d5761-fc29-42d0-8f07-e026846f2357/index.m3u8
 ViaPlay Football	https://logowik.com/content/uploads/images/viaplay1900.jpg	https://stream.saytchi.online/api/proxy/f71e6d14-7137-42b2-b9bb-264334603b2d/index.m3u8
 Футбол	https://www.cableman.ru/sites/default/files/futbol_0.jpg	https://stream.saytchi.online/api/proxy/76864bdb-ead7-49c5-884a-457f2fa56e53/index.m3u8
